@@ -1,6 +1,409 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>API基本概念</title>
+    <url>/2023/04/15/API/</url>
+    <content><![CDATA[<h2 id="1、API是什么"><a href="#1、API是什么" class="headerlink" title="1、API是什么"></a>1、API是什么</h2><p>API全称 Application Programming Interface，<strong>应用程序接口</strong>。</p>
+<p>可以通过我之前的回答了解一下</p>
+<h2 id="如何通俗解释API。"><a href="#如何通俗解释API。" class="headerlink" title="如何通俗解释API。"></a><a href="https://www.zhihu.com/question/21430743/answer/777048322">如何通俗解释API</a>。</h2><p>通常搜索在API的解释都是一组定义、程序及协议的集合，但对于不懂技术的人来说，这或许比较难以理解，接下来用抽象的故事来描述一下API。</p>
+<p>假如老王开了一家银行，银行呢只有仓库和<a href="https://www.zhihu.com/search?q=%E8%AE%B0%E8%B4%A6%E6%9C%AC&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">记账本</a>，顾客来了之后将金钱放在仓库里并在记帐本上记帐。老王很快就意识到一个问题，这个存钱的人打不开仓库、不认识字、故意写错存放金额的问题。于是老王雇佣了一个员工大旺，并给银行加了一个柜台，这样顾客就可以直接把金钱交给大旺，大旺记录好之后给顾客收据，并将金币存放在仓库中。</p>
+<p><img src="https://picx.zhimg.com/80/v2-a5f5dd85498288fc8aee9607eb553ed5_720w.webp?source=1940ef5c" alt="img"></p>
+<p>在这里老王雇佣了大旺来完成记帐存钱取钱等繁琐的任务，这节省了用户的时间，也提高了银行工作的效率。如果我们把这具体的事情抽象化，那代替大旺的角色就是<strong>API</strong>，很大的节省了开发人员的负担，提高了效率。</p>
+<p>柜台将银行分为两个区域：客户在前台办理业务，后台进行存款取款等操作。在柜台，前台和后台进行了交互，双方不能越界<strong>。</strong>从API的属于来说，柜台就是术语中的API的<strong>接口</strong>，在这里完成交互。</p>
+<p>假如顾客在存钱的时候，问大旺今天的股票情况，但大旺的工作只负责存钱取钱等流程，对顾客问的完全不了解。这里就要说一下API中的另一个术语<strong>协议</strong>，规定了双方在交互时候的一系列规则，双方都要遵守协议来完成。</p>
+<p>如果顾客是一个英国人，而大旺他不会英语呢怎么办呢，这时候需要一个懂英语的同事来帮助大旺工作了。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-b71d855c38ecddff68cbf4024a6788ea_720w.webp?source=1940ef5c" alt="img"></p>
+<p>在 API 术语里面， <strong>API 端点</strong>指的是同一个接口中提供特定功能子集的<a href="https://www.zhihu.com/search?q=%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">服务提供者</a>。大旺和丽丽都是API中的端点，他们的工作不一样而已。</p>
+<p>总结一下，<strong>API就是能够轻松实现和其他软件组件的交互。API接口就是实现不同组件之间交互地方，API协议就是规定不同组件交互时候的规则，API端点是在同一接口提高不同的功能。</strong></p>
+<p>现在回头来看百科给出的API的定义来说，就容易理解了。</p>
+<p>一般是指一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。通俗来讲<strong>API就是可以轻松实现和其他软件的交互。</strong></p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子:"></a>举个栗子:</h2><p>胖虎是一个程序猿，老板要求他写一个火车票查询的软件，胖虎想提高工作效率，于是在写火车票查询的代码中，引入了<a href="https://link.zhihu.com/?target=http://www.binstd.com/">BinSTD平台</a>的火车票查询的接口，这样子就可以轻松实现功能。</p>
+<h1 id="2、SDK是什么"><a href="#2、SDK是什么" class="headerlink" title="2、SDK是什么"></a><strong>2、SDK是什么</strong></h1><p>SDK全称software development kit，<strong>软件开发工具包</strong>。</p>
+<p>一般都是一些<a href="https://www.zhihu.com/search?q=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">软件工程师</a>为特定的软件包、软件框架、硬件平台、<a href="https://www.zhihu.com/search?q=%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">操作系统</a>等建立应用软件时的开发工具的集合。</p>
+<p>通俗来讲<strong>就是第三方服务商提供的实现产品软件某项功能的工具包。</strong></p>
+<h2 id="再来举个栗子："><a href="#再来举个栗子：" class="headerlink" title="再来举个栗子："></a>再来举个栗子：</h2><p>老板让胖虎来完成BinSTD网站上的业务功能，胖虎觉得开发周期长，不利于公司产品上线，偶然机会了解到了华为云平台上的相关功能，于是在基于华为云SDK下，通过编码调用华为云API,就可以访问华为云的资源和数据。</p>
+<h1 id="3、API和SDK的区别"><a href="#3、API和SDK的区别" class="headerlink" title="3、API和SDK的区别"></a><strong>3、API和SDK的区别</strong></h1><ul>
+<li>API是一个函数，有其特定的功能；而SDK是一个很多功能函数的集合体，一个工具包。</li>
+<li>API是数据接口，SDK相当于开发集成工具环境，要在SDK的环境下来调用API。</li>
+<li>API接口对接过程中需要的环境需要自己提供，SDK不仅提供<a href="https://www.zhihu.com/search?q=%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">开发环境</a>，还提供很多API。</li>
+<li>简单功能调用，API调用方便快捷；复杂功能调用，SDK功能齐全。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NotionNext-快速免费搭建网站</title>
+    <url>/2023/04/30/NotionNext-%E5%BF%AB%E9%80%9F%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<h1 id="NotionNext-快速免费搭建网站"><a href="#NotionNext-快速免费搭建网站" class="headerlink" title="NotionNext-快速免费搭建网站"></a>NotionNext-快速免费搭建网站</h1><p>📔折腾博客多年，尝试过 WordPress、Hexo等各种博客系统。然而在写作过程中最重要的应该是养成内容持续输出的习惯；软件平台仅仅是一个辅助，反复折腾搭建系统显得本末倒置。 是否有一种方案，能让“<strong>坚持笔记</strong>”和“<strong>博客分享</strong>”得到完美结合呢？ 直到Notion笔记本的出现，一切都有了可能！</p>
+<h2 id="NotionNext是什么？"><a href="#NotionNext是什么？" class="headerlink" title="NotionNext是什么？"></a>NotionNext是什么？</h2><p>NotionNext是我开发的、完全<a href="https://github.com/tangly1024/NotionNext">免费开源</a>的网站生成工具<strong>，</strong>它将您的<a href="https://tangly1024.com/article/notion">Notion笔记</a>实时渲染成静态博客站；从而实现<strong>无需购买服务器</strong>，无需购买域名，只要一个笔记即可搭建独立站，让您与全世界建立连接！</p>
+<p>📔NotionNext的愿景是帮助非技术人员的小白，最低成本、最快速地搭建自己的网站。</p>
+<p>已有上千位网友使用NotionNext搭建网站，访问以下链接查看部分案例：</p>
+<p><a href="https://tangly1024.com/favicon.icohttps://tangly1024.com/links!">友情链接 | TANGLY’s BLOG记录思考、分享编程技术!</a></p>
+<h2 id="用NotionNext建站的几个理由"><a href="#用NotionNext建站的几个理由" class="headerlink" title="用NotionNext建站的几个理由"></a>用NotionNext建站的几个理由</h2><h3 id="1-Notion笔记"><a href="#1-Notion笔记" class="headerlink" title="1.Notion笔记"></a>1.Notion笔记</h3><p>首先，借助NotionNext建站，所有文章的编写发布都只在您的Notion笔记中完成，Notion笔记支持在电脑与手机上随时访问；因此您无需登录任何第三方平台、或打开WordPress后台、或者通过写Git上传等繁琐的方式来发布文章。</p>
+<p>其次，Notion 是一款将笔记、在线文档、知识库和任务管理无缝整合的「All-In-One」应用，它也是我一直在用、并且极力推荐的一款笔记软件，关于Notion的介绍可浏览此文《<a href="https://tangly1024.com/article/notion">Notion笔记 | 简化生活的效率工具</a>》。</p>
+<p>借助Notion灵活的排版以及<a href="https://tangly1024.com/article/notion-short-key">便捷的写作体验</a>，您不需要专门学习<a href="https://markdown.com.cn/basic-syntax/">Markdown</a>语法，也可以轻松随时随地写出调理清晰的文章，以便记录您的创意与灵感。站点数据完全保存在Notion笔记当中，您可以随时导出本地进行备份。</p>
+<h4 id="Notion-AI"><a href="#Notion-AI" class="headerlink" title="Notion AI"></a>Notion AI</h4><p>Notion集成了Open AI，能大大提升您的写作效率，这也是Notion作为笔记工具的理由之一。</p>
+<p>最后，NotionNext 只是一个将您的笔记转成网站的小工具，并不是一个繁重的系统，之后还可以选择其他的工具和软件渲染您的笔记。</p>
+<h3 id="2-NextJs"><a href="#2-NextJs" class="headerlink" title="2.NextJs"></a>2.NextJs</h3><p>NotionNext源代码完全免费开源，任何人都可以修改代码的源码，从而自定义站点的功能。</p>
+<p>NotionNext基于NextJs框架开发，Next.js 是一个轻量级的React服务端渲染框架，其优势是更快的响应速度、更强的SEO，从而助力于您的网站被搜索引擎更好地收录，从而让您的网站被更多人访问！</p>
+<h4 id="🚀-网站的性能"><a href="#🚀-网站的性能" class="headerlink" title="🚀 网站的性能"></a>🚀 网站的性能</h4><p><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6b0caa33-4465-46a9-8060-13eb12aeb825%2FUntitled.png?table=block&id=26f9a559-1dc1-483d-9ba5-e2d18ef2ef1a" alt="notion image"></p>
+<h3 id="3-多主题切换"><a href="#3-多主题切换" class="headerlink" title="3. 多主题切换"></a>3. 多主题切换</h3><p>多个主题任您挑选</p>
+<p><a href="https://tangly1024.com/aeaed73067444b3cb0c24cce10924847"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe9b02096-eead-4d70-8a5c-3251567fe129%2FNext.png?table=block&id=aeaed730-6744-4b3c-b0c2-4cce10924847" alt="Next">Next</a><a href="https://tangly1024.com/755a80eec92d4f338756fd62e7400477"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb3a67fbc-c912-4dd0-a135-0fb731b9a222%2Ftheme-hexo.png?table=block&id=755a80ee-c92d-4f33-8756-fd62e7400477" alt="Hexo">Hexo</a><a href="https://tangly1024.com/40700b720caf4fe49110ff3accaa031a"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4675b625-f876-4936-831d-de625e12aa43%2Ftheme-medium.png?table=block&id=40700b72-0caf-4fe4-9110-ff3accaa031a" alt="Medium">Medium</a><a href="https://tangly1024.com/57365a6cca0a4019a52c6e1ef3f251b5"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3706e996-6904-46a8-afff-ebf5b5560d07%2Ftheme-fukasawa.png?table=block&id=57365a6c-ca0a-4019-a52c-6e1ef3f251b5" alt="Fukasawa">Fukasawa</a><a href="https://tangly1024.com/9f227f3234e742b4bc8a9f64c278c3cd"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc9a4c5bd-1406-4fdf-92f2-2aaf861a93fb%2Fexample.png?table=block&id=9f227f32-34e7-42b4-bc8a-9f64c278c3cd" alt="Example">Example</a><a href="https://tangly1024.com/af1896b599b147c5b443ae468a85cd97"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F850961f3-7ed0-4993-a0f7-1f683f2f038c%2F800ae654d83b94eccc97794fc544a50.png?table=block&id=af1896b5-99b1-47c5-b443-ae468a85cd97" alt="Matery">Matery</a><a href="https://tangly1024.com/3f36d27f73094f409b399cee3f660248"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe2af5a1c-8c61-49dd-8a04-575f8b31f4af%2F%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20230321090145.png?table=block&id=3f36d27f-7309-4f40-9b39-9cee3f660248" alt="Simple">Simple</a></p>
+<ul>
+<li>点击下方预览页面，体验网站主题在线切换的功能</li>
+<li><ul>
+<li><a href="https://preview.tangly1024.com/">NOTION BLOG | 演示站点描述演示站点描述<img src="https://preview.tangly1024.com/favicon.ico" alt="NOTION BLOG | 演示站点描述">https://preview.tangly1024.com/<img src="https://www.notion.so/image/https%3A%2F%2Fp1.qhimg.com%2Fbdm%2F1600_900_100%2Ft01e66d486b8e826270.jpg?table=block&id=02ab3b86-7800-4aa6-9e9e-415905ef32a5&cache=v2" alt="NOTION BLOG | 演示站点描述"></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-更多自定义功能"><a href="#4-更多自定义功能" class="headerlink" title="4. 更多自定义功能"></a>4. 更多自定义功能</h3><ul>
+<li><p>支持自定义字体</p>
+</li>
+<li><p><a href="https://preview.tangly1024.com/article/example-2">文章支持加锁</a></p>
+</li>
+<li><p>文章分类、标签、归档页面</p>
+</li>
+<li><p><a href="https://docs.tangly1024.com/zh/features/singlePage">支持快速添加菜单</a></p>
+</li>
+<li><p>支持夜间模式</p>
+</li>
+<li><p>多种插件支持：例如<a href="https://docs.tangly1024.com/zh/features/live2D">看板宠物</a>😾    </p>
+</li>
+<li><p><a href="https://tangly1024.com/article/notion-next-custom-properties">支持自定义你的表头属性</a></p>
+</li>
+<li><p>支持多种评论插件</p>
+</li>
+</ul>
+<h2 id="开始部署您的站点"><a href="#开始部署您的站点" class="headerlink" title="开始部署您的站点"></a>开始部署您的站点</h2><p>NotionNext支持多种方式部署，任选一个教程开始动手！</p>
+<h3 id="Vercel部署"><a href="#Vercel部署" class="headerlink" title="Vercel部署"></a>Vercel部署</h3><p>这是目前我在用的部署方案</p>
+<p><a href="https://tangly1024.com/article/vercel-deploy-notion-next">Vercel快速部署NotionNext站点 | TANGLY’s BLOG用vercel托管你的Notion站点，方便又便宜<img src="https://tangly1024.com/favicon.ico" alt="Vercel快速部署NotionNext站点 | TANGLY’s BLOG">https://tangly1024.com/article/vercel-deploy-notion-next<img src="https://tangly1024.com/bg_image.jpg" alt="Vercel快速部署NotionNext站点 | TANGLY’s BLOG"></a></p>
+<p>部署效果演示：<a href="https://nobelium-plum-nine.vercel.app/">https://nobelium-plum-nine.vercel.app/</a></p>
+<h3 id="Zeabur部署"><a href="#Zeabur部署" class="headerlink" title="Zeabur部署"></a>Zeabur部署</h3><p>Zeabur是一款优秀的、国人自研的托管平台</p>
+<p><a href="https://notion-next.zeabur.app/article/deploy-on-zeabur">使用 Zeabur 部署你的 Notion 博客 | NOTION BLOG使用 Zeabur 快速部署你的 Notion 博客，以及配套的其他服务！<img src="https://notion-next.zeabur.app/favicon.ico" alt="使用 Zeabur 部署你的 Notion 博客 | NOTION BLOG">https://notion-next.zeabur.app/article/deploy-on-zeabur<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F67cc98b9-9e0e-43e9-9436-ff4d9501b2ee%2Fdefault-og.png?table=block&id=7a96297f-c707-4ae4-9dc1-002517849e89&cache=v2" alt="使用 Zeabur 部署你的 Notion 博客 | NOTION BLOG"></a></p>
+<p>部署效果演示：<a href="https://tangly1024.zeabur.app/">https://tangly1024.zeabur.app/</a></p>
+<h3 id="云主机部署"><a href="#云主机部署" class="headerlink" title="云主机部署"></a>云主机部署</h3><p> 请先准备好一台您自己的服务器</p>
+<p><a href="https://tangly1024.com/article/deploy-notion-next-on-vps">VPS服务器部署NotionNext | TANGLY’s BLOG在你的云服务器上手动部署NotionNext<img src="https://tangly1024.com/favicon.ico" alt="VPS服务器部署NotionNext | TANGLY&#39;s BLOG">https://tangly1024.com/article/deploy-notion-next-on-vps<img src="https://tangly1024.com/bg_image.jpg" alt="VPS服务器部署NotionNext | TANGLY&#39;s BLOG"></a></p>
+<h3 id="CloudFlare部署"><a href="#CloudFlare部署" class="headerlink" title="CloudFlare部署"></a>CloudFlare部署</h3><p>大名鼎鼎的CloudFlare，不过似乎只能导出静态</p>
+<p><a href="https://tangly1024.com/article/notion-next-cloud-flare">NotionNext部署-CloudFlare | TANGLY’s BLOGcloudflare支持纯静态导出的notionnext，兼容性不那么好，但不失为一种选择。<img src="https://tangly1024.com/favicon.ico" alt="NotionNext部署-CloudFlare | TANGLY’s BLOG">https://tangly1024.com/article/notion-next-cloud-flare<img src="https://tangly1024.com/bg_image.jpg" alt="NotionNext部署-CloudFlare | TANGLY’s BLOG"></a></p>
+<p>部署效果演示：<a href="https://cloudflare.tangly1024.com/">https://cloudflare.tangly1024.com/</a></p>
+<p>😀</p>
+<p>提示：您可以同时使用多种部署方案；部署完成后，请阅读下方的站点配置教程：</p>
+<h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>部署完成后，如何设置您的站点信息，例如博客排序，绑定个性域名等，请访问《操作手册》搜索关键词：</p>
+<p><a href="https://tangly1024.com/article/notion-next-guide">NotionNext 操作手册 | TANGLY’s BLOG介绍NotionNext的所有功能和常见问题说明<img src="https://tangly1024.com/favicon.ico" alt="NotionNext 操作手册 | TANGLY’s BLOG">https://tangly1024.com/article/notion-next-guide<img src="https://images.unsplash.com/photo-1587620931276-d97f425f62b9?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="NotionNext 操作手册 | TANGLY’s BLOG"></a></p>
+<h3 id="绑定个性域名"><a href="#绑定个性域名" class="headerlink" title="绑定个性域名"></a>绑定个性域名</h3><p>vercel为您的站点提供一个 免费的<code>*.vercel.app</code> 域名，但vercel的官方域名在大陆被墙，推荐您绑定自己的域名。</p>
+<p>参考以下文章，您可以快速地将自己的域名解析到Vercel站点:</p>
+<p><a href="https://tangly1024.com/article/vercel-domain">Vercel应用绑定自己的域名 | 小唐笔记📒首先需要在域名服务商处购买域名，可以选择Namesilo、Freenom、Godaddy、阿里云、腾讯云等任意平台。并在域名服务商后台添加一条CNAME转发进行解析，CNAME值为 cname.vervel-dns.com 。 CF具有Worker.js、全球无限CDN流量、网站防火墙、DDoS等特性，我个人比较喜欢将域名解析交给CloudFlare管理 。 …<img src="https://tangly1024.com/favicon.ico" alt="Vercel应用绑定自己的域名 | 小唐笔记📒">https://tangly1024.com/article/vercel-domain<img src="https://www.notion.so/image/https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95831505-6425-40f3-a2a8-fb2e2bbba49e%2FUntitled.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Credential%3DAKIAT73L2G45EIPT3X45%252F20220322%252Fus-west-2%252Fs3%252Faws4_request%26X-Amz-Date%3D20220322T013907Z%26X-Amz-Expires%3D86400%26X-Amz-Signature%3D579a6c3d516cc6480c2e0f75daa02e7c2f42e786dbff3d073089f2efabb2d51c%26X-Amz-SignedHeaders%3Dhost%26x-id%3DGetObject?table=block&id=269e98e4-e5d9-4a10-847d-1d52115e1049&cache=v2" alt="Vercel应用绑定自己的域名 | 小唐笔记📒"></a></p>
+<h2 id="项目更新"><a href="#项目更新" class="headerlink" title="项目更新"></a>项目更新</h2><p>项目不定期会修复bug、增加新特性，请参考此篇文章进行更新：</p>
+<p><a href="https://tangly1024.com/article/how-to-update-notionnext">NotionNext更新指南 | TANGLY’s BLOG本项目在长期维护更新中，不时将修复一些bug和增加新特性。 新版本中对页面样式以及加载速度都做了大量的优化，因此非常推荐更新到最新版本。 您的项目若版本比较旧，则右上角将会出现一个 Fetch upstream 按钮，点击并选择 Fetch and merge 即可更新为最新的代码 或者如果出现 UpdateBranch 选项也可以直接更新，不要点击 Discard xx commits 选项，这样会丢失您自己的代码修改。 如果您此处的按钮既不是 Fetch and merge，也没有 Update branch，则说明我的代码和您的有冲突，请小心驾驶。 如果你并不是熟悉Git的操作，推荐做法是备份一下您的代码，诸如 blog.config.js 配置文件，然后重新fork一遍项目，再更新新版本中的配置项，重新配置即可。 当我和你的代码发生冲突（ confilcts），(例如我修改了 blog.config.js 文件，你也修改了此文件)，导致在更新时，Git需要人工确认要合并代码时需要保留的最终代码版本。 不要点 Discard xx commits 建议是用github之类的代码版本管理工具，在您的电脑上进行合并。 这里具体的更新合并步骤教程待完成。您可以参阅以下两位战友的热心分享： 除了Github fork部署，还支持Docker部署、Vercel一键Clone部署。这两种部署方式更新方法如下： 备份你的blog.config.js 等自定义配置信息，并重新执行Docker指令，获取最新版本镜像。镜像已上传至 Dockerhub，可以在安装 Docker环境 的系统中执行以下命令。 旧版 docker run -p 3000:3000 -e NOTION_PAGE_ID&#x3D;”02ab3b8678004aa69e9e415905ef32a5” notionnext:2.8.1 # 02ab3b8678004aa69e9e415905ef32a5 这个值可替换成你的Notion_PAGE_ID 此环境变量则默认读取示例文章 docker run -p 3000:3000 -e NEXT_PUBLIC_THEME&#x3D;”next” -e NOTION_PAGE_ID&#x3D;”02ab3b8678004aa69e9e415905ef32a5” tangly1024&#x2F;notionnext:3.3.9 # 02ab3b8678004aa69e9e415905ef32a5 这个值可替换成你的Notion_PAGE_ID 此环境变量则默认读取示例文章 可在Github的 Packages、或 Dockerhub 中查看所有docker镜像的版本 删除旧版Vercel项目，重新按找以下步骤一键Clone部署。 2.选择用 Github方式创建仓库，然后点击 create 确认部署。<img src="https://tangly1024.com/favicon.ico" alt="NotionNext更新指南 | TANGLY&#39;s BLOG">https://tangly1024.com/article/how-to-update-notionnext<img src="https://tangly1024.com/bg_image.jpg" alt="NotionNext更新指南 | TANGLY&#39;s BLOG"></a></p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p>问：如何修改hexo主题首页下的“Hi，我是一个程序员…”等字样</p>
+<p>答：修改 <code>themes/hexo/config_hexo.js</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">HOME_BANNER_GREETINGS</span>: [‘<span class="title class_">Hi</span>，我是一个程序员’, ‘<span class="title class_">Hi</span>，我是一个打工人’, ‘<span class="title class_">Hi</span>，我是一个干饭人’, ‘欢迎来到我的博客🎉’], <span class="comment">// 首页大图标语文字</span></span><br></pre></td></tr></table></figure>
+
+<p>JavaScript</p>
+<p>Copy<a href="https://tangly1024.com/article/luo-yong-hao-patriotic"></a></p>
+]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyCharm 真永久激活方法与插件使用教程</title>
+    <url>/2023/04/28/PyCharm%20%E7%9C%9F%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="PyCharm-真永久激活方法与插件使用教程"><a href="#PyCharm-真永久激活方法与插件使用教程" class="headerlink" title="PyCharm 真永久激活方法与插件使用教程"></a>PyCharm 真永久激活方法与插件使用教程</h1><p> 此教程为 第三方插件 激活方式 </p>
+<p>本教程适用于 JetBrains全家桶所有产品</p>
+<p>（Phpstorm、PyCharm、WebStorm、IntelliJ IDEA、GoLand、CLion）安装方法相同</p>
+<p>本教程适用于 Pycharm 所有版本</p>
+<p>Windows、Mac、Linux系统都适用</p>
+<h2 id="PyCharm2022版激活码与激活补丁-官方汉化"><a href="#PyCharm2022版激活码与激活补丁-官方汉化" class="headerlink" title="PyCharm2022版激活码与激活补丁 + 官方汉化"></a>PyCharm2022版激活码与激活补丁 + 官方汉化</h2><p>——————————————————</p>
+<p>激活插件请在公众号内回复：2099 </p>
+<p>临时激活码</p>
+<p><a href="https://pan.baidu.com/s/1i385azbLTGfC1iN0TD7BGg">https://pan.baidu.com/s/1i385azbLTGfC1iN0TD7BGg</a><br>提取码: hu4h<br>2022.07.26更新支持Phpstorm、PyCharm、WebStorm、IntelliJ IDEA</p>
+<p><a href="https://www.yuque.com/docs/share/516ab220-cdfe-40a7-85de-b127857209ec?#">20221.4最新激活方法</a></p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483743&idx=1&sn=4454bef2fbd2137b943c3ba8b80f4a4e&chksm=fd215064ca56d972b97b9e1984d318031676134580fbf3303585fa66d9aac6d7f958189b3692#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658820319532-4216eb51-0f6e-4d19-8ea8-d0ce7ddc2e46.png?x-oss-process=image/resize,w_687,limit_0" alt="image.png"></a></p>
+<h2 id="PyCharm2021版激活码与激活补丁-官方汉化"><a href="#PyCharm2021版激活码与激活补丁-官方汉化" class="headerlink" title="PyCharm2021版激活码与激活补丁 + 官方汉化"></a>PyCharm2021版激活码与激活补丁 + 官方汉化</h2><p>——————————————————</p>
+<p>激活插件请在公众号内回复：2099 </p>
+<p>临时激活码</p>
+<p><a href="https://pan.baidu.com/s/1i385azbLTGfC1iN0TD7BGg">https://pan.baidu.com/s/1i385azbLTGfC1iN0TD7BGg</a><br>提取码: hu4h<br>2022.07.26更新支持Phpstorm、PyCharm、WebStorm、IntelliJ IDEA</p>
+<p><a href="https://www.yuque.com/docs/share/516ab220-cdfe-40a7-85de-b127857209ec?#">20221.4最新激活方法</a></p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483747&idx=1&sn=94ab1c93b0956e84c24ba7a50b897011&chksm=fd215058ca56d94ea9a573e4adc4a6307a9ac965399666163953fbac6b9050dbfcdc5ba9a4ba#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658820453077-61a11a18-e260-4ed6-a4d1-2eccb1b68a84.png?x-oss-process=image/resize,w_692,limit_0" alt="image.png"></a></p>
+<h2 id="PyCharm2020版激活码与激活补丁-官方汉化"><a href="#PyCharm2020版激活码与激活补丁-官方汉化" class="headerlink" title="PyCharm2020版激活码与激活补丁 + 官方汉化"></a>PyCharm2020版激活码与激活补丁 + 官方汉化</h2><p>——————————————————</p>
+<p><a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">点击下载 PyCharm永久激活插件2.3.5</a></p>
+<p>提取码：9cqf</p>
+<p><a href="https://pan.baidu.com/s/1U3ebBUz9RF8xzRA7TkE6Yw">点击下载 PyCharm永久激活插件2.1.9</a></p>
+<p>提取码：u4ry</p>
+<p><a href="https://pan.baidu.com/s/1jaNrPBgrUu6Hc2LYQ7msmA">点击下载 PyCharm永久激活插件2.1.12版</a></p>
+<p>提取码：2w6t</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483751&idx=1&sn=81abc9029bbf5a1c305c0f5183bab949&chksm=fd21505cca56d94af5d338ad56464b0d105fcf114ab11b402ab32ada6d4ba462009a84a6af8e#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658820559843-31d422e9-5db5-4590-9347-c53589ccf8ac.png?x-oss-process=image/resize,w_690,limit_0" alt="image.png"></a></p>
+<h2 id="PyCharm2019版激活码与激活补丁"><a href="#PyCharm2019版激活码与激活补丁" class="headerlink" title="PyCharm2019版激活码与激活补丁"></a>PyCharm2019版激活码与激活补丁</h2><p>——————————————————</p>
+<p><a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">点击下载 PyCharm永久激活插件2.3.5</a></p>
+<p>提取码：9cqf</p>
+<p><a href="https://pan.baidu.com/s/1U3ebBUz9RF8xzRA7TkE6Yw">点击下载 PyCharm永久激活插件2.1.9</a></p>
+<p>提取码：u4ry</p>
+<p><a href="https://pan.baidu.com/s/1jaNrPBgrUu6Hc2LYQ7msmA">点击下载 PyCharm永久激活插件2.1.12版</a></p>
+<p>提取码：2w6t</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483755&idx=1&sn=152e9cc5e3301ee5912276b9e0ce31e6&chksm=fd215050ca56d9460c199a21b1b51a3c40d6bd65c7548b39950ffa7355f14f88fe3ac8576e12#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658820917926-385629bb-e0c7-42d9-bac4-ab16db4d4014.png?x-oss-process=image/resize,w_689,limit_0" alt="image.png"></a></p>
+<h2 id="🍎Mac、Linux系统激活操作🍎"><a href="#🍎Mac、Linux系统激活操作🍎" class="headerlink" title="🍎Mac、Linux系统激活操作🍎"></a>🍎Mac、Linux系统激活操作🍎</h2><p> Mac、Linux版 PyCharm2022版激活码与激活补丁+汉化 </p>
+<p>——————————————————</p>
+<p>激活插件请在公众号内回复：2099 临时激活码请在公众号内回复：369</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483764&idx=1&sn=be21a1ecd9a6d6069df49cb0b999261c&chksm=fd21504fca56d95964efc091479bb15ab1e3514a56ca68f9cfad85cc0babbcb59b3227163ee4#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658821317555-9198542c-2e2c-45fb-b7c4-5c5042eda3b8.png?x-oss-process=image/resize,w_695,limit_0" alt="image.png"></a></p>
+<h2 id="Mac、Linux版-PyCharm2021版激活码与激活补丁-汉化"><a href="#Mac、Linux版-PyCharm2021版激活码与激活补丁-汉化" class="headerlink" title="Mac、Linux版 PyCharm2021版激活码与激活补丁+汉化"></a>Mac、Linux版 PyCharm2021版激活码与激活补丁+汉化</h2><p>——————————————————</p>
+<p>激活插件请在公众号内回复：2099 临时激活码请在公众号内回复：369</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483762&idx=1&sn=37bc7ac521cb1fd1f2b07913c2050381&chksm=fd215049ca56d95f218c2a0f3a3a2689d2aca04baf28caeed2246110f23042a28d0687c4b7f6#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658821416123-a0ef678b-47e1-4f03-8183-c0e95ed9e48b.png?x-oss-process=image/resize,w_696,limit_0" alt="image.png"></a></p>
+<h2 id="Mac、Linux版-PyCharm2020版激活码与激活补丁-汉化"><a href="#Mac、Linux版-PyCharm2020版激活码与激活补丁-汉化" class="headerlink" title="Mac、Linux版 PyCharm2020版激活码与激活补丁+汉化"></a>Mac、Linux版 PyCharm2020版激活码与激活补丁+汉化</h2><p>——————————————————</p>
+<p><a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">点击下载 PyCharm永久激活插件2.3.5</a></p>
+<p>提取码：9cqf</p>
+<p><a href="https://pan.baidu.com/s/1U3ebBUz9RF8xzRA7TkE6Yw">点击下载 PyCharm永久激活插件2.1.9</a></p>
+<p>提取码：u4ry</p>
+<p><a href="https://pan.baidu.com/s/1jaNrPBgrUu6Hc2LYQ7msmA">点击下载 PyCharm永久激活插件2.1.12版</a></p>
+<p>提取码：2w6t</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483768&idx=1&sn=1a8e3ed44071ecb92d363f608355a617&chksm=fd215043ca56d955169007538d47c3fc17eb26f626c1d396365559a4fbbb798d895f90f5655e#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658821527383-8dfcd332-29cf-435f-a760-2a4536da2060.png?x-oss-process=image/resize,w_692,limit_0" alt="image.png"></a></p>
+<h2 id="Mac、Linux版-PyCharm2019版激活码与激活补丁"><a href="#Mac、Linux版-PyCharm2019版激活码与激活补丁" class="headerlink" title="Mac、Linux版 PyCharm2019版激活码与激活补丁"></a>Mac、Linux版 PyCharm2019版激活码与激活补丁</h2><p>——————————————————</p>
+<p><a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">点击下载 PyCharm永久激活插件2.3.5</a></p>
+<p>提取码：9cqf</p>
+<p><a href="https://pan.baidu.com/s/1U3ebBUz9RF8xzRA7TkE6Yw">点击下载 PyCharm永久激活插件2.1.9</a></p>
+<p>提取码：u4ry</p>
+<p><a href="https://pan.baidu.com/s/1jaNrPBgrUu6Hc2LYQ7msmA">点击下载 PyCharm永久激活插件2.1.12版</a></p>
+<p>提取码：2w6t</p>
+<p>——————————————————</p>
+<p>👇👇操作视频👇👇</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU3NTYzNzU4OA==&mid=2247483772&idx=1&sn=289482fc315d78a54c72af0e84d6b9ea&chksm=fd215047ca56d9512c8a02e60c4c22416753bd235b048c57ef88fbd350bbbeae9de31763a105#rd"><img src="https://cdn.nlark.com/yuque/0/2022/png/21557581/1658821576548-84f2cae5-8bfc-4ab7-9547-521776181843.png?x-oss-process=image/resize,w_693,limit_0" alt="image.png"></a></p>
+<h2 id="PyCharm2019及更早版本激活补丁"><a href="#PyCharm2019及更早版本激活补丁" class="headerlink" title="PyCharm2019及更早版本激活补丁"></a>PyCharm2019及更早版本激活补丁</h2><p>如果你的IDE已经过了试用打不开，可以运行<a href="https://pan.baidu.com/s/1OTjTJP5AFP93Jpkw5xofaw">临时重置脚本</a>（注意选择对应系统版本），它可以让你暂时进入IDE进行上述操作</p>
+<p>本插件是全自动无限激活一个月，到期会自动激活，适用2019版JetBrains全家桶</p>
+<p>本插件可以离线激活</p>
+<p>——————————————————</p>
+<p><a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">点击下载 PyCharm永久激活插件2.3.5</a></p>
+<p>提取码：9cqf</p>
+<p><a href="https://pan.baidu.com/s/1U3ebBUz9RF8xzRA7TkE6Yw">点击下载 PyCharm永久激活插件2.1.9</a></p>
+<p>提取码：u4ry</p>
+<p><a href="https://pan.baidu.com/s/1jaNrPBgrUu6Hc2LYQ7msmA">点击下载 PyCharm永久激活插件2.1.12版</a></p>
+<p>提取码：2w6t</p>
+<p>——————————————————</p>
+<p>激活方法：</p>
+<p>安装 </p>
+<p>PyCharm </p>
+<p>，在安装过程中会出现一个激活窗口如下图</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1628665173464-5e293018-9aa0-4469-8041-b98f5b2434a7.png?x-oss-process=image/resize,w_750,limit_0" alt="img"></p>
+<p>在此窗口中请选中 【Evaluate for free】然后再点击按钮【Evaluate】先以评估试用的方法进入PyCharm,然后再按下面的操作永久激活PyCharm</p>
+<p>1、断开网络链接，下载PyCharm永久激活插件<a href="https://pan.baidu.com/s/1Iueqebo2qqltGyIHQ1TWbw">PyCharm永久激活插件2.3.5</a>（提取码：9cqf ）</p>
+<p>下载完成后不要解压压缩包</p>
+<p>2、打开pycharm随便新建个项目进入主界面按下图演示操作</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1635483183933-beac0d31-d50b-46ce-be8d-5589614ec266.png" alt="QQ截图20211029114728.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1635483189525-83b3b5e6-085d-4db7-a2bf-9d56bf73f56c.png" alt="QQ截图20211029114745.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1635559630252-98e910dc-9046-4e41-bfcc-ff624d84f7d3.png" alt="QQ截图20211030100644.png"></p>
+<p>分别勾选【Logout when reset 】【Auto reset before per restart】</p>
+<p>分别点击【Reload】【Reset】按钮</p>
+<p>4、安装完成后恢复网络链接</p>
+<p>永久激活插件的具体选项功能说明请看下面的介绍，</p>
+<p>激活插件功能介绍</p>
+<p>点击菜单【Help】-&gt;【Eval Reset】后会弹出插件主界面 ，插件主要功能介绍如下</p>
+<p>●按钮【Reload】刷新界面上的显示信息。</p>
+<p>●按钮【Reset】点击后会询问是否重置试用信息并重启IDE。选择Yes则执行重置操作并重启IDE生效，选择No则什么也不做。（此为手动重置方式）</p>
+<p>●勾选项【Autoreset before per restart 】如果勾选了，则自勾选后每次重启&#x2F;退出IDE时会自动重置试用信息，你无需做额外的事情。（此为自动重置方式）；如果不勾选的话每次PyCharm试用期到期后需要手动点击【Reset】按钮</p>
+<p>●如果你的IDE已经过了试用打不开，可以运行这个<a href="https://pan.baidu.com/s/1OTjTJP5AFP93Jpkw5xofaw">临时重置脚本</a>（注意选择对应系统版本），它可以让你暂时进入IDE进行上述操作</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1620356788975-d548b769-7f3a-4b23-a2ef-8d8c4dcbfea8.png" alt="20201226130800216.png"></p>
+<p>勾选【Auto reset before per restart 】并点击按钮【Reset】然后系统自动重启 PyCharm</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1620356822045-df4499e0-3576-40ef-b036-0909731e7966.png" alt="20201226130815008.png"></p>
+<p>重启完成后点击菜单【Help】-&gt;【About】查看是否续命成功如下图</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/21557581/1620356839756-59f559f1-94d7-408b-b456-f28c5010b3f4.png" alt="20201226130811507.png"></p>
+<h1 id="下载-PyCharm"><a href="#下载-PyCharm" class="headerlink" title="下载 PyCharm"></a>下载 PyCharm</h1><p>官方下载最新 PyCharm </p>
+<p>官方下载地址：<a href="https://www.jetbrains.com/pycharm/download/#section=windows">https://www.jetbrains.com/pycharm/download/#section=windows</a></p>
+<h1 id="安装-PyCharm"><a href="#安装-PyCharm" class="headerlink" title="安装 PyCharm"></a>安装 PyCharm</h1><p>具体安装方法请查看下面的链接</p>
+<p><a href="http://www.jb51.net/article/200048.htm">http://www.jb51.net/article/200048.htm</a></p>
+<h1 id="汉化-PyCharm"><a href="#汉化-PyCharm" class="headerlink" title="汉化 PyCharm"></a>汉化 PyCharm</h1><p>使用JetBrains官方汉化方案</p>
+<p><a href="https://www.jb51.net/article/199937.htm">https://www.jb51.net/article/199937.htm</a></p>
+]]></content>
+      <tags>
+        <tag>破万法！！！</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim简介</title>
+    <url>/2024/04/26/Vim%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h2 id="vim是什么？"><a href="#vim是什么？" class="headerlink" title="vim是什么？"></a>vim是什么？</h2><p>vim是Linux环境下一款功能强大、高度可定制的文本编辑工具，类似于Windows下面的source insight、sublime、notepad。VI是visual interface的缩写，即可视化接口。vim 即 vi IMproved，在 vi 的基础上做了很多改进，如：增加了多级撤销、多窗口操作、崩溃后也可以恢复、增加了稳定性、关键字自动补全、上下文自动补全等功能。</p>
+<h2 id="vim的工作模式"><a href="#vim的工作模式" class="headerlink" title="vim的工作模式"></a>vim的工作模式</h2><p>vim一般有6种工作模式。</p>
+<p>普通模式：使用vim打开一个文件时默认模式，也叫命令模式，允许用户通过各种命令浏览代码、滚屏等操作。<br>插入模式：也可以叫做编辑模式，在普通模式下敲击 i 、a 或 o 就进入插入模式，允许用户通过键盘输入、编辑。<br>命令行模式：在普通模式下，先输入冒号:，接着输入命令，就可以通过配置命令对vim进行配置了，如改变颜色主题、显示行号等，这些配置命令也可以保存到&#x2F;etc&#x2F;vim&#x2F;vimrc配置文件中，每次打开默认配置执行。<br>可视化模式：在普通模式下敲击前盘上的 v 键，就进入可视化模式，然后移动光标就可以选中一块文本，常用来完成文本的复制、粘贴、删除等操作。<br>替换模式：如果我们想修改某个字符，不需要先进入插入模式，删除，然后再输入新的字符，直接在普通模式下，敲击R键就可以直接替换。<br>EX模式：类似于命令行模式，可以一次运行多个命令<br>vim的各种工作模式可以通过不同的键进行切换，用户统一使用ESC键返回到普通模式。</p>
+<h3 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h3><p>单个字符移动：<br>h:  向左移动<br>l:  向右移动<br>j:  向下移动<br>k:  向上移动<br>xh:  向左移动x个字符距离</p>
+<p>单词移动：<br>w:  将光标移动到下一个单词的开头<br>b:  将光标移动到前一个单词的开头<br>e:  将光标移动到下一个单词的词末<br>E:  移动到单词的结尾(忽略标点符号)<br>ge:  将光标移动到上一个单词的词末<br>2w:  指定移动的次数</p>
+<p>行移动：<br>$:  将光标移动到当前行的行尾<br>0:  将光标移动到当前行的行首<br>^:  将光标移动到当前行的第一个非空字符（行首和当前行非空字符不是一个位置）<br>2|:  移到当前行的第2列<br>fx:  将光标移动到当前行的第一个字符x上<br>3fx: 将光标移动到航前行的第3个字符x上<br>tx:   将光标移动到目标字符x的前一个字符上<br>fx和tx可以通过;和,进行重复移动，一个是正向重复，一个是反向重复<br>%:  用于符号间的移动，它会在一对()、[]、{}之间跳跃</p>
+<p>文本块移动：<br>(：  移到当前句子的开头<br>):  移到下一个句子的开头<br>{:  移到当前一段的开头<br>}:  移到下一段的开头<br>[[:  移到当前这一节的开头<br>]]:  移到下一节的开头</p>
+<p>在屏幕中移动<br>xG:  跳转到指定的第x行，G移动到文件按末尾，&#96;&#96;（2次单引号)返回到跳转前的位置<br>gg:  移动到文件开头<br>x%:  移动到文件中间，就使用50%<br>H:  移动到home<br>M:  移动到屏幕中间<br>L:  移动到一屏末尾<br>ctrl+G:  查看当前的位置状态</p>
+<h3 id="滚屏与跳转"><a href="#滚屏与跳转" class="headerlink" title="滚屏与跳转"></a>滚屏与跳转</h3><p>半屏滚动:  ctrl+u&#x2F;ctrl+d<br>全屏滚动:  ctrl+f&#x2F;ctrl+b</p>
+<p>定位光标的位置<br>zz:  将光标置于屏幕的中间<br>zt:  将光标移动到屏幕的顶部<br>zb:  将光标移动到屏幕的底部</p>
+<p>设置跳转标记<br>mx,my,mz设置三个位置<br><code>x,</code>y,&#96;z跳转到设置</p>
+<h3 id="文本插入操作"><a href="#文本插入操作" class="headerlink" title="文本插入操作"></a>文本插入操作</h3><p>i:  在当前光标的前面插入字符<br>a:  在当前光标的后面追加字符<br>o:  在当前光标的下一行行首插入字符<br>I:  在一行的开头添加文本<br>A:  在一行的结尾处添加文本<br>O:  在光标当前行的上一行插入文本<br>s:  删除当前光标处的字符并进入到插入模式<br>S:  删除光标所在处的行，并进入到插入模式<br>u:  撤销修改</p>
+<h3 id="文本删除操作"><a href="#文本删除操作" class="headerlink" title="文本删除操作"></a>文本删除操作</h3><p>字符删除<br>x:  删除当前光标所在处的字符<br>X:  删除当前光标左边的字符</p>
+<p>单词删除<br>dw:  删除一个单词(从光标处到空格)<br>daw:  无论光标在什么位置，删除光标所在的整个单词(包括空白字符)<br>diw:  删除整个单词文本，但是保留空格字符不删除<br>d2w:  删除从当前光标开始处的2个单词<br>d$:  删除从光标到一行末尾的整个文本<br>d0:  删除从光标到一行开头的所有单词<br>dl:  删除当前光标处的字符&#x3D;x<br>dh:  删除当前光标左边的字符&#x3D;X</p>
+<p>行删除<br>dd:  删除当前光标处的一整行&#x3D;D<br>5dd:  删除从光标开始处的5行代码<br>dgg:  删除从光标到文本开头<br>dG:  删除从光标到文本结尾</p>
+<p>行合并<br>J:  删除一个分行符，将当前行与下一行合并</p>
+<h3 id="多窗口操作"><a href="#多窗口操作" class="headerlink" title="多窗口操作"></a>多窗口操作</h3><p>分割窗口<br>    split&#x2F;vsplit filename<br>窗口间跳转<br>    ctrl+w hjkl<br>    ctrl+w w<br>移动窗口<br>    ctrl+w HJKL<br>调整窗口尺寸<br>    ctrl+w +&#x2F;-  调整窗口的高度<br>    ctrl+w &lt;&#x2F;&gt;  调整窗口的宽度<br>    ctrl+w &#x3D; 所有的窗口设置相同的尺寸<br>    :resize n将当前窗口尺寸调整为N行<br>关闭窗口<br>    close: 关闭一个窗口<br>    qall: 退出所有窗口<br>    qall!: 放弃修改，退出所有窗口<br>    wqall: 保存并退出所有窗口<br>    wall: 保存所有窗口</p>
+]]></content>
+      <tags>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Clash</title>
+    <url>/2023/04/29/clash/</url>
+    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。<br>Clash for Windows 是目前在 Windows 上唯一可用的图形化 Clash 分支。通过 Clash API 来配置和控制 Clash 核心程序，便于用户可视化操作和使用。<br><strong>支持的协议：</strong> Vmess, Shadowsocks, Snell , SOCKS5 , ShadowsocksR（在0.11.2版本加入）<br>【注】：ClashR for Windows 是第三方修改版本，已汉化。支持SSR协议，使用方法与原版相同。下载地址请看第3节。<br>ClashR(for Windows)（Whojave）项目地址：<a href="https://github.com/WhoJave/clash/releases">https://github.com/WhoJave/clash/releases</a></p>
+<h2 id="2-整理教程时的系统环境"><a href="#2-整理教程时的系统环境" class="headerlink" title="2. 整理教程时的系统环境"></a>2. 整理教程时的系统环境</h2><p>Windows 10 1903<br>Clash for Windows 0.8.0</p>
+<p>此教程针对手持 Clash 订阅链接的用户，</p>
+<p>V2ray订阅链接需先转换成Clash 订阅链接才能使用。查看 <a href="https://www.v2rayfree.eu.org/post/v2ray-to-clash/">订阅链接转换</a>教程。</p>
+<p>没有V2ray订阅链接？请移步 👉 <a href="https://www.v2rayfree.eu.org/post/free-v2ray/">https://www.v2rayfree.eu.org/post/free-v2ray/</a> 免费获取。</p>
+<h2 id="3-下载和安装-Clash-for-Windows"><a href="#3-下载和安装-Clash-for-Windows" class="headerlink" title="3. 下载和安装 Clash for Windows"></a>3. 下载和安装 Clash for Windows</h2><p>原版CFW的Github发布地址：<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">https://github.com/Fndroid/clash_for_windows_pkg/releases</a></p>
+<p>由于 Clash for Windows 没有任何有效的数字签名，因此 SmartScreen 可能会弹出提示，请点击「更多信息」，然后选择「仍要运行」。</p>
+<h2 id="4-如何汉化-Clash-for-Windows？"><a href="#4-如何汉化-Clash-for-Windows？" class="headerlink" title="4. 如何汉化 Clash for Windows？"></a>4. 如何汉化 Clash for Windows？</h2><p>汉化版CFW的Github发布地址：<a href="https://github.com/ender-zhao/Clash-for-Windows_Chinese">https://github.com/ender-zhao/Clash-for-Windows_Chinese</a></p>
+<p>对于部分新用户来说，纯英文的界面确实有一些不太友好，但是我们可以通过很简单的操作来自行汉化Clash for Windows。以下操作需要在Clash未在运行的前提下进行：</p>
+<p>如果是安装版的Clash，那么可以对着桌面图标单击右键，选择<code>打开文件所在位置</code>，即可找到clash主程序所在的<code>Clash for Windows</code>文件夹。然后双击进入<code>resources</code>文件夹，找到<code>app.asar</code>这个文件。</p>
+<p>将Clash for Windows汉化文件，替换掉原来的<code>app.asar</code>文件。</p>
+<h2 id="5-快速配置-Clash-for-Windows"><a href="#5-快速配置-Clash-for-Windows" class="headerlink" title="5. 快速配置 Clash for Windows"></a>5. 快速配置 Clash for Windows</h2><p>打开 Clash for Windows 应用程序，在左侧的标签页中选择「Profiles」， 在顶部输入您的 <code>Clash 订阅链接</code> ，然后点击「Download」按钮。</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash\2110331695.png"><img src="https://images-abx.vercel.app/2022/04/07/17d78462587a54d5e9d991628614be96-0652df.png" alt="1-订阅.png"></a></p>
+<p>Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息「Success!」，并且可以看到一个新增的配置文件：</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash\1262785329.png"><img src="https://images-abx.vercel.app/2022/04/07/844624698cb188e4e67e7602e941deb7-385e71.png" alt="2-订阅成功.png"></a></p>
+<p>点击新增的配置文件来切换到该配置，然后点击「Proxies」标签页来切换接入点，将顶部的出站模式选择为「Rule」。<br>此模式下你的网络访问请求将通过 Clash for Winows 进行<strong>分流处理</strong>。</p>
+<p>展开此折叠框以了解“分流”</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash\3643147102.png"><img src="https://images-abx.vercel.app/2022/04/07/c1c82a36141d4961b937e72a3f676e62-c76ea4.png" alt="3-选择模式.png"></a></p>
+<p>在「Proxy」策略组中选择所想要使用的接入点。Proxy 策略组是用于访问国际网络的默认策略，在不进行其他修改的情况下，所有国际网络的访问都通过 Proxy 策略组中选择的接入点进行。</p>
+<p>图中所示的其它策略组为本人出于自身实际需求自行配置的，请以自己的实际配置为准。</p>
+<h2 id="6-启动-Clash-for-Windows"><a href="#6-启动-Clash-for-Windows" class="headerlink" title="6. 启动 Clash for Windows"></a>6. 启动 Clash for Windows</h2><p>请务必确保开关是启用状态。<br>经博客聊天窗口统计，大量新手用户因未打开开关，导致连不上代理。</p>
+<p>返回到「General」部分，将「System Proxy」的开关更改为<strong>绿色</strong>状态即可开始使用。此外，建议将「Start with Windows」也更改为<strong>绿色</strong>来让 Clash for Windows 在开机时自动启动。</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash\1116731389.png"><img src="https://images-abx.vercel.app/2022/04/07/a1201f520557417f10eaa429f58fe2ee-d13b96.png" alt="4-打开代理.png"></a></p>
+<hr>
+<h4 id="本地拖拽YAML文件"><a href="#本地拖拽YAML文件" class="headerlink" title="本地拖拽YAML文件"></a>本地拖拽YAML文件</h4><p>在无法直接从软件里更新自己的订阅时，可以复制你的链接，直接粘贴到浏览器打开，然后复制全部的文本，在桌面新建一个文本文档（TXT格式），然后粘贴到文档里，保存后将文件的扩展名更改为 YAML 。然后直接拖拽到软件的 Proflies 界面。</p>
+<p>这是一种曲线救国的方法。此方法导入的配置无法进行更新，需要更新时请重新来一遍。</p>
+<p>简单的使用教程到这里就结束了 ，当前已经可以进行正常的科学上网。<br>有兴趣的话可以接着了解下边的内容。</p>
+<hr>
+<p>请注意<br>当配置文件存在错误时，无法在「Profiles」界面切换，请根据提示进行修改<br>若出现如图所示的情况，说明您未点击刚才新增的配置文件，请返回「Profiles」点击选择对应的配置文件。</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash/571262170.png"><img src="https://images-abx.vercel.app/2022/04/07/2c4427af7cbfea6cfacf931113e4e413-49c4aa.png" alt="9-配置错误示例.png"></a></p>
+<h2 id="7-其它知识"><a href="#7-其它知识" class="headerlink" title="7. 其它知识"></a>7. 其它知识</h2><h3 id="7-1-Clash-for-Windows-界面简介"><a href="#7-1-Clash-for-Windows-界面简介" class="headerlink" title="7.1 Clash for Windows 界面简介"></a>7.1 Clash for Windows 界面简介</h3><p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash\884528405.png"><img src="https://images-abx.vercel.app/2022/04/07/71aae3627a227210b26de37c57a4a6a3-1719cd.png" alt="8-界面简介.png"></a></p>
+<ul>
+<li><pre><code>General（常规）
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  ：</span><br><span class="line"></span><br><span class="line">  - `Port`、`Socks Port`；分别为 HTTP、SOCKS 代理端口，点击终端图案可以打开一个配置了代理的命令行窗口，点击端口数字可以复制该命令；</span><br><span class="line">  - `Allow LAN`：启用局域网共享代理功能；‘</span><br><span class="line">  - `Log Level`：日志等级；</span><br><span class="line">  - `Home Directory`：点击下方路径直达 `C:\Users\用户名\.config\clash` 文件夹；</span><br><span class="line">  - `GeoIP Database`：点击下方日期可更新 GeoIP 数据库；</span><br><span class="line">  - `UWP Loopback` ：可以用来使 UWP 应用解除回环代理限制；</span><br><span class="line">  - `Tap Device` ：安装 cfw-tap 网卡，可用于处理不遵循系统代理的软件（实际启动 tap 模式需要更改配置文件）；</span><br><span class="line">  - `General YML`：编辑 `config.yml` 文件，可用于配置部分 **General** 页面内容；</span><br><span class="line">  - `Dark Theme`：控制暗色模式；</span><br><span class="line">  - `System Proxy`：启用系统代理；</span><br><span class="line">  - `Start with Windows`：设置开机自启；</span><br><span class="line"></span><br><span class="line">- `Proxies（代理）`：选择代理方式（Global - 全局、Rule - 规则、Direct - 直连）及策略组节点选择；</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  Profiles（配置管理）</span><br></pre></td></tr></table></figure>
+
+：
+
+- 用来下载远端配置文件和创建本地副本，且可在多个配置文件间切换；
+- 对配置进行节点、策略组和规则的管理（添加节点、策略组和规则在各自编辑界面选择 `Add`, 调整策略组顺序、节点顺序及策略组节点使用拖拽的方式）；
+</code></pre>
+</li>
+<li><p><code>Logs（日志）</code>：显示当前请求命中规则类型和策略；</p>
+</li>
+<li><p><code>Connections (连接)</code>: 显示当前的 TCP 连接，可对某个具体连接执行关闭操作；</p>
+</li>
+<li><p><code>Feedback（反馈）</code>：显示软件、作者相关信息，内含捐赠码，欢迎打赏 <a href="https://github.com/Fndroid">Fndroid</a> 大佬以感谢和支持开发。</p>
+</li>
+</ul>
+<h3 id="7-2-UWP-应用"><a href="#7-2-UWP-应用" class="headerlink" title="7.2 UWP 应用"></a>7.2 UWP 应用</h3><p>如需使用 UWP 应用，还需要点击「EnableLoopback」来为 UWP 应用启用本地回环代理。在 Windows 10 中，微软出于安全性考虑，不允许 UWP 应用访问本地回环地址，这导致 UWP 应用无法直接使用代理，需要其他工具来破除这一限制。</p>
+<p>Clash for Windows 集成了 EnableLoopback 程序，只需要点击「UWP Loopback」就可以使用。</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash/1411832154.png"><img src="https://images-abx.vercel.app/2022/04/07/4275f07728d218798b3a8e75dc3198a6-dae985.png" alt="5-UWP应用.png"></a></p>
+<p>打开后一般直接点击 Exempt All 勾选所有 UWP 应用，然后点击 Save Changes 即可。请注意安装新的 UWP 应用后需要重新设置。</p>
+<h3 id="7-3-更新-GeoIP-数据库"><a href="#7-3-更新-GeoIP-数据库" class="headerlink" title="7.3 更新 GeoIP 数据库"></a>7.3 更新 GeoIP 数据库</h3><p>在「General」界面点击「GeoIP Database」来更新 MaxMind 的 GeoIP2 Lite 数据库。此数据库用于 Geo 规则和 DNS 判断，在更新软件时，GeoIP 库会同步更新，一般不需要频繁刷新。</p>
+<p><a href="file:///D:/\Users\liubo\Documents\md\images\Clash/3353354913.png"><img src="https://images-abx.vercel.app/2022/04/07/dbc4402eb5faece296596c44bdf23af8-257d2d.png" alt="7-更新IP库.png"></a></p>
+<h3 id="7-4-TAP-设备"><a href="#7-4-TAP-设备" class="headerlink" title="7.4 TAP 设备"></a>7.4 TAP 设备</h3><h4 id="7-4-1-介绍"><a href="#7-4-1-介绍" class="headerlink" title="7.4.1 介绍"></a>7.4.1 介绍</h4><p>Clash for Windows 中提供了一个新的 TAP 模式。对于不遵循系统代理的软件，TAP 模式可以接管其流量并交由 CFW 处理。</p>
+<h4 id="7-4-2-CFW0-9-0及以后版本"><a href="#7-4-2-CFW0-9-0及以后版本" class="headerlink" title="7.4.2 CFW0.9.0及以后版本"></a>7.4.2 CFW0.9.0及以后版本</h4><h5 id="安装TAP网卡"><a href="#安装TAP网卡" class="headerlink" title="安装TAP网卡"></a>安装TAP网卡</h5><p>点击 <code>General</code>页面下的 <code>TAP Device</code>以安装 TAP 网卡，此网卡将用于接管系统流量，安装完成可在系统网络连接中看到一张新的虚拟网卡 <code>cfw-tap</code>。</p>
+<h5 id="启动TAP模式"><a href="#启动TAP模式" class="headerlink" title="启动TAP模式"></a>启动TAP模式</h5><p>在配置文件中，添加以下字段(包含fake-ip)：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">dns:</span></span><br><span class="line">   <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">   <span class="attr">enhanced-mode:</span> <span class="string">fake-ip</span> <span class="comment"># 或 redir-host</span></span><br><span class="line">   <span class="attr">listen:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:53</span></span><br><span class="line">   <span class="attr">nameserver:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br><span class="line"><span class="attr">experimental:</span></span><br><span class="line">  <span class="attr">interface-name:</span> <span class="string">WLAN</span> <span class="comment"># WLAN 为物理网卡名</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h5><p>此版本可以使用interface-name属性避免回环，所以可以不使用fake-ip模式，并且支持了UDP及IP类请求</p>
+<h4 id="7-4-3-CFW0-8-11及以前版本"><a href="#7-4-3-CFW0-8-11及以前版本" class="headerlink" title="7.4.3 CFW0.8.11及以前版本"></a>7.4.3 CFW0.8.11及以前版本</h4><h5 id="安装TAP网卡-1"><a href="#安装TAP网卡-1" class="headerlink" title="安装TAP网卡"></a>安装TAP网卡</h5><p>点击 <code>General</code>页面下的 <code>TAP Device</code>以安装 TAP 网卡，此网卡将用于接管系统流量，安装完成可在系统网络连接中看到一张新的虚拟网卡 <code>cfw-tap</code>。</p>
+<h5 id="启动TAP模式-1"><a href="#启动TAP模式-1" class="headerlink" title="启动TAP模式"></a>启动TAP模式</h5><p>在配置文件中，添加以下字段(包含fake-ip)：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">dns:</span></span><br><span class="line">   <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">   <span class="attr">enhanced-mode:</span> <span class="string">fake-ip</span></span><br><span class="line">   <span class="attr">listen:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:53</span></span><br><span class="line">   <span class="attr">nameserver:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="工作原理-1"><a href="#工作原理-1" class="headerlink" title="工作原理"></a>工作原理</h5><p>为避免循环，Clash for Windows 只会将Fake IP段的请求发往TAP，所以必须要在配置文件中指定 <code>enhanced-mode: fake-ip</code>。<br>Clash for Windows 会将系统 DNS 修改为 Clash 本地 DNS 服务器，获取到 Fake IP 的请求再发送至 TAP 网卡，这样设置可以让大部分软件能够正常工作，但如果请求直接使用IP地址而非域名，则不会被发往 TAP ，例如 Telegram 。</p>
+<h4 id="7-4-4-CFW0-9-6版本"><a href="#7-4-4-CFW0-9-6版本" class="headerlink" title="7.4.4 CFW0.9.6版本"></a>7.4.4 CFW0.9.6版本</h4><p>此版本调整了TAP逻辑，DNS在此版本要求监听在0.0.0.0:53<br>同时，此版本已经将TAP安装DNS改为10.0.0.1了，Office不能联网的问题可以参考这个修改配置文件解决：<br><a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/466#issuecomment-614716133">https://github.com/Fndroid/clash_for_windows_pkg/issues/466#issuecomment-614716133</a></p>
+<h3 id="7-5-URL-Scheme"><a href="#7-5-URL-Scheme" class="headerlink" title="7.5 URL Scheme"></a>7.5 URL Scheme</h3><p>CFW支持使用URL Scheme快速导入配置文件：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">clash://install-config?url=&lt;encoded</span> <span class="string">URI&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-6-便携模式"><a href="#7-6-便携模式" class="headerlink" title="7.6 便携模式"></a>7.6 便携模式</h3><p><strong>版本要求：</strong><br>从0.4.0开始，Clash for Windows提供简单的便携支持</p>
+<p><strong>使用方法：</strong><br>进入Release页面下载最新后缀为 <code>.zip或.7z</code>的免安装包并解压至希望安装的目录下（如移动硬盘、U盘等）</p>
+<p><strong>配置文件：</strong><br>进入 <code>安装目录/resources/static/files/</code>目录中进行如下操作：</p>
+<ol>
+<li>新建config.yml（文件可以为空，但一定要创建）</li>
+<li>重新启动Clash for Windows<br>此时文件夹目录中还有其他文件及文件夹，请勿对其修改</li>
+</ol>
+<p><strong>启动及更新：</strong><br>安装目录下Clash for Windows.exe即为软件入口，点击启动即可<br>如需更新Clash for Windows，只需下载对应zip安装包，解压并覆盖至软件目录即可</p>
+<h2 id="8-常见问题"><a href="#8-常见问题" class="headerlink" title="8. 常见问题"></a>8. 常见问题</h2><h3 id="8-1-界面显示不全，无法操作"><a href="#8-1-界面显示不全，无法操作" class="headerlink" title="8.1 界面显示不全，无法操作"></a>8.1 界面显示不全，无法操作</h3><p>删除 Home Directory 下 config.yml 文件并重启软件 如错误依旧，打开 logs 文件夹，选取最新日志文件分析</p>
+<h3 id="8-2-升级后提示-xxx-not-found"><a href="#8-2-升级后提示-xxx-not-found" class="headerlink" title="8.2 升级后提示 xxx not found"></a>8.2 升级后提示 xxx not found</h3><p>0.6.0 版本升级后，Clash 核心增加对规则部分的校验，如果策略不存在，则不再忽略而提示错误，根据错误信息检查配置文件并进行排除即可</p>
+<h3 id="8-3-系统代理自动关闭或打开"><a href="#8-3-系统代理自动关闭或打开" class="headerlink" title="8.3 系统代理自动关闭或打开"></a>8.3 系统代理自动关闭或打开</h3><p>清除系统代理设置 如无法解决，则检查是否有其他安全&#x2F;代理软件修改代理设置</p>
+<p><strong>如果装有QQ输入法或者QQ音乐等腾讯系软件，建议卸载或者禁止开机自动启动，此类毒瘤软件会更改系统代理设置。</strong><br><strong>浏览器里有代理类插件的话（包括Switch Omgega、各种VPN、集装箱等），请尝试删除代理插件，然后重启电脑。</strong></p>
+<p>详见：<a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/312">https://github.com/Fndroid/clash_for_windows_pkg/issues/312</a></p>
+<h3 id="8-4-无法访问网页"><a href="#8-4-无法访问网页" class="headerlink" title="8.4 无法访问网页"></a>8.4 无法访问网页</h3><p>0.6.0 版本升级后，Clash 核心使用自定义 DNS 设置进行服务器及直连域名的解析，所以当日志中出现大量 All DNS Failed! 日志时，请重新设置合适的 DNS</p>
+<p>如果不使用 TAP ，建议将 DNS 关闭</p>
+<h3 id="8-5-TAP-无法安装"><a href="#8-5-TAP-无法安装" class="headerlink" title="8.5 TAP 无法安装"></a>8.5 TAP 无法安装</h3><p>检查是否已经安装其他 TAP 设备，若是，可以先在设备管理器中将其删除后重试</p>
+<h3 id="8-6-安装0-7-4-之后版本首次使用时不显示接入点"><a href="#8-6-安装0-7-4-之后版本首次使用时不显示接入点" class="headerlink" title="8.6 安装0.7.4 之后版本首次使用时不显示接入点"></a>8.6 安装0.7.4 之后版本首次使用时不显示接入点</h3><p>新版 Clash for Windows 在下载配置文件后并不会默认切换到新的配置文件（与旧版本不同），否则仍然使用的是默认配置文件。</p>
+<h3 id="8-7-替换配置文件后不显示接入点"><a href="#8-7-替换配置文件后不显示接入点" class="headerlink" title="8.7 替换配置文件后不显示接入点"></a>8.7 替换配置文件后不显示接入点</h3><p>这可能是因为 <code>Clash for Windows</code> 的基础配置文件 <code>config.yml</code> 被修改。要解决此问题，点击 <code>Clash for Windows General</code> 标签页上的 <code>Home Directory</code> 进入 <code>Clash for Windows</code> 配置目录，然后删除 <code>config.yml</code> 文件（不是 <code>config.yaml</code>），退出并重启打开 <code>Clash for Windows</code>，重新进行配置步骤。</p>
+<h3 id="8-8-系统代理异常关闭"><a href="#8-8-系统代理异常关闭" class="headerlink" title="8.8 系统代理异常关闭"></a>8.8 系统代理异常关闭</h3><p><strong>解决办法：</strong></p>
+<p>① 打开注册表编辑器（可以自行百度如何打开）</p>
+<p>② 进入HKEY_CURRENT_USERSoftwareMicrosoftWindowsCurrentVersionInternet SettingsConnections</p>
+<p>③ 选择文件 - 导出，输入文件名备份当前分支</p>
+<p>④ 删除所有条目</p>
+<p>⑤ 重新开关System Proxy</p>
+<p>⑥ 刷新注册表编辑器，查看条目是否重新出现，若否，选择文件 - 导入恢复设置</p>
+<p><strong>如果装有QQ输入法或者QQ音乐等腾讯系软件，建议卸载或者禁止开机自动启动，此类毒瘤软件会更改系统代理设置。</strong><br><strong>浏览器里有代理类插件的话（包括Switch Omgega、各种VPN、集装箱等），请尝试删除代理插件，然后重启电脑。</strong></p>
+<p>详见：<a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/312">https://github.com/Fndroid/clash_for_windows_pkg/issues/312</a></p>
+<h3 id="8-9-TAP无法正常工作"><a href="#8-9-TAP无法正常工作" class="headerlink" title="8.9 TAP无法正常工作"></a>8.9 TAP无法正常工作</h3><p>首先，重新启动CFW，且勿使用管理员权限启动。<br>然后重新在 <code>General</code>中点击 <code>Install TAP Device</code>。</p>
+<h2 id="9-GeoIP相关问题"><a href="#9-GeoIP相关问题" class="headerlink" title="9. GeoIP相关问题"></a>9. GeoIP相关问题</h2><p>若遇到首页和log中有类似于下边这样的提示：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">time=&quot;2020-01-08T03:23:08Z&quot;</span> <span class="string">level=fatal</span> </span><br><span class="line"><span class="string">msg=&quot;Can&#x27;t</span> <span class="attr">load mmdb: error opening database:</span> <span class="string">invalid</span> <span class="string">MaxMind</span> <span class="string">DB</span> <span class="string">file&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>则说明 country.mmdb 文件有问题，请下载正常的 country.mmdb 文件，然后移动到 <code>.config\clash</code> 文件夹进行替换。</p>
+<p>如果找不到该文件夹，可以在 CFW 首页点击 <code>Open Folder</code> 直达。</p>
+<p>点击右边按钮下载country.mmdb 文件（下载后请自行解压）</p>
+<h2 id="10-常见的订阅错误报告"><a href="#10-常见的订阅错误报告" class="headerlink" title="10. 常见的订阅错误报告"></a>10. 常见的订阅错误报告</h2><p>① 如果遇到以下提示：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Invalid Config:yaml:</span></span><br><span class="line"><span class="string">unmarshal</span> <span class="string">errors:line</span> <span class="number">1</span><span class="string">:cannot</span> <span class="string">unmarshal</span> <span class="type">!!str</span> <span class="string">c3M6Ly9...</span></span><br></pre></td></tr></table></figure>
+
+<p>说明用错了订阅链接，请检查自己是不是复制错了或者多了空格之类的。</p>
+<p>没有 Clash 订阅链接的可以使用<a href="https://bianyuan.xyz/">订阅转换API</a>来转换订阅链接。</p>
+<p>② 如果遇到此类提示：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">Invalid Config:</span></span><br><span class="line"><span class="string">Value</span> <span class="string">for</span> <span class="string">&#x27;Proxy&#x27;</span> <span class="string">is</span> <span class="string">invalid:Unexpected</span> <span class="literal">null</span> <span class="string">or</span> <span class="string">empty</span></span><br></pre></td></tr></table></figure>
+
+<p>说明你还没买套餐，或者订阅为空。请联系你所在机场的管理员。</p>
+<p>③ 如果遇到此提示：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">...cipher</span> <span class="string">not</span> <span class="string">supported</span></span><br></pre></td></tr></table></figure>
+
+<p>说明你使用的加密算法不被Clash支持。请更换加密算法。推荐：<code>ChaCha20-ietf-poly1305</code></p>
+<h2 id="11-Clash-家族"><a href="#11-Clash-家族" class="headerlink" title="11. Clash 家族"></a>11. Clash 家族</h2><p>每一款都好用！吹爆!</p>
+<ul>
+<li><p>Clash for Windows <a href="https://www.v2rayfree.eu.org/post/clash-for-windows-tutorial/">https://www.v2rayfree.eu.org/post/clash-for-windows-tutorial/</a></p>
+</li>
+<li><p>Clash for Android ：<a href="https://www.v2rayfree.eu.org/post/clash-for-android-tutorial/">https://www.v2rayfree.eu.org/post/clash-for-android-tutorial/</a></p>
+</li>
+<li><p>ClashX (Mac) ：<a href="https://www.v2rayfree.eu.org/post/clash-for-mac-tutorial/">https://www.v2rayfree.eu.org/post/clash-for-mac-tutorial/</a></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github图床介绍</title>
+    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
+<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
+<p>上传即可或者搭配picgo使用</p>
+<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>“玫瑰太贵了，⽤野草纪念我吧，满地都是，生生不息”</title>
     <url>/2023/04/30/%E2%80%9C%E7%8E%AB%E7%91%B0%E5%A4%AA%E8%B4%B5%E4%BA%86%EF%BC%8C%E2%BD%A4%E9%87%8E%E8%8D%89%E7%BA%AA%E5%BF%B5%E6%88%91%E5%90%A7%EF%BC%8C%E6%BB%A1%E5%9C%B0%E9%83%BD%E6%98%AF%EF%BC%8C%E7%94%9F%E7%94%9F%E4%B8%8D%E6%81%AF%E2%80%9D/</url>
     <content><![CDATA[<p>以前村里得给我糖，给我弄木剑，带我放牛的老人一个接一个的走了，破旧的瓦房却还立在那里。<br>——戏法界小徒</p>
@@ -15,6 +418,18 @@
 <p>我一个人的时候从不觉得孤独，只有在和他人相处中的时候才感到孤独。<br>——甘城w</p>
 <p>玫瑰太贵了，用野草纪念我吧，满地都是，生生不息。<br>——瓷爹家的九渊兔子</p>
 <p>你永远有资格做梦，但不应该一直在梦里沉溺。<br>——鱼狼咬咬</p>
+]]></content>
+      <tags>
+        <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“长大后才发现，语文课本里面全是刀！！！”</title>
+    <url>/2024/05/18/%E2%80%9C%E9%95%BF%E5%A4%A7%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%EF%BC%8C%E8%AF%AD%E6%96%87%E8%AF%BE%E6%9C%AC%E9%87%8C%E9%9D%A2%E5%85%A8%E6%98%AF%E5%88%80%EF%BC%81%EF%BC%81%EF%BC%81%E2%80%9D/</url>
+    <content><![CDATA[<iframe src="https://player.bilibili.com/player.html?aid=395451815&amp;bvid=BV1Co4y1r7Kr&amp;cid=1039074407&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(76, 73, 72); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Lato, Roboto, &quot;PingFang SC&quot;, &quot;Microsoft JhengHei&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(255, 255, 255, 0.5); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+<hr>
+<p><em><strong>1.在山的那边,依然是山。山那边的山啊,铁青着脸，给我的幻想打了一个零分!妈妈,那个海呢?</strong></em><br><em><strong>《在山的那边》在山的那边,是用信念凝成的海。</strong></em><br><em><strong>2.燕子去了,有再来的时候;杨柳枯了,有再青的时候；桃花谢了,有再开的时候。但是,聪明的,你告诉我,我们的日子为什么一去不复返呢?</strong></em><br><em><strong>《匆匆》</strong></em><br><em><strong>3.真的,一直到现在,我实在再没有吃到那夜似的好豆,也不再看到那夜似的好戏了。</strong></em><br><em><strong>鲁迅《社戏》</strong></em><br><em><strong>4.他那么老,好像生来只为了做我的爷爷，可我从未认真想过他有一天会死，他的一生我也知道的很少，他说过一些,我记不大起来，就像他爱我很多,我只是喊他声爷爷。</strong></em><br><em><strong>王海桑《爷爷是个老头》</strong></em><br><em><strong>5.“她出去了,就再也没有回来”</strong></em><br><em><strong>“我那个有病的儿子和未成年的女儿”</strong></em><br><em><strong>我懂得母亲没有说完的话。妹妹也懂。我俩在一块儿,要好好儿活……</strong></em><br><em><strong>《秋天的怀念》史铁生</strong></em><br><em><strong>6.爸爸以前和你一样小,现在再也不能回到你这么小的童年了。有一天你会长大,你也会像外祖母一样老,有一天你度过了你的所有时间,也会像外祖母永远不能回来了。</strong></em><br><em><strong>《和时间赛跑》林清玄</strong></em><br><em><strong>7.走过院子,看那垂落的夹竹桃,我默念着:爸爸的花儿落了,我已不再是小孩子。</strong></em><br><em><strong>选自《城南旧事》里的最后一篇《爸爸的花儿落了》</strong></em><br><em><strong>8.凡是人间的灾难,无论落到谁头上,谁都得受着,而且都受得了,只要他不死。至于死,就更是一件容易的事了。</strong></em><br><em><strong>《落难的王子》周国平在女儿出生夭折时的悲痛情况下写的</strong></em><br><em><strong>9.每个人都在自己的生命中,孤独地过冬。我们帮不了谁。我的一小炉火,对这个贫寒一生的人来说,显然杯水车薪。他的寒冷太巨大。</strong></em><br><em><strong>刘亮程《一个人的村庄》</strong></em><br><em><strong>10.这时候最热闹的,要数树上的蝉声与水里的蛙声；但热闹是他们的,我什么也没有。</strong></em><br><em><strong>朱自清《荷塘月色》</strong></em><br><em><strong>11.在奥斯维辛,没有新鲜东西可供报道。这里阳光明媚,绿树成阴,在集中营大门附近,孩子们在追逐游戏。</strong></em><br><em><strong>《奥斯维辛没有什么新闻》</strong></em><br><em><strong>12.也许多少年后在某个地方,我将轻声叹息将往事回顾,一片树林里分出两条路。而我选择了人迹更少的一条,从此决定了我一生的道路。</strong></em><br><em><strong>未选择的路(弗罗斯特作诗歌)没有对错,只有少数多数</strong></em></p>
 ]]></content>
       <tags>
         <tag>美句</tag>
@@ -61,31 +476,316 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2024/04/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="vim是什么？"><a href="#vim是什么？" class="headerlink" title="vim是什么？"></a>vim是什么？</h2><p>vim是Linux环境下一款功能强大、高度可定制的文本编辑工具，类似于Windows下面的source insight、sublime、notepad。VI是visual interface的缩写，即可视化接口。vim 即 vi IMproved，在 vi 的基础上做了很多改进，如：增加了多级撤销、多窗口操作、崩溃后也可以恢复、增加了稳定性、关键字自动补全、上下文自动补全等功能。</p>
-<h2 id="vim的工作模式"><a href="#vim的工作模式" class="headerlink" title="vim的工作模式"></a>vim的工作模式</h2><p>vim一般有6种工作模式。</p>
-<p>普通模式：使用vim打开一个文件时默认模式，也叫命令模式，允许用户通过各种命令浏览代码、滚屏等操作。<br>插入模式：也可以叫做编辑模式，在普通模式下敲击 i 、a 或 o 就进入插入模式，允许用户通过键盘输入、编辑。<br>命令行模式：在普通模式下，先输入冒号:，接着输入命令，就可以通过配置命令对vim进行配置了，如改变颜色主题、显示行号等，这些配置命令也可以保存到&#x2F;etc&#x2F;vim&#x2F;vimrc配置文件中，每次打开默认配置执行。<br>可视化模式：在普通模式下敲击前盘上的 v 键，就进入可视化模式，然后移动光标就可以选中一块文本，常用来完成文本的复制、粘贴、删除等操作。<br>替换模式：如果我们想修改某个字符，不需要先进入插入模式，删除，然后再输入新的字符，直接在普通模式下，敲击R键就可以直接替换。<br>EX模式：类似于命令行模式，可以一次运行多个命令<br>vim的各种工作模式可以通过不同的键进行切换，用户统一使用ESC键返回到普通模式。</p>
-<h3 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h3><p>单个字符移动：<br>h:  向左移动<br>l:  向右移动<br>j:  向下移动<br>k:  向上移动<br>xh:  向左移动x个字符距离</p>
-<p>单词移动：<br>w:  将光标移动到下一个单词的开头<br>b:  将光标移动到前一个单词的开头<br>e:  将光标移动到下一个单词的词末<br>E:  移动到单词的结尾(忽略标点符号)<br>ge:  将光标移动到上一个单词的词末<br>2w:  指定移动的次数</p>
-<p>行移动：<br>$:  将光标移动到当前行的行尾<br>0:  将光标移动到当前行的行首<br>^:  将光标移动到当前行的第一个非空字符（行首和当前行非空字符不是一个位置）<br>2|:  移到当前行的第2列<br>fx:  将光标移动到当前行的第一个字符x上<br>3fx: 将光标移动到航前行的第3个字符x上<br>tx:   将光标移动到目标字符x的前一个字符上<br>fx和tx可以通过;和,进行重复移动，一个是正向重复，一个是反向重复<br>%:  用于符号间的移动，它会在一对()、[]、{}之间跳跃</p>
-<p>文本块移动：<br>(：  移到当前句子的开头<br>):  移到下一个句子的开头<br>{:  移到当前一段的开头<br>}:  移到下一段的开头<br>[[:  移到当前这一节的开头<br>]]:  移到下一节的开头</p>
-<p>在屏幕中移动<br>xG:  跳转到指定的第x行，G移动到文件按末尾，&#96;&#96;（2次单引号)返回到跳转前的位置<br>gg:  移动到文件开头<br>x%:  移动到文件中间，就使用50%<br>H:  移动到home<br>M:  移动到屏幕中间<br>L:  移动到一屏末尾<br>ctrl+G:  查看当前的位置状态</p>
-<h3 id="滚屏与跳转"><a href="#滚屏与跳转" class="headerlink" title="滚屏与跳转"></a>滚屏与跳转</h3><p>半屏滚动:  ctrl+u&#x2F;ctrl+d<br>全屏滚动:  ctrl+f&#x2F;ctrl+b</p>
-<p>定位光标的位置<br>zz:  将光标置于屏幕的中间<br>zt:  将光标移动到屏幕的顶部<br>zb:  将光标移动到屏幕的底部</p>
-<p>设置跳转标记<br>mx,my,mz设置三个位置<br><code>x,</code>y,&#96;z跳转到设置</p>
-<h3 id="文本插入操作"><a href="#文本插入操作" class="headerlink" title="文本插入操作"></a>文本插入操作</h3><p>i:  在当前光标的前面插入字符<br>a:  在当前光标的后面追加字符<br>o:  在当前光标的下一行行首插入字符<br>I:  在一行的开头添加文本<br>A:  在一行的结尾处添加文本<br>O:  在光标当前行的上一行插入文本<br>s:  删除当前光标处的字符并进入到插入模式<br>S:  删除光标所在处的行，并进入到插入模式<br>u:  撤销修改</p>
-<h3 id="文本删除操作"><a href="#文本删除操作" class="headerlink" title="文本删除操作"></a>文本删除操作</h3><p>字符删除<br>x:  删除当前光标所在处的字符<br>X:  删除当前光标左边的字符</p>
-<p>单词删除<br>dw:  删除一个单词(从光标处到空格)<br>daw:  无论光标在什么位置，删除光标所在的整个单词(包括空白字符)<br>diw:  删除整个单词文本，但是保留空格字符不删除<br>d2w:  删除从当前光标开始处的2个单词<br>d$:  删除从光标到一行末尾的整个文本<br>d0:  删除从光标到一行开头的所有单词<br>dl:  删除当前光标处的字符&#x3D;x<br>dh:  删除当前光标左边的字符&#x3D;X</p>
-<p>行删除<br>dd:  删除当前光标处的一整行&#x3D;D<br>5dd:  删除从光标开始处的5行代码<br>dgg:  删除从光标到文本开头<br>dG:  删除从光标到文本结尾</p>
-<p>行合并<br>J:  删除一个分行符，将当前行与下一行合并</p>
-<h3 id="多窗口操作"><a href="#多窗口操作" class="headerlink" title="多窗口操作"></a>多窗口操作</h3><p>分割窗口<br>    split&#x2F;vsplit filename<br>窗口间跳转<br>    ctrl+w hjkl<br>    ctrl+w w<br>移动窗口<br>    ctrl+w HJKL<br>调整窗口尺寸<br>    ctrl+w +&#x2F;-  调整窗口的高度<br>    ctrl+w &lt;&#x2F;&gt;  调整窗口的宽度<br>    ctrl+w &#x3D; 所有的窗口设置相同的尺寸<br>    :resize n将当前窗口尺寸调整为N行<br>关闭窗口<br>    close: 关闭一个窗口<br>    qall: 退出所有窗口<br>    qall!: 放弃修改，退出所有窗口<br>    wqall: 保存并退出所有窗口<br>    wall: 保存所有窗口</p>
+    <title>免费部署 Alist 目录列表程序</title>
+    <url>/2024/05/18/%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%20Alist%20%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>[note type&#x3D;”primary flat no-icon”]写的比较仓促，有什么不足的地方，还请大家多多指点。评论区欢饮留言～[&#x2F;note]</p>
+<p>[note type&#x3D;”info flat no-icon”]</p>
+<ol>
+<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例</li>
+<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
+<li>错误指正后，v3 版本也能正常部署使用了</li>
+<li>2023&#x2F;3&#x2F;16 恢复图片链接，原深海图床 CDN 因未知原因无法访问，已把仅剩的缩略图迁移至去不图床，图片可能会比较模糊[&#x2F;note]</li>
+</ol>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Alist 是一款支持多种存储的目录文件列表程序，后端基于 <code>gin</code>，前端使用 <code>react</code></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413013a46fe1.png"><img src="https://bu.dusays.com/2023/03/16/6413013a46fe1.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413010ad3013.png"><img src="https://bu.dusays.com/2023/03/16/6413010ad3013.png" alt="img"></a></p>
+<p><a href="https://alist-doc.nn.ci/">查看文档</a><a href="https://github.com/Xhofe/alist">查看源码</a></p>
+<hr>
+<h1 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h1><ol>
+<li>一个 Github 账号</li>
+<li>Fork 一份 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库</li>
+<li>一个 render 账号</li>
+<li>一个数据库，可选 <code>sqlite3</code>、<code>mysql</code>、<code>postgres</code></li>
+</ol>
+<hr>
+<h2 id="render-账号"><a href="#render-账号" class="headerlink" title="render 账号"></a>render 账号</h2><p>点击进入 <a href="https://render.com/">render</a> 官网<br>点击右上角 <code>GET STARTED</code>, 使用 Github 进行注册或登录<br>按照网页的提示完成注册后进入控制面板</p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301642afa0.png"><img src="https://bu.dusays.com/2023/03/16/641301642afa0.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130188a77c9.png"><img src="https://bu.dusays.com/2023/03/16/64130188a77c9.png" alt="img"></a></p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>点击进入 <a href="https://www.elephantsql.com/">elephantsql</a> 官网<br>点击位于页面中央的 <code>Get a managed database today</code>，选择海龟样子的 <code>Free</code> 计划<br>会进入登陆页面，可以使用 Github 进行授权登陆，然后信息随便填一下就行<br>进入控制面板后创建数据库，计划记得选择 <code>Free</code><br>这样我们就获得了一个免费的 <code>postgres</code> 类型的数据库</p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301d4e12ac.png"><img src="https://bu.dusays.com/2023/03/16/641301d4e12ac.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301efa6837.png"><img src="https://bu.dusays.com/2023/03/16/641301efa6837.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/641302067ba2a.png"><img src="https://bu.dusays.com/2023/03/16/641302067ba2a.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130228cfac7.png"><img src="https://bu.dusays.com/2023/03/16/64130228cfac7.png" alt="img"></a></p>
+<p>数据库的信息最好记下来备用，等一会要填</p>
+<p>截图中的数据库在文章发布后已被删除</p>
+<hr>
+<h1 id="部署-Alist"><a href="#部署-Alist" class="headerlink" title="部署 Alist"></a>部署 Alist</h1><h2 id="拉取仓库"><a href="#拉取仓库" class="headerlink" title="拉取仓库"></a>拉取仓库</h2><p>进入 <a href="https://dashboard.render.com/">render</a> 的控制台，点击 <code>New+</code>，选择 <code>Web Service</code></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130252835b9.png"><img src="https://bu.dusays.com/2023/03/16/64130252835b9.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130276670f6.png"><img src="https://bu.dusays.com/2023/03/16/64130276670f6.png" alt="img"></a></p>
+<p>选择刚刚 Fork 的 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库<br>点击，进入部署页面，自己取个名字，然后先什么都不要动，往下拉，拉到最底下</p>
+<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p>在左下角 <code>Create Web Service</code> 的按钮上边，有个 <code>Advanced</code> 按钮，点击<br>然后在点击 <code>Add Environment Variable</code> 开始添加环境变量<br>这边可以参考我之前在 Alist 社区的对话</p>
+<p>[<a href="https://www.zxma.top/posts/438365eb/#referto_[1]">1]</a><a href="https://github.com/alist-org/alist/discussions/931">koyeb 怎么连接数据库</a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413029066de4.png"><img src="https://bu.dusays.com/2023/03/16/6413029066de4.png" alt="img"></a></p>
+<p>参考表格对应填写变量参数，只要把 <code>DB_HOST</code>，<code>DB_NAME</code>，<code>DB_PASS</code>，<code>DB_USER</code> 给改成自己的就可以了</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据库对应</th>
+<th align="center">变量参数</th>
+<th align="center">示例参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Server</td>
+<td align="center">DB_HOST</td>
+<td align="center">queenie.db.elephantsql.com</td>
+</tr>
+<tr>
+<td align="center">User &amp; Default database</td>
+<td align="center">DB_NAME</td>
+<td align="center">bkqgx</td>
+</tr>
+<tr>
+<td align="center">Password</td>
+<td align="center">DB_PASS</td>
+<td align="center">5CqBjEVZWdaaad2333aadadadadN3Clo</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_PORT</td>
+<td align="center">5432</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_SSL_MODE</td>
+<td align="center">disable</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_TYPE</td>
+<td align="center">postgres</td>
+</tr>
+<tr>
+<td align="center">User &amp; Default database</td>
+<td align="center">DB_USER</td>
+<td align="center">bkqgx</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">PORT</td>
+<td align="center">8080</td>
+</tr>
+</tbody></table>
+<p>填完检查一下，一共 8 个变量，好了就可以点击 <code>Create Web Service</code> 开始部署了，大概 1~2 分钟可以看到成果</p>
+<ol>
+<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例，供大家参考↓↓↓</li>
+<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
+<li>错误指正后，v3 版本也能正常部署使用了</li>
+</ol>
+<h2 id="环境变量示例"><a href="#环境变量示例" class="headerlink" title="环境变量示例"></a>环境变量示例</h2><ul>
+<li>参数示例</li>
+<li>文字示例</li>
+<li>关于 sslmode</li>
+</ul>
+<p>DB_SSL_MODE 这个变量我也不是很清楚，有错误的可以评论区指正，根据官方文档来看</p>
+<ol>
+<li>sqlite3 数据库：请忽略该参数</li>
+<li>mysql 数据库：参数有 <code>true</code>, <code>false</code>, <code>skip-verify</code>, <code>preferred</code>, 选一个填</li>
+<li>postgres 数据库：参数有 <code>disable</code>，<code>allow</code>，<code>prefer</code>，<code>require</code>，<code>verify-full</code>，选一个填</li>
+</ol>
+<p>我用的 postgres 数据库填的是 <code>disable</code>，就是没用 SSL</p>
+<h1 id="评论区疑难解答"><a href="#评论区疑难解答" class="headerlink" title="评论区疑难解答"></a>评论区疑难解答</h1><ul>
+<li>账密未输出</li>
+<li>保持唤醒</li>
+</ul>
+<p>如果你是已连接数据库了，那么你的密码应该已经写入数据库了，所以他不会再显示了，需要你自己去数据库看用户名和密码<br>如果你使用的是 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库<br>前往你自己的 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库，点击侧边栏的 <code>Browser</code> 之后输入 <code>SELECT * FROM &quot;public&quot;.&quot;x_users&quot; LIMIT 100</code><br>会有一行 <code>username</code> 名为 <code>admin</code> 的，后面就是密码，<code>admin</code> 就是用户名<br><a href="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png"><img src="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png" alt="1670238084349-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
+<p>或者点 <code>Table queries</code>，再点 <code>x_user</code> 也是可以的<br><a href="https://bu.dusays.com/2022/12/05/638dcfaa95816.png"><img src="https://bu.dusays.com/2022/12/05/638dcfaa95816.png" alt="1670238119405-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
+<hr>
+<h1 id="示例站点"><a href="#示例站点" class="headerlink" title="示例站点"></a>示例站点</h1><p>免费部署 Alist 目录列表程序</p>
+<p><a href="https://www.zxma.top/posts/438365eb/">https://www.zxma.top/posts/438365eb/</a></p>
 ]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
   </entry>
   <entry>
-    <title>图片测试</title>
-    <url>/2024/04/30/%E6%97%A0%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="https://article.biliimg.com/bfs/article/e0de8c0d1fffda31b5d4bce47871cccace19f326.jpg"></p>
+    <title>Replit博客【已失效，留帖以纪念】</title>
+    <url>/2024/05/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p><a href="https://blogmusea.repl.co/">Demo</a></p>
+<h1 id="Replit搭建博客"><a href="#Replit搭建博客" class="headerlink" title="Replit搭建博客"></a>Replit搭建博客</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>Replit账号1枚<br>注册replit账号<br>打开官网注册账号<br><a href="https://replit.com/">https://replit.com/</a></p>
+<p><img src="https://i0.hdslb.com/bfs/album/6cfb0fde3eb749c3decff131ff84bb1079119fce.png" alt="img"></p>
+<p><img src="https://i0.hdslb.com/bfs/album/b06bd50bd82cf08555b8cffbc1a1ea33b7106b45.png" alt="img"></p>
+<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>选择Teams，好处是项目可以无限制创建，体现在三级域名一个账号就可以创建很多。</p>
+<p><img src="https://i0.hdslb.com/bfs/album/9b61db7f4048d7275306524fa8a5ec51a802958c.png" alt="img"></p>
+<p>选择New Education Organization</p>
+<p><img src="https://i0.hdslb.com/bfs/album/445cc7fc6f46372b5b040aba8dcb81562f9caf54.png" alt="img"></p>
+<p>勾选</p>
+<p>[note type&#x3D;”default modern no-icon”]I confirm that I am a teacher or administrator at an institution or organization of the above type.[&#x2F;note]</p>
+<p><img src="https://i0.hdslb.com/bfs/album/9c183fd4ef20fc456558bda0809a169db06cbacc.png" alt="img"></p>
+<p>起个名字就可以create New Education Organization了</p>
+<p><img src="https://i0.hdslb.com/bfs/album/f87d9e33221f64e9578286f2a596a2f0ea97f77e.png" alt="img"></p>
+<p>Create team</p>
+<p><img src="https://i0.hdslb.com/bfs/album/c32cdffb730d8266703b6f2728dee02bc40af9d6.png" alt="img"></p>
+<p>在创建的team中再创建project</p>
+<p><img src="https://i0.hdslb.com/bfs/album/98d1ec1eb1491f63775fd1c0274aa1941a1d1348.png" alt="img"></p>
+<p>在第一个文本框中输入bash，选择Bash。</p>
+<p>右侧文本框内填写项目的名字，它也是最终博客网址的域名一部分。</p>
+<p><img src="https://i0.hdslb.com/bfs/album/63607e5b1a2ed6d863242a42955bf70c043f9582.png" alt="img"></p>
+<p>单击Create创建项目后，会自动跳转到项目编辑页面，若没有跳转则自行点击刚刚创建的项目进入该页面。</p>
+<h2 id="克隆博客程序"><a href="#克隆博客程序" class="headerlink" title="克隆博客程序"></a>克隆博客程序</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Sayafx/typechonreplit.git &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/* ./ &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/.[^<span class="type">.</span>]* ./ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> *~ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> typechonreplit</span><br></pre></td></tr></table></figure>
+
+<p>在右侧的Console或Shell中粘贴，回车</p>
+<p><img src="https://i0.hdslb.com/bfs/album/69145a78ac79eb1c895873fbbfbf0ba38889c0e2.png" alt="img"></p>
+<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
+<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sh main.sh</span><br></pre></td></tr></table></figure>
+
+<p>回车。</p>
+<p><a href="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png"><img src="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png" alt="img"></a></p>
+<p>等待输出结束，博客程序克隆完毕。</p>
+<h2 id="安装博客"><a href="#安装博客" class="headerlink" title="安装博客"></a>安装博客</h2><p>等待输出完毕，出现如图所示结果时，点击绿色的Run按钮。</p>
+<p><a href="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png"><img src="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png" alt="img"></a></p>
+<p>点击小窗口右上角第二个图标，博客安装程序将在新窗口打开（必要）</p>
+<p>如果不在新窗口打开将无法安装</p>
+<p><a href="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png"><img src="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png" alt="img"></a></p>
+<p>根据提示点击下一步</p>
+<h3 id="数据库选择"><a href="#数据库选择" class="headerlink" title="数据库选择"></a>数据库选择</h3><p>数据库选择SQLite原生函数适配器，点击确认开始安装</p>
+<p><a href="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png"><img src="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png" alt="img"></a></p>
+<h3 id="设置管理员账号"><a href="#设置管理员账号" class="headerlink" title="设置管理员账号"></a>设置管理员账号</h3><p><a href="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png"><img src="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png" alt="img"></a></p>
+<h2 id="安装完毕"><a href="#安装完毕" class="headerlink" title="安装完毕"></a>安装完毕</h2><p><a href="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png"><img src="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png" alt="img"></a></p>
+<h1 id="博客配置建议"><a href="#博客配置建议" class="headerlink" title="博客配置建议"></a>博客配置建议</h1><h2 id="推荐使用Typora-bilibili图床"><a href="#推荐使用Typora-bilibili图床" class="headerlink" title="推荐使用Typora+bilibili图床"></a><strong>推荐使用Typora+bilibili图床</strong></h2><p>哔哩哔哩图片上传, Typora插件，实现图片粘贴即可上传到哔哩哔哩，并替换链接</p>
+<h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><ul>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main.exe.zip">Windows</a></li>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main">Mac</a></li>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main-linux">Linux</a></li>
+</ul>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/xlzy520/typora-plugin-bilibili">typora-plugin-bilibilitypora</a></p>
+<h3 id="typora免费版下载"><a href="#typora免费版下载" class="headerlink" title="typora免费版下载"></a>typora免费版下载</h3><p><a href="https://musea.repl.co/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98/Typora">alist</a></p>
+<h3 id="获取B站SESSDATA"><a href="#获取B站SESSDATA" class="headerlink" title="获取B站SESSDATA"></a>获取B站SESSDATA</h3><ol>
+<li><p>登录<a href="https://www.bilibili.com/">B站</a></p>
+</li>
+<li><p>按<code>F12</code>打开控制台</p>
+</li>
+<li><p>找到<code>SESSDATA</code>复制即可<a href="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png"><img src="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png" alt="img"></a></p>
+</li>
+<li><p>获取csrf: 登录哔哩哔哩→F12打开控制→Application→Cookies→bili_jct</p>
+</li>
+<li><p>进入Typora设置，选择图像Tab，插入图片时选择<strong>上传图片</strong>，然后将<strong>插件的绝对路径</strong>填入<strong>命令</strong>。如下地方，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> # Mac、Linux</span><br><span class="line">/Users/xxx/bilibili/typora-plugin-bilibili-macos token=你的SESSDATA csrf=你的bili_jct</span><br><span class="line"># Windows</span><br><span class="line">D:\Downloads\typora-plugin-bilibili-win.exe token=你的SESSDATA csrf=你的bili_jct</span><br></pre></td></tr></table></figure>
+
+<p><strong>其中很重要的后面的 <code>token=你的SESSDATA</code> ,没有这句的话，无法上传成功，如果发现上传失败，那应该就是SESSDATA过期了，需要手动更新</strong></p>
+</li>
+</ol>
+<h2 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h2><p>例如原图： <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png</a></p>
+<p>规定高宽，质量压缩: <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c</a></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Url</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原图</td>
+<td>baseURL&#x2F;1.jpg</td>
+</tr>
+<tr>
+<td>原分辨率，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@1e_1c.jpg">1.jpg@1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定宽，高度自适应，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_1e_1c.jpg">1.jpg@104w_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定高，宽度自适应，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104h_1e_1c.jpg">1.jpg@104h_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定高宽，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.jpg">1.jpg@104w_104h_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>原分辨率，webp格式(占用最小)</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
+</tr>
+<tr>
+<td>规定高度，webp格式(占用最小)</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
+</tr>
+</tbody></table>
+<p>格式：(图像原链接)@(\d+[whsepqoc]_?)*(.(|webp|gif|png|jpg|jpeg))?$</p>
+<ul>
+<li>w:[1, 9223372036854775807] (width，图像宽度)</li>
+<li>h:[1, 9223372036854775807] (height，图像高度)</li>
+<li>s:[1, 9223372036854775807] (作用未知)</li>
+<li>e:[0,2] (resize，0:保留比例取其小，1:保留比例取其大，2:不保留原比例，不与c混用)</li>
+<li>p:[1,1000] (默认100，放大倍数，不与c混用)</li>
+<li>q:[1,100] (quality，默认75，图像质量)</li>
+<li>o:[0,1] (作用未知)</li>
+<li>c:[0,1] (clip，0:默认，1:裁剪)</li>
+<li>webp,png,jpeg,gif(不加则保留原格式)</li>
+<li>不区分大小写，相同的参数后面覆盖前面</li>
+<li>计算后的实际w<em>h不能大于原w</em>h，否则wh参数失效</li>
+</ul>
+<h4 id="解决B站防盗链（403）"><a href="#解决B站防盗链（403）" class="headerlink" title="解决B站防盗链（403）"></a>解决B站防盗链（403）</h4><blockquote>
+<p>B站开启了防盗链，利用的是HTTP的Referer属性做判断。如果Referer是他白名单之外的网站，就会返回403</p>
+</blockquote>
+<h4 id="全站图片使用"><a href="#全站图片使用" class="headerlink" title="全站图片使用"></a>全站图片使用</h4><p>在外观-设置外观里找到<code>自定义head标签内位置内容</code>，设置如下标志，那么全站资源引用都不会携带referrer</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="新窗口打开"><a href="#新窗口打开" class="headerlink" title="新窗口打开"></a>新窗口打开</h4><p>主要设置<code>rel=&quot;noreferrer&quot;</code>，使用<code>window.open</code>打开的话是会默认携带<code>referrer</code>的，第一次还是会403</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">&quot;noreferrer&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="内置插件和主题请自行启用"><a href="#内置插件和主题请自行启用" class="headerlink" title="内置插件和主题请自行启用"></a>内置插件和主题请自行启用</h2><h3 id="Snow插件推荐设置"><a href="#Snow插件推荐设置" class="headerlink" title="Snow插件推荐设置"></a>Snow插件推荐设置</h3><p>雪花数量：200</p>
+<p>雪花大小：1</p>
+<p>雪花距离：225</p>
+<p>雪花速度：0.5</p>
+<p>雪花偏移0.1</p>
+<p>雪花透明度：0.5</p>
+<p>背景颜色：（空着不填）</p>
+<p><a href="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png"><img src="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png" alt="img"></a></p>
+<h2 id="登录界面改字"><a href="#登录界面改字" class="headerlink" title="登录界面改字"></a>登录界面改字</h2><p>login.php第16行，删除class&#x3D;“xxxx”引号里的内容</p>
+<p>接着按需更改其他内容，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://syblog.repl.co/&quot;</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>HMuSeaB’s Blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加网站监控"><a href="#添加网站监控" class="headerlink" title="添加网站监控"></a>添加网站监控</h2><p>Replit项目30分钟内无流量会休眠，因此可以使用网站监控让网站一直有流量。</p>
+<p>推荐一个常用的（需科学上网）</p>
+<p><a href="https://uptimerobot.com/">https://uptimerobot.com/</a></p>
 ]]></content>
+      <tags>
+        <tag>回忆</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图床</title>
+    <url>/2024/05/18/%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img src="https://article.biliimg.com/bfs/article/bcff52035697efb13c04b953787cd5a47ec2c4ee.jpg" alt="67184958_p0"></p>
+<p><img src="https://article.biliimg.com/bfs/article/467792f13def895b57d0747460b71779fb99cf49.jpg" alt="67243791_p0"></p>
+]]></content>
+      <tags>
+        <tag>破万法！！！</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电影中那些无法超越的唯美画面与经典台词</title>
+    <url>/2024/05/18/%E7%94%B5%E5%BD%B1%E4%B8%AD%E9%82%A3%E4%BA%9B%E6%97%A0%E6%B3%95%E8%B6%85%E8%B6%8A%E7%9A%84%E5%94%AF%E7%BE%8E%E7%94%BB%E9%9D%A2%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%8F%B0%E8%AF%8D/</url>
+    <content><![CDATA[<p>《返老还童》</p>
+<p>有时候，我们的人生会与别人的碰撞，只是我们不知道，无论是意外还是注定，我们都无法改变。</p>
+<p>有些人生来就注定可以坐在河边，有些人生来就注定被闪电击中，有些人生来就注定懂音乐，有些人生来就注定是艺术家，有些人生来就注定是游泳健将，有些人生来就注定懂纽扣生意，有些人生来就注定知道莎士比亚，有些人生来就注定做母亲，有些人生来就注定是舞者，</p>
+<p>《情人》</p>
+<p>你看我，我只有十五岁半。</p>
+<p>我在想为什么没有永恒，多遗憾啊。有些事情是永垂不朽的</p>
+<p>《怦然心动》</p>
+<p>他用那双眼睛看着我，那双重又闪亮迷人的双眼，我知道布莱斯•洛斯奇，还在等待着我的初吻。</p>
+<p>《绿皮书》</p>
+<p>尚恩，如果教授问起工作的事，跟他说抱歉，我要去找个女孩，威尔。</p>
+<p>我父亲说过，不管你做什么，都要做到极致，上班就认真工作，笑就尽情大笑，吃东西时，就像是最后一餐那样去享受</p>
+<p>《超脱》</p>
+<p>我们都有各自的难题，有些时候情况好点，有些时候我们不能给予别人，足够的空间</p>
+<p>《少年派的奇幻漂流》</p>
+<p>我仅剩下一具凡身在苦苦支撑，一切仿佛都静止了，都变得支离破碎，分不清黑夜白天，也分不清梦境现实。</p>
+<p>上帝啊，基督需要您，他在等待您的教诲，仁慈的主，慈悲的主啊</p>
+<p>有时上帝看似抛弃了我，但他都看在眼里，看似对我的苦难漠不关心，但他都看在眼里，当我彻底放弃希望的时候，他赐予了我安宁，并喻示我重新启程</p>
+<p>《肖申克的救赎》</p>
+<p>他窝在凉阴下，脸上挂着奇异微笑。</p>
+<p>《星际穿越》</p>
+<p>也许她现在正在准备去睡一个长觉，</p>
+<p>《钢琴师》</p>
+<p>我不知道该怎么感谢你，（感谢上帝，不用谢我，他让我们死里逃生，这就是为什么我们要信仰他。</p>
+]]></content>
+      <tags>
+        <tag>美句</tag>
+      </tags>
   </entry>
 </search>
