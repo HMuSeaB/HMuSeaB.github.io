@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>API基本概念</title>
-    <url>/2023/04/15/API/</url>
-    <content><![CDATA[<h2 id="1、API是什么"><a href="#1、API是什么" class="headerlink" title="1、API是什么"></a>1、API是什么</h2><p>API全称 Application Programming Interface，<strong>应用程序接口</strong>。</p>
-<p>可以通过我之前的回答了解一下</p>
-<h2 id="如何通俗解释API。"><a href="#如何通俗解释API。" class="headerlink" title="如何通俗解释API。"></a><a href="https://www.zhihu.com/question/21430743/answer/777048322">如何通俗解释API</a>。</h2><p>通常搜索在API的解释都是一组定义、程序及协议的集合，但对于不懂技术的人来说，这或许比较难以理解，接下来用抽象的故事来描述一下API。</p>
-<p>假如老王开了一家银行，银行呢只有仓库和<a href="https://www.zhihu.com/search?q=%E8%AE%B0%E8%B4%A6%E6%9C%AC&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">记账本</a>，顾客来了之后将金钱放在仓库里并在记帐本上记帐。老王很快就意识到一个问题，这个存钱的人打不开仓库、不认识字、故意写错存放金额的问题。于是老王雇佣了一个员工大旺，并给银行加了一个柜台，这样顾客就可以直接把金钱交给大旺，大旺记录好之后给顾客收据，并将金币存放在仓库中。</p>
-<p><img src="https://picx.zhimg.com/80/v2-a5f5dd85498288fc8aee9607eb553ed5_720w.webp?source=1940ef5c" alt="img"></p>
-<p>在这里老王雇佣了大旺来完成记帐存钱取钱等繁琐的任务，这节省了用户的时间，也提高了银行工作的效率。如果我们把这具体的事情抽象化，那代替大旺的角色就是<strong>API</strong>，很大的节省了开发人员的负担，提高了效率。</p>
-<p>柜台将银行分为两个区域：客户在前台办理业务，后台进行存款取款等操作。在柜台，前台和后台进行了交互，双方不能越界<strong>。</strong>从API的属于来说，柜台就是术语中的API的<strong>接口</strong>，在这里完成交互。</p>
-<p>假如顾客在存钱的时候，问大旺今天的股票情况，但大旺的工作只负责存钱取钱等流程，对顾客问的完全不了解。这里就要说一下API中的另一个术语<strong>协议</strong>，规定了双方在交互时候的一系列规则，双方都要遵守协议来完成。</p>
-<p>如果顾客是一个英国人，而大旺他不会英语呢怎么办呢，这时候需要一个懂英语的同事来帮助大旺工作了。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-b71d855c38ecddff68cbf4024a6788ea_720w.webp?source=1940ef5c" alt="img"></p>
-<p>在 API 术语里面， <strong>API 端点</strong>指的是同一个接口中提供特定功能子集的<a href="https://www.zhihu.com/search?q=%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">服务提供者</a>。大旺和丽丽都是API中的端点，他们的工作不一样而已。</p>
-<p>总结一下，<strong>API就是能够轻松实现和其他软件组件的交互。API接口就是实现不同组件之间交互地方，API协议就是规定不同组件交互时候的规则，API端点是在同一接口提高不同的功能。</strong></p>
-<p>现在回头来看百科给出的API的定义来说，就容易理解了。</p>
-<p>一般是指一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。通俗来讲<strong>API就是可以轻松实现和其他软件的交互。</strong></p>
-<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子:"></a>举个栗子:</h2><p>胖虎是一个程序猿，老板要求他写一个火车票查询的软件，胖虎想提高工作效率，于是在写火车票查询的代码中，引入了<a href="https://link.zhihu.com/?target=http://www.binstd.com/">BinSTD平台</a>的火车票查询的接口，这样子就可以轻松实现功能。</p>
-<h1 id="2、SDK是什么"><a href="#2、SDK是什么" class="headerlink" title="2、SDK是什么"></a><strong>2、SDK是什么</strong></h1><p>SDK全称software development kit，<strong>软件开发工具包</strong>。</p>
-<p>一般都是一些<a href="https://www.zhihu.com/search?q=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">软件工程师</a>为特定的软件包、软件框架、硬件平台、<a href="https://www.zhihu.com/search?q=%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">操作系统</a>等建立应用软件时的开发工具的集合。</p>
-<p>通俗来讲<strong>就是第三方服务商提供的实现产品软件某项功能的工具包。</strong></p>
-<h2 id="再来举个栗子："><a href="#再来举个栗子：" class="headerlink" title="再来举个栗子："></a>再来举个栗子：</h2><p>老板让胖虎来完成BinSTD网站上的业务功能，胖虎觉得开发周期长，不利于公司产品上线，偶然机会了解到了华为云平台上的相关功能，于是在基于华为云SDK下，通过编码调用华为云API,就可以访问华为云的资源和数据。</p>
-<h1 id="3、API和SDK的区别"><a href="#3、API和SDK的区别" class="headerlink" title="3、API和SDK的区别"></a><strong>3、API和SDK的区别</strong></h1><ul>
-<li>API是一个函数，有其特定的功能；而SDK是一个很多功能函数的集合体，一个工具包。</li>
-<li>API是数据接口，SDK相当于开发集成工具环境，要在SDK的环境下来调用API。</li>
-<li>API接口对接过程中需要的环境需要自己提供，SDK不仅提供<a href="https://www.zhihu.com/search?q=%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">开发环境</a>，还提供很多API。</li>
-<li>简单功能调用，API调用方便快捷；复杂功能调用，SDK功能齐全。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>NotionNext-快速免费搭建网站</title>
     <url>/2023/04/30/NotionNext-%E5%BF%AB%E9%80%9F%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<h1 id="NotionNext-快速免费搭建网站"><a href="#NotionNext-快速免费搭建网站" class="headerlink" title="NotionNext-快速免费搭建网站"></a>NotionNext-快速免费搭建网站</h1><p>📔折腾博客多年，尝试过 WordPress、Hexo等各种博客系统。然而在写作过程中最重要的应该是养成内容持续输出的习惯；软件平台仅仅是一个辅助，反复折腾搭建系统显得本末倒置。 是否有一种方案，能让“<strong>坚持笔记</strong>”和“<strong>博客分享</strong>”得到完美结合呢？ 直到Notion笔记本的出现，一切都有了可能！</p>
@@ -103,6 +70,39 @@
 
 <p>JavaScript</p>
 <p>Copy<a href="https://tangly1024.com/article/luo-yong-hao-patriotic"></a></p>
+]]></content>
+      <tags>
+        <tag>博客相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>API基本概念</title>
+    <url>/2023/04/15/API/</url>
+    <content><![CDATA[<h2 id="1、API是什么"><a href="#1、API是什么" class="headerlink" title="1、API是什么"></a>1、API是什么</h2><p>API全称 Application Programming Interface，<strong>应用程序接口</strong>。</p>
+<p>可以通过我之前的回答了解一下</p>
+<h2 id="如何通俗解释API。"><a href="#如何通俗解释API。" class="headerlink" title="如何通俗解释API。"></a><a href="https://www.zhihu.com/question/21430743/answer/777048322">如何通俗解释API</a>。</h2><p>通常搜索在API的解释都是一组定义、程序及协议的集合，但对于不懂技术的人来说，这或许比较难以理解，接下来用抽象的故事来描述一下API。</p>
+<p>假如老王开了一家银行，银行呢只有仓库和<a href="https://www.zhihu.com/search?q=%E8%AE%B0%E8%B4%A6%E6%9C%AC&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">记账本</a>，顾客来了之后将金钱放在仓库里并在记帐本上记帐。老王很快就意识到一个问题，这个存钱的人打不开仓库、不认识字、故意写错存放金额的问题。于是老王雇佣了一个员工大旺，并给银行加了一个柜台，这样顾客就可以直接把金钱交给大旺，大旺记录好之后给顾客收据，并将金币存放在仓库中。</p>
+<p><img src="https://picx.zhimg.com/80/v2-a5f5dd85498288fc8aee9607eb553ed5_720w.webp?source=1940ef5c" alt="img"></p>
+<p>在这里老王雇佣了大旺来完成记帐存钱取钱等繁琐的任务，这节省了用户的时间，也提高了银行工作的效率。如果我们把这具体的事情抽象化，那代替大旺的角色就是<strong>API</strong>，很大的节省了开发人员的负担，提高了效率。</p>
+<p>柜台将银行分为两个区域：客户在前台办理业务，后台进行存款取款等操作。在柜台，前台和后台进行了交互，双方不能越界<strong>。</strong>从API的属于来说，柜台就是术语中的API的<strong>接口</strong>，在这里完成交互。</p>
+<p>假如顾客在存钱的时候，问大旺今天的股票情况，但大旺的工作只负责存钱取钱等流程，对顾客问的完全不了解。这里就要说一下API中的另一个术语<strong>协议</strong>，规定了双方在交互时候的一系列规则，双方都要遵守协议来完成。</p>
+<p>如果顾客是一个英国人，而大旺他不会英语呢怎么办呢，这时候需要一个懂英语的同事来帮助大旺工作了。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-b71d855c38ecddff68cbf4024a6788ea_720w.webp?source=1940ef5c" alt="img"></p>
+<p>在 API 术语里面， <strong>API 端点</strong>指的是同一个接口中提供特定功能子集的<a href="https://www.zhihu.com/search?q=%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:777048322%7D">服务提供者</a>。大旺和丽丽都是API中的端点，他们的工作不一样而已。</p>
+<p>总结一下，<strong>API就是能够轻松实现和其他软件组件的交互。API接口就是实现不同组件之间交互地方，API协议就是规定不同组件交互时候的规则，API端点是在同一接口提高不同的功能。</strong></p>
+<p>现在回头来看百科给出的API的定义来说，就容易理解了。</p>
+<p>一般是指一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。通俗来讲<strong>API就是可以轻松实现和其他软件的交互。</strong></p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子:"></a>举个栗子:</h2><p>胖虎是一个程序猿，老板要求他写一个火车票查询的软件，胖虎想提高工作效率，于是在写火车票查询的代码中，引入了<a href="https://link.zhihu.com/?target=http://www.binstd.com/">BinSTD平台</a>的火车票查询的接口，这样子就可以轻松实现功能。</p>
+<h1 id="2、SDK是什么"><a href="#2、SDK是什么" class="headerlink" title="2、SDK是什么"></a><strong>2、SDK是什么</strong></h1><p>SDK全称software development kit，<strong>软件开发工具包</strong>。</p>
+<p>一般都是一些<a href="https://www.zhihu.com/search?q=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">软件工程师</a>为特定的软件包、软件框架、硬件平台、<a href="https://www.zhihu.com/search?q=%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">操作系统</a>等建立应用软件时的开发工具的集合。</p>
+<p>通俗来讲<strong>就是第三方服务商提供的实现产品软件某项功能的工具包。</strong></p>
+<h2 id="再来举个栗子："><a href="#再来举个栗子：" class="headerlink" title="再来举个栗子："></a>再来举个栗子：</h2><p>老板让胖虎来完成BinSTD网站上的业务功能，胖虎觉得开发周期长，不利于公司产品上线，偶然机会了解到了华为云平台上的相关功能，于是在基于华为云SDK下，通过编码调用华为云API,就可以访问华为云的资源和数据。</p>
+<h1 id="3、API和SDK的区别"><a href="#3、API和SDK的区别" class="headerlink" title="3、API和SDK的区别"></a><strong>3、API和SDK的区别</strong></h1><ul>
+<li>API是一个函数，有其特定的功能；而SDK是一个很多功能函数的集合体，一个工具包。</li>
+<li>API是数据接口，SDK相当于开发集成工具环境，要在SDK的环境下来调用API。</li>
+<li>API接口对接过程中需要的环境需要自己提供，SDK不仅提供<a href="https://www.zhihu.com/search?q=%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:796137064%7D">开发环境</a>，还提供很多API。</li>
+<li>简单功能调用，API调用方便快捷；复杂功能调用，SDK功能齐全。</li>
+</ul>
 ]]></content>
       <tags>
         <tag>知识</tag>
@@ -400,13 +400,15 @@
 <h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
 ]]></content>
       <tags>
-        <tag>知识</tag>
+        <tag>博客相关</tag>
       </tags>
   </entry>
   <entry>
     <title>“玫瑰太贵了，⽤野草纪念我吧，满地都是，生生不息”</title>
     <url>/2023/04/30/%E2%80%9C%E7%8E%AB%E7%91%B0%E5%A4%AA%E8%B4%B5%E4%BA%86%EF%BC%8C%E2%BD%A4%E9%87%8E%E8%8D%89%E7%BA%AA%E5%BF%B5%E6%88%91%E5%90%A7%EF%BC%8C%E6%BB%A1%E5%9C%B0%E9%83%BD%E6%98%AF%EF%BC%8C%E7%94%9F%E7%94%9F%E4%B8%8D%E6%81%AF%E2%80%9D/</url>
-    <content><![CDATA[<p>以前村里得给我糖，给我弄木剑，带我放牛的老人一个接一个的走了，破旧的瓦房却还立在那里。<br>——戏法界小徒</p>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p>以前村里得给我糖，给我弄木剑，带我放牛的老人一个接一个的走了，破旧的瓦房却还立在那里。<br>——戏法界小徒</p>
 <p>能哭出来的都很好了，哭过了继续为生活而努力，<br>有的人连崩溃都是静悄悄的。<br>——国家啥时候发对象啊</p>
 <p>有的人一生老实善良，从没干过坏事，却仍然被生活狠狠的掐住脖子。<br>——她走了去照顾他了</p>
 <p>人间的面,吃碗就多碗的滋味，见一面就多一面的回忆。<br>——我要瘦到90斤啊啊啊啊啊啊啊啊</p>
@@ -428,8 +430,84 @@
     <url>/2023/04/30/%E2%80%9C%E9%95%BF%E5%A4%A7%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%EF%BC%8C%E8%AF%AD%E6%96%87%E8%AF%BE%E6%9C%AC%E9%87%8C%E9%9D%A2%E5%85%A8%E6%98%AF%E5%88%80%EF%BC%81%EF%BC%81%EF%BC%81%E2%80%9D/</url>
     <content><![CDATA[<iframe src="https://player.bilibili.com/player.html?aid=395451815&amp;bvid=BV1Co4y1r7Kr&amp;cid=1039074407&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(76, 73, 72); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Lato, Roboto, &quot;PingFang SC&quot;, &quot;Microsoft JhengHei&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(255, 255, 255, 0.5); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
 
+
+
 <hr>
 <p><em><strong>1.在山的那边,依然是山。山那边的山啊,铁青着脸，给我的幻想打了一个零分!妈妈,那个海呢?</strong></em><br><em><strong>《在山的那边》在山的那边,是用信念凝成的海。</strong></em><br><em><strong>2.燕子去了,有再来的时候;杨柳枯了,有再青的时候；桃花谢了,有再开的时候。但是,聪明的,你告诉我,我们的日子为什么一去不复返呢?</strong></em><br><em><strong>《匆匆》</strong></em><br><em><strong>3.真的,一直到现在,我实在再没有吃到那夜似的好豆,也不再看到那夜似的好戏了。</strong></em><br><em><strong>鲁迅《社戏》</strong></em><br><em><strong>4.他那么老,好像生来只为了做我的爷爷，可我从未认真想过他有一天会死，他的一生我也知道的很少，他说过一些,我记不大起来，就像他爱我很多,我只是喊他声爷爷。</strong></em><br><em><strong>王海桑《爷爷是个老头》</strong></em><br><em><strong>5.“她出去了,就再也没有回来”</strong></em><br><em><strong>“我那个有病的儿子和未成年的女儿”</strong></em><br><em><strong>我懂得母亲没有说完的话。妹妹也懂。我俩在一块儿,要好好儿活……</strong></em><br><em><strong>《秋天的怀念》史铁生</strong></em><br><em><strong>6.爸爸以前和你一样小,现在再也不能回到你这么小的童年了。有一天你会长大,你也会像外祖母一样老,有一天你度过了你的所有时间,也会像外祖母永远不能回来了。</strong></em><br><em><strong>《和时间赛跑》林清玄</strong></em><br><em><strong>7.走过院子,看那垂落的夹竹桃,我默念着:爸爸的花儿落了,我已不再是小孩子。</strong></em><br><em><strong>选自《城南旧事》里的最后一篇《爸爸的花儿落了》</strong></em><br><em><strong>8.凡是人间的灾难,无论落到谁头上,谁都得受着,而且都受得了,只要他不死。至于死,就更是一件容易的事了。</strong></em><br><em><strong>《落难的王子》周国平在女儿出生夭折时的悲痛情况下写的</strong></em><br><em><strong>9.每个人都在自己的生命中,孤独地过冬。我们帮不了谁。我的一小炉火,对这个贫寒一生的人来说,显然杯水车薪。他的寒冷太巨大。</strong></em><br><em><strong>刘亮程《一个人的村庄》</strong></em><br><em><strong>10.这时候最热闹的,要数树上的蝉声与水里的蛙声；但热闹是他们的,我什么也没有。</strong></em><br><em><strong>朱自清《荷塘月色》</strong></em><br><em><strong>11.在奥斯维辛,没有新鲜东西可供报道。这里阳光明媚,绿树成阴,在集中营大门附近,孩子们在追逐游戏。</strong></em><br><em><strong>《奥斯维辛没有什么新闻》</strong></em><br><em><strong>12.也许多少年后在某个地方,我将轻声叹息将往事回顾,一片树林里分出两条路。而我选择了人迹更少的一条,从此决定了我一生的道路。</strong></em><br><em><strong>未选择的路(弗罗斯特作诗歌)没有对错,只有少数多数</strong></em></p>
+
+  <a href="https://www.bilibili.com/video/BV1Co4y1r7Kr/" class="bilibili_box" id="BV1Co4y1r7Kr"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1Co4y1r7Kr')
+      fetch('https://api.320.ink/api/b?id=BV1Co4y1r7Kr').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>03:08</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  ]]></content>
+      <tags>
+        <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】</title>
+    <url>/2023/04/30/%E3%80%8A%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85%E3%80%8B%E7%A5%9E%E7%BA%A7%E5%8F%B0%E8%AF%8D%E5%86%99%E8%BF%9B%E4%BD%9C%E6%96%87%EF%BC%81%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4%EF%BC%8C%E7%9B%B8%E8%A7%81%E6%89%8D%E6%9C%89%E6%84%8F%E4%B9%89%E3%80%90%E7%BA%B8%E6%9D%A1%E7%B4%A0%E6%9D%90%E3%80%91/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】"><a href="#《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】" class="headerlink" title="《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】"></a>《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】</h1><p>1.我深知生命如蜉蝣，深知死亡总是如影随形，但此时哪怕再多一年，再多一日，再多一时也好，我辈仍愿人生得续。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：人生苦短，享受当下等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/925a920fe00b1bc5a2a30f33015c659689f18e2e.jpg@640w_!web-note.webp" alt="img"></p>
+<p>2.意义总是难以追寻的，是我们相遇过，奋力呐喊着，却吼不破命运的壳。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：人生价值，奋发进取等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/043d334bb68d7460942d2a2dbde0044c9e56e471.jpg@640w_!web-note.webp" alt="img"></p>
+<p>3.双向奔赴，相见才有意义。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：理智追星，尊重他人权利等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/bf20a749f94ff17cc9004bbf1893cb5005c323d6.jpg@640w_!web-note.webp" alt="img"></p>
+<p>4.人心的重量，会使土地平静下来。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：人与自然，生态文明等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/5276da4fc82d3eadf080c44bd432229b040904b6.jpg@640w_!web-note.webp" alt="img"></p>
+<p>5.这世界上唯一能够陪你走出伤痛的人，永远只有自己。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：成长，积极乐观，坚强不屈等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/0ebb5509273bb635dbc5cfbc813bf466c0960702.jpg@640w_!web-note.webp" alt="img"></p>
+<p>6.虽然你现在身处绝望之中，但一定会有闪光的日子在前方等着你。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：心怀希望，勇敢乐观，对未来的信念等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/a5741de3fb67470d9eee0d5e6d0feda7e8d81a71.jpg@640w_!web-note.webp" alt="img"></p>
+<p>7.虽然你现在可能觉得一片黑暗，可是黎明总会来临。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：不畏困难，坚持不懈，信念等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/f6f900167d8c37bc8a0c2436bf45c872a332fa90.jpg@640w_!web-note.webp" alt="img"></p>
+<p>8.不管现在有多么悲伤，今后还是会顺利长大，所以别担心，未来一点也不可怕。</p>
+<p>——铃芽之旅</p>
+<p>适用主题：永不放弃，追求未来，保持信念与希望等</p>
+<p><img src="https://i0.hdslb.com/bfs/note/f9ebd26b6b3b2fe3cba7f27443166cb488bd17dd.jpg@640w_!web-note.webp" alt="img"></p>
 ]]></content>
       <tags>
         <tag>美句</tag>
@@ -708,49 +786,207 @@
       </tags>
   </entry>
   <entry>
-    <title>《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】</title>
-    <url>/2023/04/30/%E3%80%8A%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85%E3%80%8B%E7%A5%9E%E7%BA%A7%E5%8F%B0%E8%AF%8D%E5%86%99%E8%BF%9B%E4%BD%9C%E6%96%87%EF%BC%81%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4%EF%BC%8C%E7%9B%B8%E8%A7%81%E6%89%8D%E6%9C%89%E6%84%8F%E4%B9%89%E3%80%90%E7%BA%B8%E6%9D%A1%E7%B4%A0%E6%9D%90%E3%80%91/</url>
-    <content><![CDATA[<h1 id="《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】"><a href="#《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】" class="headerlink" title="《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】"></a>《铃芽之旅》神级台词写进作文！双向奔赴，相见才有意义【纸条素材】</h1><p>1.我深知生命如蜉蝣，深知死亡总是如影随形，但此时哪怕再多一年，再多一日，再多一时也好，我辈仍愿人生得续。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：人生苦短，享受当下等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/925a920fe00b1bc5a2a30f33015c659689f18e2e.jpg@640w_!web-note.webp" alt="img"></p>
-<p>2.意义总是难以追寻的，是我们相遇过，奋力呐喊着，却吼不破命运的壳。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：人生价值，奋发进取等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/043d334bb68d7460942d2a2dbde0044c9e56e471.jpg@640w_!web-note.webp" alt="img"></p>
-<p>3.双向奔赴，相见才有意义。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：理智追星，尊重他人权利等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/bf20a749f94ff17cc9004bbf1893cb5005c323d6.jpg@640w_!web-note.webp" alt="img"></p>
-<p>4.人心的重量，会使土地平静下来。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：人与自然，生态文明等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/5276da4fc82d3eadf080c44bd432229b040904b6.jpg@640w_!web-note.webp" alt="img"></p>
-<p>5.这世界上唯一能够陪你走出伤痛的人，永远只有自己。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：成长，积极乐观，坚强不屈等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/0ebb5509273bb635dbc5cfbc813bf466c0960702.jpg@640w_!web-note.webp" alt="img"></p>
-<p>6.虽然你现在身处绝望之中，但一定会有闪光的日子在前方等着你。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：心怀希望，勇敢乐观，对未来的信念等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/a5741de3fb67470d9eee0d5e6d0feda7e8d81a71.jpg@640w_!web-note.webp" alt="img"></p>
-<p>7.虽然你现在可能觉得一片黑暗，可是黎明总会来临。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：不畏困难，坚持不懈，信念等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/f6f900167d8c37bc8a0c2436bf45c872a332fa90.jpg@640w_!web-note.webp" alt="img"></p>
-<p>8.不管现在有多么悲伤，今后还是会顺利长大，所以别担心，未来一点也不可怕。</p>
-<p>——铃芽之旅</p>
-<p>适用主题：永不放弃，追求未来，保持信念与希望等</p>
-<p><img src="https://i0.hdslb.com/bfs/note/f9ebd26b6b3b2fe3cba7f27443166cb488bd17dd.jpg@640w_!web-note.webp" alt="img"></p>
+    <title>哔哩哔哩卡片标签外挂</title>
+    <url>/2024/05/18/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8D%A1%E7%89%87%E6%A0%87%E7%AD%BE%E5%A4%96%E6%8C%82/</url>
+    <content><![CDATA[<p>2023-04-04更新：更新连接匹配问题。<br>例如 <a href="https://www.bilibili.com/video/BV1Sx4y1K7Gq">https://www.bilibili.com/video/BV1Sx4y1K7Gq</a> 显示正常，<br>但是 <a href="https://www.bilibili.com/video/BV1Sx4y1K7Gq/?spm_id_from=333.880.my_history.page.click&vd_source=5b241fa0dead9a9b68032971967b01c9">https://www.bilibili.com/video/BV1Sx4y1K7Gq/?spm_id_from=333.880.my_history.page.click&amp;vd_source=5b241fa0dead9a9b68032971967b01c9</a> 无法正常显示。</p>
+<p>2023-04-01更新：添加简介显示，使用时可选择关闭。</p>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>群里有一位小伙伴问这个文章的b站视频卡片样式怎么实现的：<a href="https://cyborg2077.github.io/2023/02/10/XuechengOnlinePart3/">学成在线–媒资管理模块开发</a><br>看着还不错便来了兴致决定弄一下，通过 f12 查到了 api 地址，感谢<a href="https://blog.4t.pw/">@怕冷爱上雪</a>提供帮助。</p>
+<p>因为官方 api 不能直接使用，于是便尝试使用 vercel 来作为中转使用（早就想尝试使用 vercel 托管 api）。</p>
+<h2 id="二、教程"><a href="#二、教程" class="headerlink" title="二、教程"></a>二、教程</h2><h3 id="bilibili-js"><a href="#bilibili-js" class="headerlink" title="bilibili.js"></a>bilibili.js</h3><p>在<code>[blogroot]\themes\butterfly\scripts\tag</code>下新建文件<code>bilibili.js</code>并粘贴如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">JS</span><br><span class="line"></span><br><span class="line">&#x27;use strict&#x27;</span><br><span class="line">let playIcon = `&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; class=&quot;icon&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z&quot; fill=&quot;#9499A0&quot;/&gt;&lt;/svg&gt;`</span><br><span class="line">let likeIcon = `&lt;svg width=&quot;36&quot; height=&quot;36&quot; viewBox=&quot;0 0 36 36&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;`</span><br><span class="line">let coinIcon = `&lt;svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot; style=&quot;fill:;&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;`</span><br><span class="line"></span><br><span class="line">function bilibili(args) &#123;</span><br><span class="line">  const id = args[0].replace(/.*video\/(.*)\/?.*/, &#x27;$1&#x27;)</span><br><span class="line">  const time = args[1]</span><br><span class="line">  const hidden_desc = args[2]</span><br><span class="line">  return `</span><br><span class="line">  &lt;a href=&quot;https://www.bilibili.com/video/$&#123;id&#125;/&quot; class=&quot;bilibili_box&quot; id=&quot;$&#123;id&#125;&quot;&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    bilibili()</span><br><span class="line">    function bilibili() &#123;</span><br><span class="line">      let dom = document.getElementById(&#x27;$&#123;id&#125;&#x27;)</span><br><span class="line">      fetch(&#x27;https://api.320.ink/api/b?id=$&#123;id&#125;&#x27;).then(res=&gt;res.json()).then(data=&gt;&#123;</span><br><span class="line">        dom.innerHTML = \`</span><br><span class="line">        &lt;div class=&quot;bilibili_cover&quot;&gt;</span><br><span class="line">          &lt;img src=&quot;https://s1.hdslb.com/bfs/static/player/img/play.svg&quot; class=&quot;play_icon no-lazyload&quot;&gt;</span><br><span class="line">          &lt;img src=&quot;\$&#123;data.pic + &#x27;&amp;h=300&#x27;&#125;&quot; class=&quot;no-lazyload&quot;&gt;</span><br><span class="line">          $&#123;time ? `&lt;span&gt;$&#123;time&#125;&lt;/span&gt;` : &#x27;&#x27;&#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;bilibili_info&quot;&gt;</span><br><span class="line">          &lt;div class=&quot;title&quot;&gt;\$&#123;data.title&#125;&lt;/div&gt;</span><br><span class="line">          $&#123;hidden_desc == &#x27;true&#x27; ? &#x27;&#x27; : &#x27;&lt;div class=&quot;desc&quot;&gt;\$&#123;data.desc&#125;&lt;/div&gt;&#x27;&#125;</span><br><span class="line">          &lt;div class=&quot;stat&quot;&gt;</span><br><span class="line">            &lt;span&gt;$&#123;playIcon&#125;\$&#123;data.view&#125;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;$&#123;likeIcon&#125;\$&#123;data.like&#125;&lt;/span&gt;</span><br><span class="line">            &lt;span&gt;$&#123;coinIcon&#125;\$&#123;data.coin&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;owner&quot;&gt;</span><br><span class="line">            &lt;span class=&quot;tip&quot;&gt;视频&lt;/span&gt;</span><br><span class="line">            &lt;img src=&quot;\$&#123;data.face + &#x27;&amp;h=100&#x27;&#125;&quot; class=&quot;no-lazyload&quot;&gt;</span><br><span class="line">            &lt;span&gt;\$&#123;data.owner&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        \`</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  `</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.tag.register(&#x27;bilibili&#x27;, bilibili, &#123; ends: false &#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="bilibili-styl"><a href="#bilibili-styl" class="headerlink" title="bilibili.styl"></a>bilibili.styl</h3><p>在<code>[blogroot]\themes\butterfly\source\css\_tags</code>下新建文件<code>bilbili.styl</code>并粘贴如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line"></span><br><span class="line">.bilibili_box</span><br><span class="line">  display: flex</span><br><span class="line">  background: var(--card-bg)</span><br><span class="line">  border: 1px solid #e0e3ed</span><br><span class="line">  border-radius: 10px</span><br><span class="line">  overflow: hidden</span><br><span class="line">  color: var(--font-color) !important</span><br><span class="line">  text-decoration: none !important</span><br><span class="line">  transition: .3s</span><br><span class="line">  &amp;:hover</span><br><span class="line">    border-color: #4976f5</span><br><span class="line">  +maxWidth768()</span><br><span class="line">    flex-direction: column</span><br><span class="line">  .bilibili_cover</span><br><span class="line">    width: 234px</span><br><span class="line">    position relative</span><br><span class="line">    +maxWidth768()</span><br><span class="line">      width: 100%</span><br><span class="line">    img</span><br><span class="line">      width: 100%</span><br><span class="line">      filter: none</span><br><span class="line">      margin: 0 !important</span><br><span class="line">      border-radius: 0 !important</span><br><span class="line">    .play_icon</span><br><span class="line">      position: absolute</span><br><span class="line">      width 45px</span><br><span class="line">      height 45px</span><br><span class="line">      opacity .8</span><br><span class="line">      top: 50%</span><br><span class="line">      left 50%</span><br><span class="line">      transform: translate(-50%,-50%)</span><br><span class="line">    span </span><br><span class="line">      position: absolute</span><br><span class="line">      bottom: 0px</span><br><span class="line">      right: 5px</span><br><span class="line">      color: white</span><br><span class="line">      text-shadow: 0 1px 3px #7a7a7a</span><br><span class="line">  .bilibili_info</span><br><span class="line">    padding: 10px 10px 10px 18px</span><br><span class="line">    line-height: 1</span><br><span class="line">    width: calc(100% - 200px)</span><br><span class="line">    display: flex</span><br><span class="line">    flex-direction: column</span><br><span class="line">    justify-content: space-around</span><br><span class="line">    +maxWidth768()</span><br><span class="line">      width: 100%</span><br><span class="line">      padding-bottom: 25px</span><br><span class="line">      line-height: 1.5</span><br><span class="line">    .title </span><br><span class="line">      font-size: 1.2rem</span><br><span class="line">      font-weight: bold</span><br><span class="line">      white-space: nowrap</span><br><span class="line">      overflow: hidden</span><br><span class="line">      text-overflow: ellipsis</span><br><span class="line">      line-height: 1.5</span><br><span class="line">    .desc </span><br><span class="line">      font-size: 15px</span><br><span class="line">      margin: 2px 0 4px</span><br><span class="line">      white-space: nowrap</span><br><span class="line">      overflow: hidden</span><br><span class="line">      text-overflow: ellipsis</span><br><span class="line">      +maxWidth768()</span><br><span class="line">        // word-break: break-all</span><br><span class="line">        white-space: normal</span><br><span class="line">        display:-webkit-box;</span><br><span class="line">        -webkit-box-orient:vertical;</span><br><span class="line">        -webkit-line-clamp:2; </span><br><span class="line">    .stat </span><br><span class="line">      font-size: 15px</span><br><span class="line">      svg</span><br><span class="line">        margin-right: 3px</span><br><span class="line">        font-size: 18px</span><br><span class="line">        width: 1em</span><br><span class="line">        height: 1em</span><br><span class="line">        path</span><br><span class="line">          fill: var(--font-color)</span><br><span class="line">      span</span><br><span class="line">        margin-right: 10px</span><br><span class="line">        display: inline-flex</span><br><span class="line">        align-items: center</span><br><span class="line">    .owner </span><br><span class="line">      display: flex</span><br><span class="line">      align-items: center</span><br><span class="line">      line-height: 1</span><br><span class="line">      font-size: 15px</span><br><span class="line">      .tip</span><br><span class="line">        color: #FF6699</span><br><span class="line">        border: 1px solid</span><br><span class="line">        padding: 3px 6px</span><br><span class="line">        font-size: 12px</span><br><span class="line">        border-radius: 5px</span><br><span class="line">        margin-right: 10px</span><br><span class="line">      img</span><br><span class="line">        width 22px</span><br><span class="line">        height: 22px</span><br><span class="line">        border-radius: 50% !important</span><br><span class="line">        object-fit: cover</span><br><span class="line">        margin 0 5px 0 0 !important</span><br><span class="line"></span><br><span class="line">[data-theme=&#x27;light&#x27;] .bilibili_box .bilibili_info .stat svg,</span><br><span class="line">[data-theme=&#x27;dark&#x27;] .bilibili_cover</span><br><span class="line">  opacity .8</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>使用此标签外挂只需要填写视频链接，填写后将会自动获取信息。<br>视频时长因为不容易通过 api 获取所以设置成了手动填写，反正这个数据基本上不会改变</p>
+<blockquote>
+<p>如果是手机的话：进入视频之后点击分享，复制链接然后用浏览器打开再复制链接，不要使用短链接</p>
+</blockquote>
+<p>示例链接：<code>https://www.bilibili.com/video/BV1eh411G7bK/?spm_id_from=333.999.0.0</code></p>
+<p>格式如下：（视频时长可填可不填，若需要隐藏简介则必须填写视频时长）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MARKDOWN</span><br><span class="line">&#123;% bilibili 视频链接 [视频时长 隐藏简介] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>若需要隐藏简介只需要添加 true 即可</p>
+<p>示例</p>
+
+  <a href="https://www.bilibili.com/video/BV1eh411G7bK/" class="bilibili_box" id="BV1eh411G7bK"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1eh411G7bK')
+      fetch('https://api.320.ink/api/b?id=BV1eh411G7bK').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>00:29</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MARKDOWN</span><br><span class="line">&#123;% bilibili https://www.bilibili.com/video/BV1eh411G7bK 00:29 %&#125;</span><br><span class="line">&lt;!-- 如果你要隐藏简介，添加true即可（注意，要隐藏简介则必须设置适配时间！），如下 --&gt;</span><br><span class="line">&#123;% bilibili https://www.bilibili.com/video/BV1eh411G7bK 00:29 true %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、API-简述"><a href="#三、API-简述" class="headerlink" title="三、API 简述"></a>三、API 简述</h2><p>API地址如下：<br><a href="https://api.320.ink/api/b">https://api.320.ink/api/b</a></p>
+<blockquote>
+<p>该api由Vercel托管，强烈建议<a href="javascript:;">自建API</a></p>
+</blockquote>
+<p>可携带参数：</p>
+<ul>
+<li><p>id<br>bilibili 视频ID</p>
+</li>
+<li><p>t</p>
+<p>请求单个数据的类型，可选值如下</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>owner</td>
+<td>视频作者名</td>
+</tr>
+<tr>
+<td>face</td>
+<td>视频作者头像</td>
+</tr>
+<tr>
+<td>title</td>
+<td>视频标题</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>视频简介</td>
+</tr>
+<tr>
+<td>pic</td>
+<td>视频封面</td>
+</tr>
+<tr>
+<td>view</td>
+<td>观看数量</td>
+</tr>
+<tr>
+<td>like</td>
+<td>点赞数</td>
+</tr>
+<tr>
+<td>coin</td>
+<td>投币数</td>
+</tr>
+<tr>
+<td>danmaku</td>
+<td>弹幕数</td>
+</tr>
+<tr>
+<td>favorite</td>
+<td>收藏数</td>
+</tr>
+<tr>
+<td>reply</td>
+<td>评论数量</td>
+</tr>
+<tr>
+<td>share</td>
+<td>分享数量</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>示例</p>
+<ol>
+<li><a href="https://api.320.ink/api/b?id=BV1eh411G7bK">https://api.320.ink/api/b?id=BV1eh411G7bK</a><br>会返回视频的所有数据</li>
+<li><a href="https://api.320.ink/api/b?id=BV1eh411G7bK&t=view">https://api.320.ink/api/b?id=BV1eh411G7bK&amp;t=view</a><br>会返回视频的观看数量</li>
+</ol>
+<blockquote>
+<p>当然，如果是使用自建API的话你可以随意的修改代码来满足自己的需求。</p>
+</blockquote>
+<h2 id="四、自建-API"><a href="#四、自建-API" class="headerlink" title="四、自建 API"></a>四、自建 API</h2><p>若没有 vercel 账号请先自行注册<br>自建 API 需要有自己的域名（应该都有吧）</p>
+<h3 id="安装cli"><a href="#安装cli" class="headerlink" title="安装cli"></a>安装cli</h3><p>运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">npm i -g vercel</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>新建一个目录，然后在此目录中打开终端<br>运行如下命令然后一路回车</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h3><p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">npm i axios</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-46-57.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-46-57.webp" alt="创建完成效果"></a></p>
+<p>创建完成效果</p>
+<p>新建 api 目录，然后在 api 目录下创建如下两个文件</p>
+<blockquote>
+<p>创建的文件名字对应你后期的 api 路径名，如 b.js 对应 xxx.com&#x2F;api&#x2F;b<br>另外，index.js 文件对应的是 xxx.com&#x2F;api</p>
+</blockquote>
+<p><strong>b.js</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line"></span><br><span class="line">const axios = require(&#x27;axios&#x27;)</span><br><span class="line">module.exports = async (req, res) =&gt; &#123;</span><br><span class="line">  if (req.method === &#x27;GET&#x27;) &#123;</span><br><span class="line">    if (req.query.id) &#123;</span><br><span class="line">      let &#123; data &#125; = await axios.get(&#x27;https://api.bilibili.com/x/web-interface/view?bvid=&#x27; + req.query.id)</span><br><span class="line">      data = data.data</span><br><span class="line">      let ls = &#123;</span><br><span class="line">        owner: data.owner.name,</span><br><span class="line">        face: &quot;https://images.weserv.nl/?url=&quot; + data.owner.face,</span><br><span class="line">        title: data.title,</span><br><span class="line">        desc: data.desc,</span><br><span class="line">        pic: &quot;https://images.weserv.nl/?url=&quot; + data.pic,</span><br><span class="line">        coin: data.stat.coin,</span><br><span class="line">        danmaku: data.stat.danmaku,</span><br><span class="line">        favorite: data.stat.favorite,</span><br><span class="line">        like: data.stat.like,</span><br><span class="line">        reply: data.stat.reply,</span><br><span class="line">        share: data.stat.share,</span><br><span class="line">        view: data.stat.view,</span><br><span class="line">      &#125;</span><br><span class="line">      if (req.query.t) &#123; return res.send(ls[req.query.t]) &#125; else return res.send(JSON.stringify(ls))</span><br><span class="line">    &#125; else &#123; return res.send(&#x27;Hello World!&#x27;) &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了避免访问 xxx.com&#x2F;api 报错，我们给它也添加一个内容让他返回 Hello World<br><strong>index.js</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">module.exports = (req, res) =&gt; &#123;</span><br><span class="line">  return res.status(200).send(&#x27;Hello World!&#x27;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在根目录下创建 <strong>vercel.json</strong> 文件并粘贴如下代码：<br>(这一步是为了防止跨域)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">JSON</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;headers&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;source&quot;: &quot;/api/(.*)&quot;,</span><br><span class="line">      &quot;headers&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;key&quot;: &quot;Access-Control-Allow-Origin&quot;,</span><br><span class="line">          &quot;value&quot;: &quot;*&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;key&quot;: &quot;Access-Control-Allow-Headers&quot;,</span><br><span class="line">          &quot;value&quot;: &quot;X-Requested-With, Content-Type, Authorization&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;key&quot;: &quot;Access-Control-Allow-Credentials&quot;,</span><br><span class="line">          &quot;value&quot;: &quot;true&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><h4 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h4><p>在部署前先运行如下命令来测试代码是否生效</p>
+<blockquote>
+<p>第一次运行会让登录和创建项目，登陆的话选择你平时登录的方式<strong>例如 github</strong> 回车即可，在浏览器完成授权就登陆成功了。创建项目就直接一路回车即可。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">vercel dev</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-48-18.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-48-18.webp" alt="index.js正常"></a></p>
+<p>index.js正常</p>
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-52-25.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-52-25.webp" alt="b.js正常"></a></p>
+<p>b.js正常</p>
+<p>本地测试没问题了就可以运行如下命令进行线上部署了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BASH</span><br><span class="line">vercel --prod</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-56-50.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-56-50.webp" alt="部署成功"></a></p>
+<p>部署成功</p>
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-57-59.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-57-59.webp" alt="挂梯正常访问"></a></p>
+<p>挂梯正常访问</p>
+<h4 id="vercel-网站"><a href="#vercel-网站" class="headerlink" title="vercel 网站"></a>vercel 网站</h4><p>官方提供的网址在国内是无法访问的，所以我们需要自己绑定一个域名</p>
+<p>打开 <a href="https://vercel.com/">Vercel</a>，登录之后点击 api 项目，依次点击 setting，domains，填写域名然后添加解析即可。</p>
+<p>为了提升一点点的访问速度，我们再改一下地区。<br>选择 functions 然后选择香港。选择之后需要重新部署，再运行一遍<code>vercel --prod</code>就行。</p>
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-59-44.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-59-44.webp" alt="配置域名"></a></p>
+<p>配置域名</p>
+<p><a href="https://cdn.leonus.cn/post/leonus_2023-03-31_21-56-02.webp"><img src="https://cdn.leonus.cn/post/leonus_2023-03-31_21-56-02.webp" alt="配置地区"></a></p>
+<p>配置地区</p>
+<h2 id="五、参考文献"><a href="#五、参考文献" class="headerlink" title="五、参考文献"></a>五、参考文献</h2><ol>
+<li><a href="https://devpress.csdn.net/cloudnative/62fb77cc7e6682346618ec34.html#devmenu6">https://devpress.csdn.net/cloudnative/62fb77cc7e6682346618ec34.html#devmenu6</a></li>
+<li><a href="https://devpress.csdn.net/cloudnative/62fb751ac67703293080018b.html">https://devpress.csdn.net/cloudnative/62fb751ac67703293080018b.html</a></li>
+</ol>
+<p><strong>文章作者:</strong> <a href="https://blog.leonus.cn/">Leonus</a></p>
+<p><strong>文章链接:</strong> <a href="https://blog.leonus.cn/2023/butterflyTag-1.html">https://blog.leonus.cn/2023/butterflyTag-1.html</a></p>
+<p><strong>版权声明:</strong> 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.leonus.cn/">Leonus</a>！</p>
 ]]></content>
       <tags>
-        <tag>美句</tag>
+        <tag>博客相关</tag>
       </tags>
   </entry>
   <entry>
     <title>图床</title>
     <url>/2023/04/15/%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><img src="https://article.biliimg.com/bfs/article/bcff52035697efb13c04b953787cd5a47ec2c4ee.jpg" alt="67184958_p0"></p>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p><img src="https://article.biliimg.com/bfs/article/bcff52035697efb13c04b953787cd5a47ec2c4ee.jpg" alt="67184958_p0"></p>
 <p><img src="https://article.biliimg.com/bfs/article/467792f13def895b57d0747460b71779fb99cf49.jpg" alt="67243791_p0"></p>
 ]]></content>
       <tags>
