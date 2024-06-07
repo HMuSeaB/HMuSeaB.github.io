@@ -258,19 +258,6 @@
       </tags>
   </entry>
   <entry>
-    <title>github图床介绍</title>
-    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
-<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
-<p>上传即可或者搭配picgo使用</p>
-<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
-]]></content>
-      <tags>
-        <tag>博客相关</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Clash</title>
     <url>/2023/04/29/clash/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。<br>Clash for Windows 是目前在 Windows 上唯一可用的图形化 Clash 分支。通过 Clash API 来配置和控制 Clash 核心程序，便于用户可视化操作和使用。<br><strong>支持的协议：</strong> Vmess, Shadowsocks, Snell , SOCKS5 , ShadowsocksR（在0.11.2版本加入）<br>【注】：ClashR for Windows 是第三方修改版本，已汉化。支持SSR协议，使用方法与原版相同。下载地址请看第3节。<br>ClashR(for Windows)（Whojave）项目地址：<a href="https://github.com/WhoJave/clash/releases">https://github.com/WhoJave/clash/releases</a></p>
@@ -404,6 +391,19 @@
       </tags>
   </entry>
   <entry>
+    <title>github图床介绍</title>
+    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
+<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
+<p>上传即可或者搭配picgo使用</p>
+<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>博客相关</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在命令行中创建博客，使用vim</title>
     <url>/2024/06/07/vim%E5%91%BD%E4%BB%A42/</url>
     <content><![CDATA[<p>#创建博客文章</p>
@@ -422,13 +422,13 @@
 <hr>
 <p>参考文献</p>
 
-  <a href="https://www.bilibili.com/video/BV1Yb411a7ty//" class="bilibili_box" id="BV1Yb411a7ty/"></a>
+  <a href="https://www.bilibili.com/video/BV1Yb411a7ty/" class="bilibili_box" id="BV1Yb411a7ty"></a>
 
   <script>
     bilibili()
     function bilibili() {
-      let dom = document.getElementById('BV1Yb411a7ty/')
-      fetch('https://api.320.ink/api/b?id=BV1Yb411a7ty/').then(res=>res.json()).then(data=>{
+      let dom = document.getElementById('BV1Yb411a7ty')
+      fetch('https://api.320.ink/api/b?id=BV1Yb411a7ty').then(res=>res.json()).then(data=>{
         dom.innerHTML = `
         <div class="bilibili_cover">
           <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
