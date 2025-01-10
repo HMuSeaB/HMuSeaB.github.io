@@ -404,6 +404,18 @@
       </tags>
   </entry>
   <entry>
+    <title>pip命令</title>
+    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法</p>
+<meta name="referrer" content="no-referrer">
+
+<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
+]]></content>
+      <tags>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在命令行中创建博客，使用vim</title>
     <url>/2024/06/07/vim%E5%91%BD%E4%BB%A42/</url>
     <content><![CDATA[<p>#创建博客文章</p>
@@ -1221,15 +1233,6 @@
 ]]></content>
       <tags>
         <tag>美句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pip命令</title>
-    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法 <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
-]]></content>
-      <tags>
-        <tag>代码</tag>
       </tags>
   </entry>
 </search>
