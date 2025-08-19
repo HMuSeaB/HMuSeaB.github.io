@@ -233,12 +233,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WordPress 文章完美转换 Markdown 方法</title>
-    <url>/2025/08/19/WordPress/</url>
-    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Vim简介</title>
     <url>/2024/04/26/Vim%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h2 id="vim是什么？"><a href="#vim是什么？" class="headerlink" title="vim是什么？"></a>vim是什么？</h2><p>vim是Linux环境下一款功能强大、高度可定制的文本编辑工具，类似于Windows下面的source insight、sublime、notepad。VI是visual interface的缩写，即可视化接口。vim 即 vi IMproved，在 vi 的基础上做了很多改进，如：增加了多级撤销、多窗口操作、崩溃后也可以恢复、增加了稳定性、关键字自动补全、上下文自动补全等功能。</p>
@@ -264,29 +258,10 @@
       </tags>
   </entry>
   <entry>
-    <title>github图床介绍</title>
-    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
-<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
-<p>上传即可或者搭配picgo使用</p>
-<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+    <title>WordPress 文章完美转换 Markdown 方法</title>
+    <url>/2025/08/19/WordPress/</url>
+    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
 ]]></content>
-      <tags>
-        <tag>博客相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pip命令</title>
-    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法</p>
-<meta name="referrer" content="no-referrer">
-
-<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
-]]></content>
-      <tags>
-        <tag>代码</tag>
-      </tags>
   </entry>
   <entry>
     <title>Clash</title>
@@ -422,6 +397,31 @@
       </tags>
   </entry>
   <entry>
+    <title>github图床介绍</title>
+    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
+<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
+<p>上传即可或者搭配picgo使用</p>
+<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>博客相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip命令</title>
+    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法</p>
+<meta name="referrer" content="no-referrer">
+
+<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
+]]></content>
+      <tags>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在命令行中创建博客，使用vim</title>
     <url>/2024/06/07/vim%E5%91%BD%E4%BB%A42/</url>
     <content><![CDATA[<p>#创建博客文章</p>
@@ -517,28 +517,6 @@
       </tags>
   </entry>
   <entry>
-    <title>“玫瑰太贵了，⽤野草纪念我吧，满地都是，生生不息”</title>
-    <url>/2023/04/30/%E2%80%9C%E7%8E%AB%E7%91%B0%E5%A4%AA%E8%B4%B5%E4%BA%86%EF%BC%8C%E2%BD%A4%E9%87%8E%E8%8D%89%E7%BA%AA%E5%BF%B5%E6%88%91%E5%90%A7%EF%BC%8C%E6%BB%A1%E5%9C%B0%E9%83%BD%E6%98%AF%EF%BC%8C%E7%94%9F%E7%94%9F%E4%B8%8D%E6%81%AF%E2%80%9D/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<p>以前村里得给我糖，给我弄木剑，带我放牛的老人一个接一个的走了，破旧的瓦房却还立在那里。<br>——戏法界小徒</p>
-<p>能哭出来的都很好了，哭过了继续为生活而努力，<br>有的人连崩溃都是静悄悄的。<br>——国家啥时候发对象啊</p>
-<p>有的人一生老实善良，从没干过坏事，却仍然被生活狠狠的掐住脖子。<br>——她走了去照顾他了</p>
-<p>人间的面,吃碗就多碗的滋味，见一面就多一面的回忆。<br>——我要瘦到90斤啊啊啊啊啊啊啊啊</p>
-<p>我讨厌物质的人,但如果是你，我讨厌没钱的自己。<br>——玛丽莲梦露天烧烤</p>
-<p>其实并没有那么喜欢她，只不过跟她一起的时候很舒服,暴晒的太阳都似乎有了一丝缓和，她眼角弯弯的样子满足了我对爱情的所有幻想。<br>——L-型细菌</p>
-<p>我也不知道什么是爱，就是那段时间和你在起都会偷偷笑。<br>——Litost_G</p>
-<p>社会，说它残忍，但他确实有温暖，也很真实。人生，说它长，也不长，一眨眼过了那么多。<br>——拨刀抚落英</p>
-<p>你不能一直做一些烂事，然后自己后悔，好像后悔有用一样，你需要变好。<br>——白的心事</p>
-<p>我一个人的时候从不觉得孤独，只有在和他人相处中的时候才感到孤独。<br>——甘城w</p>
-<p>玫瑰太贵了，用野草纪念我吧，满地都是，生生不息。<br>——瓷爹家的九渊兔子</p>
-<p>你永远有资格做梦，但不应该一直在梦里沉溺。<br>——鱼狼咬咬</p>
-]]></content>
-      <tags>
-        <tag>美句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>“长大后才发现，语文课本里面全是刀！！！”</title>
     <url>/2023/04/30/%E2%80%9C%E9%95%BF%E5%A4%A7%E5%90%8E%E6%89%8D%E5%8F%91%E7%8E%B0%EF%BC%8C%E8%AF%AD%E6%96%87%E8%AF%BE%E6%9C%AC%E9%87%8C%E9%9D%A2%E5%85%A8%E6%98%AF%E5%88%80%EF%BC%81%EF%BC%81%EF%BC%81%E2%80%9D/</url>
     <content><![CDATA[<iframe src="https://player.bilibili.com/player.html?aid=395451815&amp;bvid=BV1Co4y1r7Kr&amp;cid=1039074407&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(76, 73, 72); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Lato, Roboto, &quot;PingFang SC&quot;, &quot;Microsoft JhengHei&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(255, 255, 255, 0.5); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
@@ -580,6 +558,28 @@
     }
   </script>
   ]]></content>
+      <tags>
+        <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“玫瑰太贵了，⽤野草纪念我吧，满地都是，生生不息”</title>
+    <url>/2023/04/30/%E2%80%9C%E7%8E%AB%E7%91%B0%E5%A4%AA%E8%B4%B5%E4%BA%86%EF%BC%8C%E2%BD%A4%E9%87%8E%E8%8D%89%E7%BA%AA%E5%BF%B5%E6%88%91%E5%90%A7%EF%BC%8C%E6%BB%A1%E5%9C%B0%E9%83%BD%E6%98%AF%EF%BC%8C%E7%94%9F%E7%94%9F%E4%B8%8D%E6%81%AF%E2%80%9D/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p>以前村里得给我糖，给我弄木剑，带我放牛的老人一个接一个的走了，破旧的瓦房却还立在那里。<br>——戏法界小徒</p>
+<p>能哭出来的都很好了，哭过了继续为生活而努力，<br>有的人连崩溃都是静悄悄的。<br>——国家啥时候发对象啊</p>
+<p>有的人一生老实善良，从没干过坏事，却仍然被生活狠狠的掐住脖子。<br>——她走了去照顾他了</p>
+<p>人间的面,吃碗就多碗的滋味，见一面就多一面的回忆。<br>——我要瘦到90斤啊啊啊啊啊啊啊啊</p>
+<p>我讨厌物质的人,但如果是你，我讨厌没钱的自己。<br>——玛丽莲梦露天烧烤</p>
+<p>其实并没有那么喜欢她，只不过跟她一起的时候很舒服,暴晒的太阳都似乎有了一丝缓和，她眼角弯弯的样子满足了我对爱情的所有幻想。<br>——L-型细菌</p>
+<p>我也不知道什么是爱，就是那段时间和你在起都会偷偷笑。<br>——Litost_G</p>
+<p>社会，说它残忍，但他确实有温暖，也很真实。人生，说它长，也不长，一眨眼过了那么多。<br>——拨刀抚落英</p>
+<p>你不能一直做一些烂事，然后自己后悔，好像后悔有用一样，你需要变好。<br>——白的心事</p>
+<p>我一个人的时候从不觉得孤独，只有在和他人相处中的时候才感到孤独。<br>——甘城w</p>
+<p>玫瑰太贵了，用野草纪念我吧，满地都是，生生不息。<br>——瓷爹家的九渊兔子</p>
+<p>你永远有资格做梦，但不应该一直在梦里沉溺。<br>——鱼狼咬咬</p>
+]]></content>
       <tags>
         <tag>美句</tag>
       </tags>
@@ -627,126 +627,107 @@
       </tags>
   </entry>
   <entry>
-    <title>免费部署 Alist 目录列表程序</title>
-    <url>/2023/04/30/%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%20Alist%20%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</url>
-    <content><![CDATA[<p>[note type&#x3D;”primary flat no-icon”]写的比较仓促，有什么不足的地方，还请大家多多指点。评论区欢饮留言～[&#x2F;note]</p>
-<p>[note type&#x3D;”info flat no-icon”]</p>
-<ol>
-<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例</li>
-<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
-<li>错误指正后，v3 版本也能正常部署使用了</li>
-<li>2023&#x2F;3&#x2F;16 恢复图片链接，原深海图床 CDN 因未知原因无法访问，已把仅剩的缩略图迁移至去不图床，图片可能会比较模糊[&#x2F;note]</li>
-</ol>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Alist 是一款支持多种存储的目录文件列表程序，后端基于 <code>gin</code>，前端使用 <code>react</code></p>
-<p><a href="https://bu.dusays.com/2023/03/16/6413013a46fe1.png"><img src="https://bu.dusays.com/2023/03/16/6413013a46fe1.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/6413010ad3013.png"><img src="https://bu.dusays.com/2023/03/16/6413010ad3013.png" alt="img"></a></p>
-<p><a href="https://alist-doc.nn.ci/">查看文档</a><a href="https://github.com/Xhofe/alist">查看源码</a></p>
+    <title>『好不容易遇见的人，不要轻易说再见』</title>
+    <url>/2024/06/29/%E3%80%8E%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93%E9%81%87%E8%A7%81%E7%9A%84%E4%BA%BA%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E8%AF%B4%E5%86%8D%E8%A7%81%E3%80%8F/</url>
+    <content><![CDATA[
+  <a href="https://www.bilibili.com/video/BV1HS421d7J9/" class="bilibili_box" id="BV1HS421d7J9"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1HS421d7J9')
+      fetch('https://api.320.ink/api/b?id=BV1HS421d7J9').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>11:41</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<h2 id="哆啦A梦"><a href="#哆啦A梦" class="headerlink" title="哆啦A梦"></a>哆啦A梦</h2><p>原作漫画里静香也是这种抱着大雄哭的状态，要说喜欢那肯定是有的，水田版这集翻拍的时期两个人感情明显已经很好了，后面狗粮更是越发越多，至于大山版末期那更是重量级，两个人又是亲脸又是约会的</p>
+<p>可是，他是主角啊，普通人…或许真的没人在意</p>
+<p>我本来是想笑着跟你说再见的，可是我做不到</p>
 <hr>
-<h1 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h1><ol>
-<li>一个 Github 账号</li>
-<li>Fork 一份 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库</li>
-<li>一个 render 账号</li>
-<li>一个数据库，可选 <code>sqlite3</code>、<code>mysql</code>、<code>postgres</code></li>
-</ol>
+<h2 id="2024-6-28"><a href="#2024-6-28" class="headerlink" title="2024.6.28"></a>2024.6.28</h2><p>吉他换弦get</p>
 <hr>
-<h2 id="render-账号"><a href="#render-账号" class="headerlink" title="render 账号"></a>render 账号</h2><p>点击进入 <a href="https://render.com/">render</a> 官网<br>点击右上角 <code>GET STARTED</code>, 使用 Github 进行注册或登录<br>按照网页的提示完成注册后进入控制面板</p>
-<p><a href="https://bu.dusays.com/2023/03/16/641301642afa0.png"><img src="https://bu.dusays.com/2023/03/16/641301642afa0.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/64130188a77c9.png"><img src="https://bu.dusays.com/2023/03/16/64130188a77c9.png" alt="img"></a></p>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>点击进入 <a href="https://www.elephantsql.com/">elephantsql</a> 官网<br>点击位于页面中央的 <code>Get a managed database today</code>，选择海龟样子的 <code>Free</code> 计划<br>会进入登陆页面，可以使用 Github 进行授权登陆，然后信息随便填一下就行<br>进入控制面板后创建数据库，计划记得选择 <code>Free</code><br>这样我们就获得了一个免费的 <code>postgres</code> 类型的数据库</p>
-<p><a href="https://bu.dusays.com/2023/03/16/641301d4e12ac.png"><img src="https://bu.dusays.com/2023/03/16/641301d4e12ac.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/641301efa6837.png"><img src="https://bu.dusays.com/2023/03/16/641301efa6837.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/641302067ba2a.png"><img src="https://bu.dusays.com/2023/03/16/641302067ba2a.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/64130228cfac7.png"><img src="https://bu.dusays.com/2023/03/16/64130228cfac7.png" alt="img"></a></p>
-<p>数据库的信息最好记下来备用，等一会要填</p>
-<p>截图中的数据库在文章发布后已被删除</p>
-<hr>
-<h1 id="部署-Alist"><a href="#部署-Alist" class="headerlink" title="部署 Alist"></a>部署 Alist</h1><h2 id="拉取仓库"><a href="#拉取仓库" class="headerlink" title="拉取仓库"></a>拉取仓库</h2><p>进入 <a href="https://dashboard.render.com/">render</a> 的控制台，点击 <code>New+</code>，选择 <code>Web Service</code></p>
-<p><a href="https://bu.dusays.com/2023/03/16/64130252835b9.png"><img src="https://bu.dusays.com/2023/03/16/64130252835b9.png" alt="img"></a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/64130276670f6.png"><img src="https://bu.dusays.com/2023/03/16/64130276670f6.png" alt="img"></a></p>
-<p>选择刚刚 Fork 的 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库<br>点击，进入部署页面，自己取个名字，然后先什么都不要动，往下拉，拉到最底下</p>
-<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p>在左下角 <code>Create Web Service</code> 的按钮上边，有个 <code>Advanced</code> 按钮，点击<br>然后在点击 <code>Add Environment Variable</code> 开始添加环境变量<br>这边可以参考我之前在 Alist 社区的对话</p>
-<p>[<a href="https://www.zxma.top/posts/438365eb/#referto_[1]">1]</a><a href="https://github.com/alist-org/alist/discussions/931">koyeb 怎么连接数据库</a></p>
-<p><a href="https://bu.dusays.com/2023/03/16/6413029066de4.png"><img src="https://bu.dusays.com/2023/03/16/6413029066de4.png" alt="img"></a></p>
-<p>参考表格对应填写变量参数，只要把 <code>DB_HOST</code>，<code>DB_NAME</code>，<code>DB_PASS</code>，<code>DB_USER</code> 给改成自己的就可以了</p>
-<table>
-<thead>
-<tr>
-<th align="center">数据库对应</th>
-<th align="center">变量参数</th>
-<th align="center">示例参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Server</td>
-<td align="center">DB_HOST</td>
-<td align="center">queenie.db.elephantsql.com</td>
-</tr>
-<tr>
-<td align="center">User &amp; Default database</td>
-<td align="center">DB_NAME</td>
-<td align="center">bkqgx</td>
-</tr>
-<tr>
-<td align="center">Password</td>
-<td align="center">DB_PASS</td>
-<td align="center">5CqBjEVZWdaaad2333aadadadadN3Clo</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">DB_PORT</td>
-<td align="center">5432</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">DB_SSL_MODE</td>
-<td align="center">disable</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">DB_TYPE</td>
-<td align="center">postgres</td>
-</tr>
-<tr>
-<td align="center">User &amp; Default database</td>
-<td align="center">DB_USER</td>
-<td align="center">bkqgx</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">PORT</td>
-<td align="center">8080</td>
-</tr>
-</tbody></table>
-<p>填完检查一下，一共 8 个变量，好了就可以点击 <code>Create Web Service</code> 开始部署了，大概 1~2 分钟可以看到成果</p>
-<ol>
-<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例，供大家参考↓↓↓</li>
-<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
-<li>错误指正后，v3 版本也能正常部署使用了</li>
-</ol>
-<h2 id="环境变量示例"><a href="#环境变量示例" class="headerlink" title="环境变量示例"></a>环境变量示例</h2><ul>
-<li>参数示例</li>
-<li>文字示例</li>
-<li>关于 sslmode</li>
-</ul>
-<p>DB_SSL_MODE 这个变量我也不是很清楚，有错误的可以评论区指正，根据官方文档来看</p>
-<ol>
-<li>sqlite3 数据库：请忽略该参数</li>
-<li>mysql 数据库：参数有 <code>true</code>, <code>false</code>, <code>skip-verify</code>, <code>preferred</code>, 选一个填</li>
-<li>postgres 数据库：参数有 <code>disable</code>，<code>allow</code>，<code>prefer</code>，<code>require</code>，<code>verify-full</code>，选一个填</li>
-</ol>
-<p>我用的 postgres 数据库填的是 <code>disable</code>，就是没用 SSL</p>
-<h1 id="评论区疑难解答"><a href="#评论区疑难解答" class="headerlink" title="评论区疑难解答"></a>评论区疑难解答</h1><ul>
-<li>账密未输出</li>
-<li>保持唤醒</li>
-</ul>
-<p>如果你是已连接数据库了，那么你的密码应该已经写入数据库了，所以他不会再显示了，需要你自己去数据库看用户名和密码<br>如果你使用的是 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库<br>前往你自己的 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库，点击侧边栏的 <code>Browser</code> 之后输入 <code>SELECT * FROM &quot;public&quot;.&quot;x_users&quot; LIMIT 100</code><br>会有一行 <code>username</code> 名为 <code>admin</code> 的，后面就是密码，<code>admin</code> 就是用户名<br><a href="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png"><img src="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png" alt="1670238084349-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
-<p>或者点 <code>Table queries</code>，再点 <code>x_user</code> 也是可以的<br><a href="https://bu.dusays.com/2022/12/05/638dcfaa95816.png"><img src="https://bu.dusays.com/2022/12/05/638dcfaa95816.png" alt="1670238119405-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
-<hr>
-<h1 id="示例站点"><a href="#示例站点" class="headerlink" title="示例站点"></a>示例站点</h1><p>免费部署 Alist 目录列表程序</p>
-<p><a href="https://www.zxma.top/posts/438365eb/">https://www.zxma.top/posts/438365eb/</a></p>
+<h2 id="写首诗｜我只是你历史上，盛了一半的唐。"><a href="#写首诗｜我只是你历史上，盛了一半的唐。" class="headerlink" title="写首诗｜我只是你历史上，盛了一半的唐。"></a>写首诗｜我只是你历史上，盛了一半的唐。</h2>
+  <a href="https://www.bilibili.com/video/BV1N3411T74B/" class="bilibili_box" id="BV1N3411T74B"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1N3411T74B')
+      fetch('https://api.320.ink/api/b?id=BV1N3411T74B').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>01:35</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<p>今夜我牵着你私奔去这片神州的极北之地。 </p>
+<p>我要给你看我颤抖着吻你， 献身只属于我的神明。</p>
+<p>我给你看世人评判的不齿之恋， 违宗乱法，叛道离经。 </p>
+<p>给你看就算漫天飞雪，我这份心动不会结冰</p>
+<p>《你身上有我》<br>         ——惊竹娇<br>你会不会在下一首诗里，<br>想起从前的月亮。<br>还是说，<br>我只是你历史上，<br>盛了一半的唐。</p>
+<p>只有诗歌和音乐能让我相信生活。 </p>
+<p>以及： </p>
+<p>人类最擅长把自己的重量， 放到另一个不幸的身上， </p>
+<p>不需要，担不起这样的信仰。</p>
+<p>助解：</p>
+<p>我相信你爱的人身上</p>
+<p>是会有一个人的影子的</p>
+<p>很多时候，</p>
+<p>人类都是爱到一半。</p>
+<p>爱你的盛唐，不爱你由盛转衰，</p>
+<p>不爱你跛脚的吗，和尘埃</p>
+<p>但我们做不了任何，甚至话也不能说，</p>
+<p>世上最不缺让人流泪的事情。</p>
+<p>一个人守着回忆</p>
+<p>毕生追寻的爱，居然不值一提，</p>
+<p>明天啊，</p>
+<p>永远有圆了一半的弯月重新升起</p>
 ]]></content>
       <tags>
-        <tag>知识</tag>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -914,138 +895,126 @@
       </tags>
   </entry>
   <entry>
-    <title>『好不容易遇见的人，不要轻易说再见』</title>
-    <url>/2024/06/29/%E3%80%8E%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93%E9%81%87%E8%A7%81%E7%9A%84%E4%BA%BA%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E8%AF%B4%E5%86%8D%E8%A7%81%E3%80%8F/</url>
-    <content><![CDATA[
-  <a href="https://www.bilibili.com/video/BV1HS421d7J9/" class="bilibili_box" id="BV1HS421d7J9"></a>
-
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1HS421d7J9')
-      fetch('https://api.320.ink/api/b?id=BV1HS421d7J9').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>11:41</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-  
-
-<h2 id="哆啦A梦"><a href="#哆啦A梦" class="headerlink" title="哆啦A梦"></a>哆啦A梦</h2><p>原作漫画里静香也是这种抱着大雄哭的状态，要说喜欢那肯定是有的，水田版这集翻拍的时期两个人感情明显已经很好了，后面狗粮更是越发越多，至于大山版末期那更是重量级，两个人又是亲脸又是约会的</p>
-<p>可是，他是主角啊，普通人…或许真的没人在意</p>
-<p>我本来是想笑着跟你说再见的，可是我做不到</p>
+    <title>免费部署 Alist 目录列表程序</title>
+    <url>/2023/04/30/%E5%85%8D%E8%B4%B9%E9%83%A8%E7%BD%B2%20Alist%20%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>[note type&#x3D;”primary flat no-icon”]写的比较仓促，有什么不足的地方，还请大家多多指点。评论区欢饮留言～[&#x2F;note]</p>
+<p>[note type&#x3D;”info flat no-icon”]</p>
+<ol>
+<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例</li>
+<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
+<li>错误指正后，v3 版本也能正常部署使用了</li>
+<li>2023&#x2F;3&#x2F;16 恢复图片链接，原深海图床 CDN 因未知原因无法访问，已把仅剩的缩略图迁移至去不图床，图片可能会比较模糊[&#x2F;note]</li>
+</ol>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Alist 是一款支持多种存储的目录文件列表程序，后端基于 <code>gin</code>，前端使用 <code>react</code></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413013a46fe1.png"><img src="https://bu.dusays.com/2023/03/16/6413013a46fe1.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413010ad3013.png"><img src="https://bu.dusays.com/2023/03/16/6413010ad3013.png" alt="img"></a></p>
+<p><a href="https://alist-doc.nn.ci/">查看文档</a><a href="https://github.com/Xhofe/alist">查看源码</a></p>
 <hr>
-<h2 id="2024-6-28"><a href="#2024-6-28" class="headerlink" title="2024.6.28"></a>2024.6.28</h2><p>吉他换弦get</p>
+<h1 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h1><ol>
+<li>一个 Github 账号</li>
+<li>Fork 一份 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库</li>
+<li>一个 render 账号</li>
+<li>一个数据库，可选 <code>sqlite3</code>、<code>mysql</code>、<code>postgres</code></li>
+</ol>
 <hr>
-<h2 id="写首诗｜我只是你历史上，盛了一半的唐。"><a href="#写首诗｜我只是你历史上，盛了一半的唐。" class="headerlink" title="写首诗｜我只是你历史上，盛了一半的唐。"></a>写首诗｜我只是你历史上，盛了一半的唐。</h2>
-  <a href="https://www.bilibili.com/video/BV1N3411T74B/" class="bilibili_box" id="BV1N3411T74B"></a>
-
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1N3411T74B')
-      fetch('https://api.320.ink/api/b?id=BV1N3411T74B').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>01:35</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-  
-
-<p>今夜我牵着你私奔去这片神州的极北之地。 </p>
-<p>我要给你看我颤抖着吻你， 献身只属于我的神明。</p>
-<p>我给你看世人评判的不齿之恋， 违宗乱法，叛道离经。 </p>
-<p>给你看就算漫天飞雪，我这份心动不会结冰</p>
-<p>《你身上有我》<br>         ——惊竹娇<br>你会不会在下一首诗里，<br>想起从前的月亮。<br>还是说，<br>我只是你历史上，<br>盛了一半的唐。</p>
-<p>只有诗歌和音乐能让我相信生活。 </p>
-<p>以及： </p>
-<p>人类最擅长把自己的重量， 放到另一个不幸的身上， </p>
-<p>不需要，担不起这样的信仰。</p>
-<p>助解：</p>
-<p>我相信你爱的人身上</p>
-<p>是会有一个人的影子的</p>
-<p>很多时候，</p>
-<p>人类都是爱到一半。</p>
-<p>爱你的盛唐，不爱你由盛转衰，</p>
-<p>不爱你跛脚的吗，和尘埃</p>
-<p>但我们做不了任何，甚至话也不能说，</p>
-<p>世上最不缺让人流泪的事情。</p>
-<p>一个人守着回忆</p>
-<p>毕生追寻的爱，居然不值一提，</p>
-<p>明天啊，</p>
-<p>永远有圆了一半的弯月重新升起</p>
+<h2 id="render-账号"><a href="#render-账号" class="headerlink" title="render 账号"></a>render 账号</h2><p>点击进入 <a href="https://render.com/">render</a> 官网<br>点击右上角 <code>GET STARTED</code>, 使用 Github 进行注册或登录<br>按照网页的提示完成注册后进入控制面板</p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301642afa0.png"><img src="https://bu.dusays.com/2023/03/16/641301642afa0.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130188a77c9.png"><img src="https://bu.dusays.com/2023/03/16/64130188a77c9.png" alt="img"></a></p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>点击进入 <a href="https://www.elephantsql.com/">elephantsql</a> 官网<br>点击位于页面中央的 <code>Get a managed database today</code>，选择海龟样子的 <code>Free</code> 计划<br>会进入登陆页面，可以使用 Github 进行授权登陆，然后信息随便填一下就行<br>进入控制面板后创建数据库，计划记得选择 <code>Free</code><br>这样我们就获得了一个免费的 <code>postgres</code> 类型的数据库</p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301d4e12ac.png"><img src="https://bu.dusays.com/2023/03/16/641301d4e12ac.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/641301efa6837.png"><img src="https://bu.dusays.com/2023/03/16/641301efa6837.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/641302067ba2a.png"><img src="https://bu.dusays.com/2023/03/16/641302067ba2a.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130228cfac7.png"><img src="https://bu.dusays.com/2023/03/16/64130228cfac7.png" alt="img"></a></p>
+<p>数据库的信息最好记下来备用，等一会要填</p>
+<p>截图中的数据库在文章发布后已被删除</p>
+<hr>
+<h1 id="部署-Alist"><a href="#部署-Alist" class="headerlink" title="部署 Alist"></a>部署 Alist</h1><h2 id="拉取仓库"><a href="#拉取仓库" class="headerlink" title="拉取仓库"></a>拉取仓库</h2><p>进入 <a href="https://dashboard.render.com/">render</a> 的控制台，点击 <code>New+</code>，选择 <code>Web Service</code></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130252835b9.png"><img src="https://bu.dusays.com/2023/03/16/64130252835b9.png" alt="img"></a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/64130276670f6.png"><img src="https://bu.dusays.com/2023/03/16/64130276670f6.png" alt="img"></a></p>
+<p>选择刚刚 Fork 的 <a href="https://github.com/alist-org/alist-render">Alist-render</a> 的仓库<br>点击，进入部署页面，自己取个名字，然后先什么都不要动，往下拉，拉到最底下</p>
+<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p>在左下角 <code>Create Web Service</code> 的按钮上边，有个 <code>Advanced</code> 按钮，点击<br>然后在点击 <code>Add Environment Variable</code> 开始添加环境变量<br>这边可以参考我之前在 Alist 社区的对话</p>
+<p>[<a href="https://www.zxma.top/posts/438365eb/#referto_[1]">1]</a><a href="https://github.com/alist-org/alist/discussions/931">koyeb 怎么连接数据库</a></p>
+<p><a href="https://bu.dusays.com/2023/03/16/6413029066de4.png"><img src="https://bu.dusays.com/2023/03/16/6413029066de4.png" alt="img"></a></p>
+<p>参考表格对应填写变量参数，只要把 <code>DB_HOST</code>，<code>DB_NAME</code>，<code>DB_PASS</code>，<code>DB_USER</code> 给改成自己的就可以了</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据库对应</th>
+<th align="center">变量参数</th>
+<th align="center">示例参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Server</td>
+<td align="center">DB_HOST</td>
+<td align="center">queenie.db.elephantsql.com</td>
+</tr>
+<tr>
+<td align="center">User &amp; Default database</td>
+<td align="center">DB_NAME</td>
+<td align="center">bkqgx</td>
+</tr>
+<tr>
+<td align="center">Password</td>
+<td align="center">DB_PASS</td>
+<td align="center">5CqBjEVZWdaaad2333aadadadadN3Clo</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_PORT</td>
+<td align="center">5432</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_SSL_MODE</td>
+<td align="center">disable</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">DB_TYPE</td>
+<td align="center">postgres</td>
+</tr>
+<tr>
+<td align="center">User &amp; Default database</td>
+<td align="center">DB_USER</td>
+<td align="center">bkqgx</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">PORT</td>
+<td align="center">8080</td>
+</tr>
+</tbody></table>
+<p>填完检查一下，一共 8 个变量，好了就可以点击 <code>Create Web Service</code> 开始部署了，大概 1~2 分钟可以看到成果</p>
+<ol>
+<li>2022&#x2F;10&#x2F;30 新增下方的环境变量示例，供大家参考↓↓↓</li>
+<li>感谢 <a href="https://cuojue.org/">@WeiCN</a> 在评论区的错误指正</li>
+<li>错误指正后，v3 版本也能正常部署使用了</li>
+</ol>
+<h2 id="环境变量示例"><a href="#环境变量示例" class="headerlink" title="环境变量示例"></a>环境变量示例</h2><ul>
+<li>参数示例</li>
+<li>文字示例</li>
+<li>关于 sslmode</li>
+</ul>
+<p>DB_SSL_MODE 这个变量我也不是很清楚，有错误的可以评论区指正，根据官方文档来看</p>
+<ol>
+<li>sqlite3 数据库：请忽略该参数</li>
+<li>mysql 数据库：参数有 <code>true</code>, <code>false</code>, <code>skip-verify</code>, <code>preferred</code>, 选一个填</li>
+<li>postgres 数据库：参数有 <code>disable</code>，<code>allow</code>，<code>prefer</code>，<code>require</code>，<code>verify-full</code>，选一个填</li>
+</ol>
+<p>我用的 postgres 数据库填的是 <code>disable</code>，就是没用 SSL</p>
+<h1 id="评论区疑难解答"><a href="#评论区疑难解答" class="headerlink" title="评论区疑难解答"></a>评论区疑难解答</h1><ul>
+<li>账密未输出</li>
+<li>保持唤醒</li>
+</ul>
+<p>如果你是已连接数据库了，那么你的密码应该已经写入数据库了，所以他不会再显示了，需要你自己去数据库看用户名和密码<br>如果你使用的是 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库<br>前往你自己的 <a href="https://www.elephantsql.com/">elephantsql</a> 数据库，点击侧边栏的 <code>Browser</code> 之后输入 <code>SELECT * FROM &quot;public&quot;.&quot;x_users&quot; LIMIT 100</code><br>会有一行 <code>username</code> 名为 <code>admin</code> 的，后面就是密码，<code>admin</code> 就是用户名<br><a href="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png"><img src="https://bu.dusays.com/2022/12/05/638dcf8bb852a.png" alt="1670238084349-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
+<p>或者点 <code>Table queries</code>，再点 <code>x_user</code> 也是可以的<br><a href="https://bu.dusays.com/2022/12/05/638dcfaa95816.png"><img src="https://bu.dusays.com/2022/12/05/638dcfaa95816.png" alt="1670238119405-87e699bc8702c63c9c8182ab8b1e1440.png"></a></p>
+<hr>
+<h1 id="示例站点"><a href="#示例站点" class="headerlink" title="示例站点"></a>示例站点</h1><p>免费部署 Alist 目录列表程序</p>
+<p><a href="https://www.zxma.top/posts/438365eb/">https://www.zxma.top/posts/438365eb/</a></p>
 ]]></content>
       <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>电影中那些无法超越的唯美画面与经典台词</title>
-    <url>/2023/04/30/%E7%94%B5%E5%BD%B1%E4%B8%AD%E9%82%A3%E4%BA%9B%E6%97%A0%E6%B3%95%E8%B6%85%E8%B6%8A%E7%9A%84%E5%94%AF%E7%BE%8E%E7%94%BB%E9%9D%A2%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%8F%B0%E8%AF%8D/</url>
-    <content><![CDATA[<p>《返老还童》</p>
-<p>有时候，我们的人生会与别人的碰撞，只是我们不知道，无论是意外还是注定，我们都无法改变。</p>
-<p>有些人生来就注定可以坐在河边，有些人生来就注定被闪电击中，有些人生来就注定懂音乐，有些人生来就注定是艺术家，有些人生来就注定是游泳健将，有些人生来就注定懂纽扣生意，有些人生来就注定知道莎士比亚，有些人生来就注定做母亲，有些人生来就注定是舞者，</p>
-<p>《情人》</p>
-<p>你看我，我只有十五岁半。</p>
-<p>我在想为什么没有永恒，多遗憾啊。有些事情是永垂不朽的</p>
-<p>《怦然心动》</p>
-<p>他用那双眼睛看着我，那双重又闪亮迷人的双眼，我知道布莱斯•洛斯奇，还在等待着我的初吻。</p>
-<p>《绿皮书》</p>
-<p>尚恩，如果教授问起工作的事，跟他说抱歉，我要去找个女孩，威尔。</p>
-<p>我父亲说过，不管你做什么，都要做到极致，上班就认真工作，笑就尽情大笑，吃东西时，就像是最后一餐那样去享受</p>
-<p>《超脱》</p>
-<p>我们都有各自的难题，有些时候情况好点，有些时候我们不能给予别人，足够的空间</p>
-<p>《少年派的奇幻漂流》</p>
-<p>我仅剩下一具凡身在苦苦支撑，一切仿佛都静止了，都变得支离破碎，分不清黑夜白天，也分不清梦境现实。</p>
-<p>上帝啊，基督需要您，他在等待您的教诲，仁慈的主，慈悲的主啊</p>
-<p>有时上帝看似抛弃了我，但他都看在眼里，看似对我的苦难漠不关心，但他都看在眼里，当我彻底放弃希望的时候，他赐予了我安宁，并喻示我重新启程</p>
-<p>《肖申克的救赎》</p>
-<p>他窝在凉阴下，脸上挂着奇异微笑。</p>
-<p>《星际穿越》</p>
-<p>也许她现在正在准备去睡一个长觉，</p>
-<p>《钢琴师》</p>
-<p>我不知道该怎么感谢你，（感谢上帝，不用谢我，他让我们死里逃生，这就是为什么我们要信仰他。</p>
-]]></content>
-      <tags>
-        <tag>美句</tag>
+        <tag>知识</tag>
       </tags>
   </entry>
   <entry>
@@ -1245,6 +1214,37 @@
       </tags>
   </entry>
   <entry>
+    <title>电影中那些无法超越的唯美画面与经典台词</title>
+    <url>/2023/04/30/%E7%94%B5%E5%BD%B1%E4%B8%AD%E9%82%A3%E4%BA%9B%E6%97%A0%E6%B3%95%E8%B6%85%E8%B6%8A%E7%9A%84%E5%94%AF%E7%BE%8E%E7%94%BB%E9%9D%A2%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%8F%B0%E8%AF%8D/</url>
+    <content><![CDATA[<p>《返老还童》</p>
+<p>有时候，我们的人生会与别人的碰撞，只是我们不知道，无论是意外还是注定，我们都无法改变。</p>
+<p>有些人生来就注定可以坐在河边，有些人生来就注定被闪电击中，有些人生来就注定懂音乐，有些人生来就注定是艺术家，有些人生来就注定是游泳健将，有些人生来就注定懂纽扣生意，有些人生来就注定知道莎士比亚，有些人生来就注定做母亲，有些人生来就注定是舞者，</p>
+<p>《情人》</p>
+<p>你看我，我只有十五岁半。</p>
+<p>我在想为什么没有永恒，多遗憾啊。有些事情是永垂不朽的</p>
+<p>《怦然心动》</p>
+<p>他用那双眼睛看着我，那双重又闪亮迷人的双眼，我知道布莱斯•洛斯奇，还在等待着我的初吻。</p>
+<p>《绿皮书》</p>
+<p>尚恩，如果教授问起工作的事，跟他说抱歉，我要去找个女孩，威尔。</p>
+<p>我父亲说过，不管你做什么，都要做到极致，上班就认真工作，笑就尽情大笑，吃东西时，就像是最后一餐那样去享受</p>
+<p>《超脱》</p>
+<p>我们都有各自的难题，有些时候情况好点，有些时候我们不能给予别人，足够的空间</p>
+<p>《少年派的奇幻漂流》</p>
+<p>我仅剩下一具凡身在苦苦支撑，一切仿佛都静止了，都变得支离破碎，分不清黑夜白天，也分不清梦境现实。</p>
+<p>上帝啊，基督需要您，他在等待您的教诲，仁慈的主，慈悲的主啊</p>
+<p>有时上帝看似抛弃了我，但他都看在眼里，看似对我的苦难漠不关心，但他都看在眼里，当我彻底放弃希望的时候，他赐予了我安宁，并喻示我重新启程</p>
+<p>《肖申克的救赎》</p>
+<p>他窝在凉阴下，脸上挂着奇异微笑。</p>
+<p>《星际穿越》</p>
+<p>也许她现在正在准备去睡一个长觉，</p>
+<p>《钢琴师》</p>
+<p>我不知道该怎么感谢你，（感谢上帝，不用谢我，他让我们死里逃生，这就是为什么我们要信仰他。</p>
+]]></content>
+      <tags>
+        <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记战7000通病</title>
     <url>/2025/08/19/%E8%AE%B0%E6%88%987000%E9%80%9A%E7%97%85/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -1353,7 +1353,7 @@
 <p>干净启动，关闭不必要插件后成功</p>
 ]]></content>
       <tags>
-        <tag>电脑</tag>
+        <tag>破万法</tag>
       </tags>
   </entry>
 </search>
