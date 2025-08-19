@@ -233,12 +233,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WordPress 文章完美转换 Markdown 方法</title>
-    <url>/2025/08/19/WordPress/</url>
-    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Vim简介</title>
     <url>/2024/04/26/Vim%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h2 id="vim是什么？"><a href="#vim是什么？" class="headerlink" title="vim是什么？"></a>vim是什么？</h2><p>vim是Linux环境下一款功能强大、高度可定制的文本编辑工具，类似于Windows下面的source insight、sublime、notepad。VI是visual interface的缩写，即可视化接口。vim 即 vi IMproved，在 vi 的基础上做了很多改进，如：增加了多级撤销、多窗口操作、崩溃后也可以恢复、增加了稳定性、关键字自动补全、上下文自动补全等功能。</p>
@@ -264,124 +258,10 @@
       </tags>
   </entry>
   <entry>
-    <title>github图床介绍</title>
-    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
-<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
-<p>上传即可或者搭配picgo使用</p>
-<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+    <title>WordPress 文章完美转换 Markdown 方法</title>
+    <url>/2025/08/19/WordPress/</url>
+    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
 ]]></content>
-      <tags>
-        <tag>博客相关</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pip命令</title>
-    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法</p>
-<meta name="referrer" content="no-referrer">
-
-<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
-]]></content>
-      <tags>
-        <tag>代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在命令行中创建博客，使用vim</title>
-    <url>/2024/06/07/vim%E5%91%BD%E4%BB%A42/</url>
-    <content><![CDATA[<p>#创建博客文章</p>
-<p>hexo n ‘你想取的名字’</p>
-<p>#路径查看</p>
-<p>pwd</p>
-<p>#查看文件</p>
-<p>ls</p>
-<p>#转换</p>
-<p>cd</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>ls -1</p>
-<p>#开始装逼</p>
-<p>vim 文件名</p>
-<p>#退出</p>
-<p>:wq</p>
-<hr>
-<p>参考文献</p>
-
-  <a href="https://www.bilibili.com/video/BV1Yb411a7ty/" class="bilibili_box" id="BV1Yb411a7ty"></a>
-
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1Yb411a7ty')
-      fetch('https://api.320.ink/api/b?id=BV1Yb411a7ty').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>28:29</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-   
-
-<hr>
-<p>任何记忆都不会完全消失</p>
-
-  <a href="https://www.bilibili.com/video/BV1GM4m1z78v/" class="bilibili_box" id="BV1GM4m1z78v"></a>
-
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1GM4m1z78v')
-      fetch('https://api.320.ink/api/b?id=BV1GM4m1z78v').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>08:44</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-  
-
-<hr>
-<p>自行车学习成功</p>
-]]></content>
-      <tags>
-        <tag>知识</tag>
-      </tags>
   </entry>
   <entry>
     <title>Clash</title>
@@ -517,6 +397,126 @@
       </tags>
   </entry>
   <entry>
+    <title>github图床介绍</title>
+    <url>/2023/04/15/github%E5%9B%BE%E5%BA%8A%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h1 id="github图床介绍"><a href="#github图床介绍" class="headerlink" title="github图床介绍"></a>github图床介绍</h1><p><a href="https://cdn.staticaly.com/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D@master/img/">https://cdn.staticaly.com/gh/用户名名/仓库名@master/img/</a></p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg">https://cdn.staticaly.com/gh/HMuSeaB/tuchuang@master/img/81471534_p0.jpg</a></p>
+<p><img src="https://article.biliimg.com/bfs/article/4e77937d2049a1c53db1252e3b43e212996d46fd.png" alt="image-20230415205412692"></p>
+<p>上传即可或者搭配picgo使用</p>
+<h1 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h1><p><a href="https://github.com/Molunerfinn/PicGo">官方网站</a></p>
+]]></content>
+      <tags>
+        <tag>博客相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip命令</title>
+    <url>/2025/01/10/pip%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>pip 常用命令以及升级方法使用python时经常使用到pip命令，可以方便安装python的各种<a href="https://so.csdn.net/so/search?q=%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93&spm=1001.2101.3001.7020">第三方库</a> 1：查看pip 打开cmd窗口，输入pip命令，会显示pip所有的参数使用方法</p>
+<meta name="referrer" content="no-referrer">
+
+<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/7e5ca19de88dbf63960b09679bcd4d60.png#pic_center" alt="pip命令的使用方法和参数"> 如果输入pip提示Did not provide a command，可能是没有配置环境变量导致的，也可能系统安装有多个pip 2：查看pip的安装路径where pip <img src="https://i-blog.csdnimg.cn/blog_migrate/cb6a21981c916e44b18603d2ddfda50e.png#pic_center" alt="查看pip的路径"> 3：查看pip版本pip -V（注意V要大写） <img src="https://i-blog.csdnimg.cn/blog_migrate/cf0df4fbf6b5476d21ab1b2f43c40f07.png#pic_center" alt="pip -V"> 4：pip升级方法 安装python第三方包时，会有pip版本的提示 <img src="https://i-blog.csdnimg.cn/blog_migrate/f371195df6689e6dfa08b4f02914be64.png#pic_center" alt="pip版本提示"> 方法一：输入pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/b2af069a640f4236a8041a07f96a16da.png#pic_center" alt="pip"> 如图示，pip升级失败，这时再查看pip也会显示pip不存在（No module named ‘pip’）【有的输入该命令可以直接升级成功，如果没有成功可以查看方法二】 <img src="https://i-blog.csdnimg.cn/blog_migrate/eeb29a6f06072788d5d8b8a16cd77877.png#pic_center" alt="pip"> 方法二：先重新安装回pip python -m ensurepip <img src="https://i-blog.csdnimg.cn/blog_migrate/70801784391ff24393f477388fe14f12.png#pic_center" alt="pip"> 如图示，再输入python -m pip install –upgrade pip <img src="https://i-blog.csdnimg.cn/blog_migrate/2897dd9b16468d742795a6d389e66e5c.png#pic_center" alt="pip"> 显示安装成功，再安装python第三方包时就不会有升级提示了 <img src="https://i-blog.csdnimg.cn/blog_migrate/e205daded94a042a23afd88996cf5133.png#pic_center" alt="pip"> 5：查看已安装的第三方库pip list <img src="https://i-blog.csdnimg.cn/blog_migrate/f4248fac08329d257d352447aa72799d.png" alt="pip"> 查看所有有新版本的第三方库：pip list –outdated <img src="https://i-blog.csdnimg.cn/blog_migrate/94f85910180cb69c6a6f1373354a1d1f.png" alt="pip"> 6：查看安装的库的详细信息：pip show [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/5246a2415db884d4bc0e26d28b5c23cf.png" alt="pip show 【库名】"> 7：卸载第三方库pip uninstall [库名] <img src="https://i-blog.csdnimg.cn/blog_migrate/679eeb3f207a1d0daf8cdf9a8bb7565b.png" alt="pip uninstall 【库名】"> </p>
+]]></content>
+      <tags>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在命令行中创建博客，使用vim</title>
+    <url>/2024/06/07/vim%E5%91%BD%E4%BB%A42/</url>
+    <content><![CDATA[<p>#创建博客文章</p>
+<p>hexo n ‘你想取的名字’</p>
+<p>#路径查看</p>
+<p>pwd</p>
+<p>#查看文件</p>
+<p>ls</p>
+<p>#转换</p>
+<p>cd</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>ls -1</p>
+<p>#开始装逼</p>
+<p>vim 文件名</p>
+<p>#退出</p>
+<p>:wq</p>
+<hr>
+<p>参考文献</p>
+
+  <a href="https://www.bilibili.com/video/BV1Yb411a7ty/" class="bilibili_box" id="BV1Yb411a7ty"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1Yb411a7ty')
+      fetch('https://api.320.ink/api/b?id=BV1Yb411a7ty').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>28:29</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+   
+
+<hr>
+<p>任何记忆都不会完全消失</p>
+
+  <a href="https://www.bilibili.com/video/BV1GM4m1z78v/" class="bilibili_box" id="BV1GM4m1z78v"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1GM4m1z78v')
+      fetch('https://api.320.ink/api/b?id=BV1GM4m1z78v').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>08:44</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<hr>
+<p>自行车学习成功</p>
+]]></content>
+      <tags>
+        <tag>知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>“玫瑰太贵了，⽤野草纪念我吧，满地都是，生生不息”</title>
     <url>/2023/04/30/%E2%80%9C%E7%8E%AB%E7%91%B0%E5%A4%AA%E8%B4%B5%E4%BA%86%EF%BC%8C%E2%BD%A4%E9%87%8E%E8%8D%89%E7%BA%AA%E5%BF%B5%E6%88%91%E5%90%A7%EF%BC%8C%E6%BB%A1%E5%9C%B0%E9%83%BD%E6%98%AF%EF%BC%8C%E7%94%9F%E7%94%9F%E4%B8%8D%E6%81%AF%E2%80%9D/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -624,6 +624,110 @@
   ]]></content>
       <tags>
         <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『好不容易遇见的人，不要轻易说再见』</title>
+    <url>/2024/06/29/%E3%80%8E%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93%E9%81%87%E8%A7%81%E7%9A%84%E4%BA%BA%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E8%AF%B4%E5%86%8D%E8%A7%81%E3%80%8F/</url>
+    <content><![CDATA[
+  <a href="https://www.bilibili.com/video/BV1HS421d7J9/" class="bilibili_box" id="BV1HS421d7J9"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1HS421d7J9')
+      fetch('https://api.320.ink/api/b?id=BV1HS421d7J9').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>11:41</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<h2 id="哆啦A梦"><a href="#哆啦A梦" class="headerlink" title="哆啦A梦"></a>哆啦A梦</h2><p>原作漫画里静香也是这种抱着大雄哭的状态，要说喜欢那肯定是有的，水田版这集翻拍的时期两个人感情明显已经很好了，后面狗粮更是越发越多，至于大山版末期那更是重量级，两个人又是亲脸又是约会的</p>
+<p>可是，他是主角啊，普通人…或许真的没人在意</p>
+<p>我本来是想笑着跟你说再见的，可是我做不到</p>
+<hr>
+<h2 id="2024-6-28"><a href="#2024-6-28" class="headerlink" title="2024.6.28"></a>2024.6.28</h2><p>吉他换弦get</p>
+<hr>
+<h2 id="写首诗｜我只是你历史上，盛了一半的唐。"><a href="#写首诗｜我只是你历史上，盛了一半的唐。" class="headerlink" title="写首诗｜我只是你历史上，盛了一半的唐。"></a>写首诗｜我只是你历史上，盛了一半的唐。</h2>
+  <a href="https://www.bilibili.com/video/BV1N3411T74B/" class="bilibili_box" id="BV1N3411T74B"></a>
+
+  <script>
+    bilibili()
+    function bilibili() {
+      let dom = document.getElementById('BV1N3411T74B')
+      fetch('https://api.320.ink/api/b?id=BV1N3411T74B').then(res=>res.json()).then(data=>{
+        dom.innerHTML = `
+        <div class="bilibili_cover">
+          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
+          <img src="${data.pic + '&h=300'}" class="no-lazyload">
+          <span>01:35</span>
+        </div>
+        <div class="bilibili_info">
+          <div class="title">${data.title}</div>
+          <div class="desc">${data.desc}</div>
+          <div class="stat">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
+            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
+            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
+          </div>
+          <div class="owner">
+            <span class="tip">视频</span>
+            <img src="${data.face + '&h=100'}" class="no-lazyload">
+            <span>${data.owner}</span>
+          </div>
+        </div>
+        `
+      })
+    }
+  </script>
+  
+
+<p>今夜我牵着你私奔去这片神州的极北之地。 </p>
+<p>我要给你看我颤抖着吻你， 献身只属于我的神明。</p>
+<p>我给你看世人评判的不齿之恋， 违宗乱法，叛道离经。 </p>
+<p>给你看就算漫天飞雪，我这份心动不会结冰</p>
+<p>《你身上有我》<br>         ——惊竹娇<br>你会不会在下一首诗里，<br>想起从前的月亮。<br>还是说，<br>我只是你历史上，<br>盛了一半的唐。</p>
+<p>只有诗歌和音乐能让我相信生活。 </p>
+<p>以及： </p>
+<p>人类最擅长把自己的重量， 放到另一个不幸的身上， </p>
+<p>不需要，担不起这样的信仰。</p>
+<p>助解：</p>
+<p>我相信你爱的人身上</p>
+<p>是会有一个人的影子的</p>
+<p>很多时候，</p>
+<p>人类都是爱到一半。</p>
+<p>爱你的盛唐，不爱你由盛转衰，</p>
+<p>不爱你跛脚的吗，和尘埃</p>
+<p>但我们做不了任何，甚至话也不能说，</p>
+<p>世上最不缺让人流泪的事情。</p>
+<p>一个人守着回忆</p>
+<p>毕生追寻的爱，居然不值一提，</p>
+<p>明天啊，</p>
+<p>永远有圆了一半的弯月重新升起</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -750,107 +854,154 @@
       </tags>
   </entry>
   <entry>
-    <title>『好不容易遇见的人，不要轻易说再见』</title>
-    <url>/2024/06/29/%E3%80%8E%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93%E9%81%87%E8%A7%81%E7%9A%84%E4%BA%BA%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E8%AF%B4%E5%86%8D%E8%A7%81%E3%80%8F/</url>
-    <content><![CDATA[
-  <a href="https://www.bilibili.com/video/BV1HS421d7J9/" class="bilibili_box" id="BV1HS421d7J9"></a>
+    <title>Replit博客【已失效，留帖以纪念】</title>
+    <url>/2023/04/30/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
 
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1HS421d7J9')
-      fetch('https://api.320.ink/api/b?id=BV1HS421d7J9').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>11:41</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-  
+<p><a href="https://blogmusea.repl.co/">Demo</a></p>
+<h1 id="Replit搭建博客"><a href="#Replit搭建博客" class="headerlink" title="Replit搭建博客"></a>Replit搭建博客</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>Replit账号1枚<br>注册replit账号<br>打开官网注册账号<br><a href="https://replit.com/">https://replit.com/</a></p>
+<p><img src="https://i0.hdslb.com/bfs/album/6cfb0fde3eb749c3decff131ff84bb1079119fce.png" alt="img"></p>
+<p><img src="https://i0.hdslb.com/bfs/album/b06bd50bd82cf08555b8cffbc1a1ea33b7106b45.png" alt="img"></p>
+<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>选择Teams，好处是项目可以无限制创建，体现在三级域名一个账号就可以创建很多。</p>
+<p><img src="https://i0.hdslb.com/bfs/album/9b61db7f4048d7275306524fa8a5ec51a802958c.png" alt="img"></p>
+<p>选择New Education Organization</p>
+<p><img src="https://i0.hdslb.com/bfs/album/445cc7fc6f46372b5b040aba8dcb81562f9caf54.png" alt="img"></p>
+<p>勾选</p>
+<p>[note type&#x3D;”default modern no-icon”]I confirm that I am a teacher or administrator at an institution or organization of the above type.[&#x2F;note]</p>
+<p><img src="https://i0.hdslb.com/bfs/album/9c183fd4ef20fc456558bda0809a169db06cbacc.png" alt="img"></p>
+<p>起个名字就可以create New Education Organization了</p>
+<p><img src="https://i0.hdslb.com/bfs/album/f87d9e33221f64e9578286f2a596a2f0ea97f77e.png" alt="img"></p>
+<p>Create team</p>
+<p><img src="https://i0.hdslb.com/bfs/album/c32cdffb730d8266703b6f2728dee02bc40af9d6.png" alt="img"></p>
+<p>在创建的team中再创建project</p>
+<p><img src="https://i0.hdslb.com/bfs/album/98d1ec1eb1491f63775fd1c0274aa1941a1d1348.png" alt="img"></p>
+<p>在第一个文本框中输入bash，选择Bash。</p>
+<p>右侧文本框内填写项目的名字，它也是最终博客网址的域名一部分。</p>
+<p><img src="https://i0.hdslb.com/bfs/album/63607e5b1a2ed6d863242a42955bf70c043f9582.png" alt="img"></p>
+<p>单击Create创建项目后，会自动跳转到项目编辑页面，若没有跳转则自行点击刚刚创建的项目进入该页面。</p>
+<h2 id="克隆博客程序"><a href="#克隆博客程序" class="headerlink" title="克隆博客程序"></a>克隆博客程序</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Sayafx/typechonreplit.git &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/* ./ &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/.[^<span class="type">.</span>]* ./ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> *~ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> typechonreplit</span><br></pre></td></tr></table></figure>
 
-<h2 id="哆啦A梦"><a href="#哆啦A梦" class="headerlink" title="哆啦A梦"></a>哆啦A梦</h2><p>原作漫画里静香也是这种抱着大雄哭的状态，要说喜欢那肯定是有的，水田版这集翻拍的时期两个人感情明显已经很好了，后面狗粮更是越发越多，至于大山版末期那更是重量级，两个人又是亲脸又是约会的</p>
-<p>可是，他是主角啊，普通人…或许真的没人在意</p>
-<p>我本来是想笑着跟你说再见的，可是我做不到</p>
-<hr>
-<h2 id="2024-6-28"><a href="#2024-6-28" class="headerlink" title="2024.6.28"></a>2024.6.28</h2><p>吉他换弦get</p>
-<hr>
-<h2 id="写首诗｜我只是你历史上，盛了一半的唐。"><a href="#写首诗｜我只是你历史上，盛了一半的唐。" class="headerlink" title="写首诗｜我只是你历史上，盛了一半的唐。"></a>写首诗｜我只是你历史上，盛了一半的唐。</h2>
-  <a href="https://www.bilibili.com/video/BV1N3411T74B/" class="bilibili_box" id="BV1N3411T74B"></a>
+<p>在右侧的Console或Shell中粘贴，回车</p>
+<p><img src="https://i0.hdslb.com/bfs/album/69145a78ac79eb1c895873fbbfbf0ba38889c0e2.png" alt="img"></p>
+<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
+<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sh main.sh</span><br></pre></td></tr></table></figure>
 
-  <script>
-    bilibili()
-    function bilibili() {
-      let dom = document.getElementById('BV1N3411T74B')
-      fetch('https://api.320.ink/api/b?id=BV1N3411T74B').then(res=>res.json()).then(data=>{
-        dom.innerHTML = `
-        <div class="bilibili_cover">
-          <img src="https://s1.hdslb.com/bfs/static/player/img/play.svg" class="play_icon no-lazyload">
-          <img src="${data.pic + '&h=300'}" class="no-lazyload">
-          <span>01:35</span>
-        </div>
-        <div class="bilibili_info">
-          <div class="title">${data.title}</div>
-          <div class="desc">${data.desc}</div>
-          <div class="stat">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.67735 4.2798C5.98983 4.1725 7.85812 4.0625 10 4.0625C12.1421 4.0625 14.0105 4.17252 15.323 4.27983C16.2216 4.3533 16.9184 5.04049 16.9989 5.9318C17.0962 7.00837 17.1875 8.43614 17.1875 10C17.1875 11.5639 17.0962 12.9916 16.9989 14.0682C16.9184 14.9595 16.2216 15.6467 15.323 15.7202C14.0105 15.8275 12.1421 15.9375 10 15.9375C7.85812 15.9375 5.98983 15.8275 4.67735 15.7202C3.77861 15.6467 3.08174 14.9593 3.00119 14.0678C2.90388 12.9908 2.8125 11.5627 2.8125 10C2.8125 8.43727 2.90388 7.00924 3.00119 5.93221C3.08174 5.04067 3.77861 4.35327 4.67735 4.2798ZM10 2.8125C7.81674 2.8125 5.9136 2.92456 4.5755 3.03395C3.07738 3.15643 1.8921 4.31616 1.75626 5.81973C1.65651 6.92379 1.5625 8.39058 1.5625 10C1.5625 11.6094 1.65651 13.0762 1.75626 14.1803C1.8921 15.6838 3.07738 16.8436 4.5755 16.966C5.9136 17.0754 7.81674 17.1875 10 17.1875C12.1835 17.1875 14.0868 17.0754 15.4249 16.966C16.9228 16.8436 18.108 15.6841 18.2438 14.1807C18.3435 13.077 18.4375 11.6105 18.4375 10C18.4375 8.38948 18.3435 6.92296 18.2438 5.81931C18.108 4.31588 16.9228 3.15645 15.4249 3.03398C14.0868 2.92458 12.1835 2.8125 10 2.8125ZM12.1876 10.722C12.7431 10.4013 12.7431 9.59941 12.1876 9.27866L9.06133 7.47373C8.50577 7.15298 7.81133 7.55392 7.81133 8.19542V11.8053C7.81133 12.4468 8.50577 12.8477 9.06133 12.527L12.1876 10.722Z" fill="#9499A0"/></svg>${data.view}</span>
-            <span><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77234 30.8573V11.7471H7.54573C5.50932 11.7471 3.85742 13.3931 3.85742 15.425V27.1794C3.85742 29.2112 5.50932 30.8573 7.54573 30.8573H9.77234ZM11.9902 30.8573V11.7054C14.9897 10.627 16.6942 7.8853 17.1055 3.33591C17.2666 1.55463 18.9633 0.814421 20.5803 1.59505C22.1847 2.36964 23.243 4.32583 23.243 6.93947C23.243 8.50265 23.0478 10.1054 22.6582 11.7471H29.7324C31.7739 11.7471 33.4289 13.402 33.4289 15.4435C33.4289 15.7416 33.3928 16.0386 33.3215 16.328L30.9883 25.7957C30.2558 28.7683 27.5894 30.8573 24.528 30.8573H11.9911H11.9902Z"></path></svg>${data.like}</span>
-            <span><svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="icon" style="fill:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.045 25.5454C7.69377 25.5454 2.54504 20.3967 2.54504 14.0454C2.54504 7.69413 7.69377 2.54541 14.045 2.54541C20.3963 2.54541 25.545 7.69413 25.545 14.0454C25.545 17.0954 24.3334 20.0205 22.1768 22.1771C20.0201 24.3338 17.095 25.5454 14.045 25.5454ZM9.66202 6.81624H18.2761C18.825 6.81624 19.27 7.22183 19.27 7.72216C19.27 8.22248 18.825 8.62807 18.2761 8.62807H14.95V10.2903C17.989 10.4444 20.3766 12.9487 20.3855 15.9916V17.1995C20.3854 17.6997 19.9799 18.1052 19.4796 18.1052C18.9793 18.1052 18.5738 17.6997 18.5737 17.1995V15.9916C18.5667 13.9478 16.9882 12.2535 14.95 12.1022V20.5574C14.95 21.0577 14.5444 21.4633 14.0441 21.4633C13.5437 21.4633 13.1382 21.0577 13.1382 20.5574V12.1022C11.1 12.2535 9.52148 13.9478 9.51448 15.9916V17.1995C9.5144 17.6997 9.10883 18.1052 8.60856 18.1052C8.1083 18.1052 7.70273 17.6997 7.70265 17.1995V15.9916C7.71158 12.9487 10.0992 10.4444 13.1382 10.2903V8.62807H9.66202C9.11309 8.62807 8.66809 8.22248 8.66809 7.72216C8.66809 7.22183 9.11309 6.81624 9.66202 6.81624Z"></path></svg>${data.coin}</span>
-          </div>
-          <div class="owner">
-            <span class="tip">视频</span>
-            <img src="${data.face + '&h=100'}" class="no-lazyload">
-            <span>${data.owner}</span>
-          </div>
-        </div>
-        `
-      })
-    }
-  </script>
-  
+<p>回车。</p>
+<p><a href="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png"><img src="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png" alt="img"></a></p>
+<p>等待输出结束，博客程序克隆完毕。</p>
+<h2 id="安装博客"><a href="#安装博客" class="headerlink" title="安装博客"></a>安装博客</h2><p>等待输出完毕，出现如图所示结果时，点击绿色的Run按钮。</p>
+<p><a href="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png"><img src="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png" alt="img"></a></p>
+<p>点击小窗口右上角第二个图标，博客安装程序将在新窗口打开（必要）</p>
+<p>如果不在新窗口打开将无法安装</p>
+<p><a href="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png"><img src="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png" alt="img"></a></p>
+<p>根据提示点击下一步</p>
+<h3 id="数据库选择"><a href="#数据库选择" class="headerlink" title="数据库选择"></a>数据库选择</h3><p>数据库选择SQLite原生函数适配器，点击确认开始安装</p>
+<p><a href="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png"><img src="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png" alt="img"></a></p>
+<h3 id="设置管理员账号"><a href="#设置管理员账号" class="headerlink" title="设置管理员账号"></a>设置管理员账号</h3><p><a href="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png"><img src="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png" alt="img"></a></p>
+<h2 id="安装完毕"><a href="#安装完毕" class="headerlink" title="安装完毕"></a>安装完毕</h2><p><a href="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png"><img src="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png" alt="img"></a></p>
+<h1 id="博客配置建议"><a href="#博客配置建议" class="headerlink" title="博客配置建议"></a>博客配置建议</h1><h2 id="推荐使用Typora-bilibili图床"><a href="#推荐使用Typora-bilibili图床" class="headerlink" title="推荐使用Typora+bilibili图床"></a><strong>推荐使用Typora+bilibili图床</strong></h2><p>哔哩哔哩图片上传, Typora插件，实现图片粘贴即可上传到哔哩哔哩，并替换链接</p>
+<h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><ul>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main.exe.zip">Windows</a></li>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main">Mac</a></li>
+<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main-linux">Linux</a></li>
+</ul>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/xlzy520/typora-plugin-bilibili">typora-plugin-bilibilitypora</a></p>
+<h3 id="typora免费版下载"><a href="#typora免费版下载" class="headerlink" title="typora免费版下载"></a>typora免费版下载</h3><p><a href="https://musea.repl.co/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98/Typora">alist</a></p>
+<h3 id="获取B站SESSDATA"><a href="#获取B站SESSDATA" class="headerlink" title="获取B站SESSDATA"></a>获取B站SESSDATA</h3><ol>
+<li><p>登录<a href="https://www.bilibili.com/">B站</a></p>
+</li>
+<li><p>按<code>F12</code>打开控制台</p>
+</li>
+<li><p>找到<code>SESSDATA</code>复制即可<a href="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png"><img src="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png" alt="img"></a></p>
+</li>
+<li><p>获取csrf: 登录哔哩哔哩→F12打开控制→Application→Cookies→bili_jct</p>
+</li>
+<li><p>进入Typora设置，选择图像Tab，插入图片时选择<strong>上传图片</strong>，然后将<strong>插件的绝对路径</strong>填入<strong>命令</strong>。如下地方，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> # Mac、Linux</span><br><span class="line">/Users/xxx/bilibili/typora-plugin-bilibili-macos token=你的SESSDATA csrf=你的bili_jct</span><br><span class="line"># Windows</span><br><span class="line">D:\Downloads\typora-plugin-bilibili-win.exe token=你的SESSDATA csrf=你的bili_jct</span><br></pre></td></tr></table></figure>
 
-<p>今夜我牵着你私奔去这片神州的极北之地。 </p>
-<p>我要给你看我颤抖着吻你， 献身只属于我的神明。</p>
-<p>我给你看世人评判的不齿之恋， 违宗乱法，叛道离经。 </p>
-<p>给你看就算漫天飞雪，我这份心动不会结冰</p>
-<p>《你身上有我》<br>         ——惊竹娇<br>你会不会在下一首诗里，<br>想起从前的月亮。<br>还是说，<br>我只是你历史上，<br>盛了一半的唐。</p>
-<p>只有诗歌和音乐能让我相信生活。 </p>
-<p>以及： </p>
-<p>人类最擅长把自己的重量， 放到另一个不幸的身上， </p>
-<p>不需要，担不起这样的信仰。</p>
-<p>助解：</p>
-<p>我相信你爱的人身上</p>
-<p>是会有一个人的影子的</p>
-<p>很多时候，</p>
-<p>人类都是爱到一半。</p>
-<p>爱你的盛唐，不爱你由盛转衰，</p>
-<p>不爱你跛脚的吗，和尘埃</p>
-<p>但我们做不了任何，甚至话也不能说，</p>
-<p>世上最不缺让人流泪的事情。</p>
-<p>一个人守着回忆</p>
-<p>毕生追寻的爱，居然不值一提，</p>
-<p>明天啊，</p>
-<p>永远有圆了一半的弯月重新升起</p>
+<p><strong>其中很重要的后面的 <code>token=你的SESSDATA</code> ,没有这句的话，无法上传成功，如果发现上传失败，那应该就是SESSDATA过期了，需要手动更新</strong></p>
+</li>
+</ol>
+<h2 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h2><p>例如原图： <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png</a></p>
+<p>规定高宽，质量压缩: <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c</a></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Url</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>原图</td>
+<td>baseURL&#x2F;1.jpg</td>
+</tr>
+<tr>
+<td>原分辨率，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@1e_1c.jpg">1.jpg@1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定宽，高度自适应，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_1e_1c.jpg">1.jpg@104w_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定高，宽度自适应，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104h_1e_1c.jpg">1.jpg@104h_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>规定高宽，质量压缩</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.jpg">1.jpg@104w_104h_1e_1c.jpg</a></td>
+</tr>
+<tr>
+<td>原分辨率，webp格式(占用最小)</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
+</tr>
+<tr>
+<td>规定高度，webp格式(占用最小)</td>
+<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
+</tr>
+</tbody></table>
+<p>格式：(图像原链接)@(\d+[whsepqoc]_?)*(.(|webp|gif|png|jpg|jpeg))?$</p>
+<ul>
+<li>w:[1, 9223372036854775807] (width，图像宽度)</li>
+<li>h:[1, 9223372036854775807] (height，图像高度)</li>
+<li>s:[1, 9223372036854775807] (作用未知)</li>
+<li>e:[0,2] (resize，0:保留比例取其小，1:保留比例取其大，2:不保留原比例，不与c混用)</li>
+<li>p:[1,1000] (默认100，放大倍数，不与c混用)</li>
+<li>q:[1,100] (quality，默认75，图像质量)</li>
+<li>o:[0,1] (作用未知)</li>
+<li>c:[0,1] (clip，0:默认，1:裁剪)</li>
+<li>webp,png,jpeg,gif(不加则保留原格式)</li>
+<li>不区分大小写，相同的参数后面覆盖前面</li>
+<li>计算后的实际w<em>h不能大于原w</em>h，否则wh参数失效</li>
+</ul>
+<h4 id="解决B站防盗链（403）"><a href="#解决B站防盗链（403）" class="headerlink" title="解决B站防盗链（403）"></a>解决B站防盗链（403）</h4><blockquote>
+<p>B站开启了防盗链，利用的是HTTP的Referer属性做判断。如果Referer是他白名单之外的网站，就会返回403</p>
+</blockquote>
+<h4 id="全站图片使用"><a href="#全站图片使用" class="headerlink" title="全站图片使用"></a>全站图片使用</h4><p>在外观-设置外观里找到<code>自定义head标签内位置内容</code>，设置如下标志，那么全站资源引用都不会携带referrer</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="新窗口打开"><a href="#新窗口打开" class="headerlink" title="新窗口打开"></a>新窗口打开</h4><p>主要设置<code>rel=&quot;noreferrer&quot;</code>，使用<code>window.open</code>打开的话是会默认携带<code>referrer</code>的，第一次还是会403</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">&quot;noreferrer&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="内置插件和主题请自行启用"><a href="#内置插件和主题请自行启用" class="headerlink" title="内置插件和主题请自行启用"></a>内置插件和主题请自行启用</h2><h3 id="Snow插件推荐设置"><a href="#Snow插件推荐设置" class="headerlink" title="Snow插件推荐设置"></a>Snow插件推荐设置</h3><p>雪花数量：200</p>
+<p>雪花大小：1</p>
+<p>雪花距离：225</p>
+<p>雪花速度：0.5</p>
+<p>雪花偏移0.1</p>
+<p>雪花透明度：0.5</p>
+<p>背景颜色：（空着不填）</p>
+<p><a href="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png"><img src="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png" alt="img"></a></p>
+<h2 id="登录界面改字"><a href="#登录界面改字" class="headerlink" title="登录界面改字"></a>登录界面改字</h2><p>login.php第16行，删除class&#x3D;“xxxx”引号里的内容</p>
+<p>接着按需更改其他内容，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://syblog.repl.co/&quot;</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>HMuSeaB’s Blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加网站监控"><a href="#添加网站监控" class="headerlink" title="添加网站监控"></a>添加网站监控</h2><p>Replit项目30分钟内无流量会休眠，因此可以使用网站监控让网站一直有流量。</p>
+<p>推荐一个常用的（需科学上网）</p>
+<p><a href="https://uptimerobot.com/">https://uptimerobot.com/</a></p>
 ]]></content>
       <tags>
-        <tag>日常</tag>
+        <tag>回忆</tag>
       </tags>
   </entry>
   <entry>
@@ -1063,169 +1214,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Replit博客【已失效，留帖以纪念】</title>
-    <url>/2023/04/30/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<p><a href="https://blogmusea.repl.co/">Demo</a></p>
-<h1 id="Replit搭建博客"><a href="#Replit搭建博客" class="headerlink" title="Replit搭建博客"></a>Replit搭建博客</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>Replit账号1枚<br>注册replit账号<br>打开官网注册账号<br><a href="https://replit.com/">https://replit.com/</a></p>
-<p><img src="https://i0.hdslb.com/bfs/album/6cfb0fde3eb749c3decff131ff84bb1079119fce.png" alt="img"></p>
-<p><img src="https://i0.hdslb.com/bfs/album/b06bd50bd82cf08555b8cffbc1a1ea33b7106b45.png" alt="img"></p>
-<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>选择Teams，好处是项目可以无限制创建，体现在三级域名一个账号就可以创建很多。</p>
-<p><img src="https://i0.hdslb.com/bfs/album/9b61db7f4048d7275306524fa8a5ec51a802958c.png" alt="img"></p>
-<p>选择New Education Organization</p>
-<p><img src="https://i0.hdslb.com/bfs/album/445cc7fc6f46372b5b040aba8dcb81562f9caf54.png" alt="img"></p>
-<p>勾选</p>
-<p>[note type&#x3D;”default modern no-icon”]I confirm that I am a teacher or administrator at an institution or organization of the above type.[&#x2F;note]</p>
-<p><img src="https://i0.hdslb.com/bfs/album/9c183fd4ef20fc456558bda0809a169db06cbacc.png" alt="img"></p>
-<p>起个名字就可以create New Education Organization了</p>
-<p><img src="https://i0.hdslb.com/bfs/album/f87d9e33221f64e9578286f2a596a2f0ea97f77e.png" alt="img"></p>
-<p>Create team</p>
-<p><img src="https://i0.hdslb.com/bfs/album/c32cdffb730d8266703b6f2728dee02bc40af9d6.png" alt="img"></p>
-<p>在创建的team中再创建project</p>
-<p><img src="https://i0.hdslb.com/bfs/album/98d1ec1eb1491f63775fd1c0274aa1941a1d1348.png" alt="img"></p>
-<p>在第一个文本框中输入bash，选择Bash。</p>
-<p>右侧文本框内填写项目的名字，它也是最终博客网址的域名一部分。</p>
-<p><img src="https://i0.hdslb.com/bfs/album/63607e5b1a2ed6d863242a42955bf70c043f9582.png" alt="img"></p>
-<p>单击Create创建项目后，会自动跳转到项目编辑页面，若没有跳转则自行点击刚刚创建的项目进入该页面。</p>
-<h2 id="克隆博客程序"><a href="#克隆博客程序" class="headerlink" title="克隆博客程序"></a>克隆博客程序</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Sayafx/typechonreplit.git &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/* ./ &amp;&amp; <span class="built_in">mv</span> <span class="literal">-b</span> typechonreplit/.[^<span class="type">.</span>]* ./ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> *~ &amp;&amp; <span class="built_in">rm</span> <span class="literal">-rf</span> typechonreplit</span><br></pre></td></tr></table></figure>
-
-<p>在右侧的Console或Shell中粘贴，回车</p>
-<p><img src="https://i0.hdslb.com/bfs/album/69145a78ac79eb1c895873fbbfbf0ba38889c0e2.png" alt="img"></p>
-<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
-<p>当出现下图的提示，且Console不再活动时，在Console或Shell中输入</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sh main.sh</span><br></pre></td></tr></table></figure>
-
-<p>回车。</p>
-<p><a href="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png"><img src="https://i0.hdslb.com/bfs/album/f7229ae58de2e689b46d231639c2988bbc1d57c6.png" alt="img"></a></p>
-<p>等待输出结束，博客程序克隆完毕。</p>
-<h2 id="安装博客"><a href="#安装博客" class="headerlink" title="安装博客"></a>安装博客</h2><p>等待输出完毕，出现如图所示结果时，点击绿色的Run按钮。</p>
-<p><a href="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png"><img src="https://i0.hdslb.com/bfs/album/2054c075f368c64e7c7400a162ecaa3880374cdc.png" alt="img"></a></p>
-<p>点击小窗口右上角第二个图标，博客安装程序将在新窗口打开（必要）</p>
-<p>如果不在新窗口打开将无法安装</p>
-<p><a href="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png"><img src="https://i0.hdslb.com/bfs/album/bad6823f356f3893eed1a2b81035ce29f93ef6e9.png" alt="img"></a></p>
-<p>根据提示点击下一步</p>
-<h3 id="数据库选择"><a href="#数据库选择" class="headerlink" title="数据库选择"></a>数据库选择</h3><p>数据库选择SQLite原生函数适配器，点击确认开始安装</p>
-<p><a href="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png"><img src="https://i0.hdslb.com/bfs/album/828798e1dbd7c1167b41a57d6992ad2737b8958f.png" alt="img"></a></p>
-<h3 id="设置管理员账号"><a href="#设置管理员账号" class="headerlink" title="设置管理员账号"></a>设置管理员账号</h3><p><a href="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png"><img src="https://i0.hdslb.com/bfs/album/e3c8b2df08a6a677ead324a4a6d0cfafbed6f603.png" alt="img"></a></p>
-<h2 id="安装完毕"><a href="#安装完毕" class="headerlink" title="安装完毕"></a>安装完毕</h2><p><a href="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png"><img src="https://i0.hdslb.com/bfs/album/5adc6a03b7fa42b0dcc039481bf7b639ecc3e9b0.png" alt="img"></a></p>
-<h1 id="博客配置建议"><a href="#博客配置建议" class="headerlink" title="博客配置建议"></a>博客配置建议</h1><h2 id="推荐使用Typora-bilibili图床"><a href="#推荐使用Typora-bilibili图床" class="headerlink" title="推荐使用Typora+bilibili图床"></a><strong>推荐使用Typora+bilibili图床</strong></h2><p>哔哩哔哩图片上传, Typora插件，实现图片粘贴即可上传到哔哩哔哩，并替换链接</p>
-<h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><ul>
-<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main.exe.zip">Windows</a></li>
-<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main">Mac</a></li>
-<li><a href="https://jiali0126.oss-cn-shenzhen.aliyuncs.com/typora/main-linux">Linux</a></li>
-</ul>
-<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/xlzy520/typora-plugin-bilibili">typora-plugin-bilibilitypora</a></p>
-<h3 id="typora免费版下载"><a href="#typora免费版下载" class="headerlink" title="typora免费版下载"></a>typora免费版下载</h3><p><a href="https://musea.repl.co/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98/Typora">alist</a></p>
-<h3 id="获取B站SESSDATA"><a href="#获取B站SESSDATA" class="headerlink" title="获取B站SESSDATA"></a>获取B站SESSDATA</h3><ol>
-<li><p>登录<a href="https://www.bilibili.com/">B站</a></p>
-</li>
-<li><p>按<code>F12</code>打开控制台</p>
-</li>
-<li><p>找到<code>SESSDATA</code>复制即可<a href="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png"><img src="https://i0.hdslb.com/bfs/album/4b212e3692523c9baa9bfb4415b89c68fff44557.png" alt="img"></a></p>
-</li>
-<li><p>获取csrf: 登录哔哩哔哩→F12打开控制→Application→Cookies→bili_jct</p>
-</li>
-<li><p>进入Typora设置，选择图像Tab，插入图片时选择<strong>上传图片</strong>，然后将<strong>插件的绝对路径</strong>填入<strong>命令</strong>。如下地方，例如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> # Mac、Linux</span><br><span class="line">/Users/xxx/bilibili/typora-plugin-bilibili-macos token=你的SESSDATA csrf=你的bili_jct</span><br><span class="line"># Windows</span><br><span class="line">D:\Downloads\typora-plugin-bilibili-win.exe token=你的SESSDATA csrf=你的bili_jct</span><br></pre></td></tr></table></figure>
-
-<p><strong>其中很重要的后面的 <code>token=你的SESSDATA</code> ,没有这句的话，无法上传成功，如果发现上传失败，那应该就是SESSDATA过期了，需要手动更新</strong></p>
-</li>
-</ol>
-<h2 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h2><p>例如原图： <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png</a></p>
-<p>规定高宽，质量压缩: <a href="https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c">https://i0.hdslb.com/bfs/album/a18a3f8d666dc19c3216bef39a092e0e60c90eb4.png@14w_14h_1e_1c</a></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Url</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>原图</td>
-<td>baseURL&#x2F;1.jpg</td>
-</tr>
-<tr>
-<td>原分辨率，质量压缩</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@1e_1c.jpg">1.jpg@1e_1c.jpg</a></td>
-</tr>
-<tr>
-<td>规定宽，高度自适应，质量压缩</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_1e_1c.jpg">1.jpg@104w_1e_1c.jpg</a></td>
-</tr>
-<tr>
-<td>规定高，宽度自适应，质量压缩</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@104h_1e_1c.jpg">1.jpg@104h_1e_1c.jpg</a></td>
-</tr>
-<tr>
-<td>规定高宽，质量压缩</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.jpg">1.jpg@104w_104h_1e_1c.jpg</a></td>
-</tr>
-<tr>
-<td>原分辨率，webp格式(占用最小)</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
-</tr>
-<tr>
-<td>规定高度，webp格式(占用最小)</td>
-<td>baseURL&#x2F;<a href="mailto:1.jpg@104w_104h_1e_1c.webp">1.jpg@104w_104h_1e_1c.webp</a></td>
-</tr>
-</tbody></table>
-<p>格式：(图像原链接)@(\d+[whsepqoc]_?)*(.(|webp|gif|png|jpg|jpeg))?$</p>
-<ul>
-<li>w:[1, 9223372036854775807] (width，图像宽度)</li>
-<li>h:[1, 9223372036854775807] (height，图像高度)</li>
-<li>s:[1, 9223372036854775807] (作用未知)</li>
-<li>e:[0,2] (resize，0:保留比例取其小，1:保留比例取其大，2:不保留原比例，不与c混用)</li>
-<li>p:[1,1000] (默认100，放大倍数，不与c混用)</li>
-<li>q:[1,100] (quality，默认75，图像质量)</li>
-<li>o:[0,1] (作用未知)</li>
-<li>c:[0,1] (clip，0:默认，1:裁剪)</li>
-<li>webp,png,jpeg,gif(不加则保留原格式)</li>
-<li>不区分大小写，相同的参数后面覆盖前面</li>
-<li>计算后的实际w<em>h不能大于原w</em>h，否则wh参数失效</li>
-</ul>
-<h4 id="解决B站防盗链（403）"><a href="#解决B站防盗链（403）" class="headerlink" title="解决B站防盗链（403）"></a>解决B站防盗链（403）</h4><blockquote>
-<p>B站开启了防盗链，利用的是HTTP的Referer属性做判断。如果Referer是他白名单之外的网站，就会返回403</p>
-</blockquote>
-<h4 id="全站图片使用"><a href="#全站图片使用" class="headerlink" title="全站图片使用"></a>全站图片使用</h4><p>在外观-设置外观里找到<code>自定义head标签内位置内容</code>，设置如下标志，那么全站资源引用都不会携带referrer</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="新窗口打开"><a href="#新窗口打开" class="headerlink" title="新窗口打开"></a>新窗口打开</h4><p>主要设置<code>rel=&quot;noreferrer&quot;</code>，使用<code>window.open</code>打开的话是会默认携带<code>referrer</code>的，第一次还是会403</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">&quot;noreferrer&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-
-<h2 id="内置插件和主题请自行启用"><a href="#内置插件和主题请自行启用" class="headerlink" title="内置插件和主题请自行启用"></a>内置插件和主题请自行启用</h2><h3 id="Snow插件推荐设置"><a href="#Snow插件推荐设置" class="headerlink" title="Snow插件推荐设置"></a>Snow插件推荐设置</h3><p>雪花数量：200</p>
-<p>雪花大小：1</p>
-<p>雪花距离：225</p>
-<p>雪花速度：0.5</p>
-<p>雪花偏移0.1</p>
-<p>雪花透明度：0.5</p>
-<p>背景颜色：（空着不填）</p>
-<p><a href="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png"><img src="https://i0.hdslb.com/bfs/album/dafa22094fc8129879ee352d2763bd41299108a8.png" alt="img"></a></p>
-<h2 id="登录界面改字"><a href="#登录界面改字" class="headerlink" title="登录界面改字"></a>登录界面改字</h2><p>login.php第16行，删除class&#x3D;“xxxx”引号里的内容</p>
-<p>接着按需更改其他内容，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://syblog.repl.co/&quot;</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span>HMuSeaB’s Blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="添加网站监控"><a href="#添加网站监控" class="headerlink" title="添加网站监控"></a>添加网站监控</h2><p>Replit项目30分钟内无流量会休眠，因此可以使用网站监控让网站一直有流量。</p>
-<p>推荐一个常用的（需科学上网）</p>
-<p><a href="https://uptimerobot.com/">https://uptimerobot.com/</a></p>
-]]></content>
-      <tags>
-        <tag>回忆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记战7000通病</title>
-    <url>/2025/08/19/%E8%AE%B0%E6%88%987000%E9%80%9A%E7%97%85/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h1 id="斗战者7000锐龙版"><a href="#斗战者7000锐龙版" class="headerlink" title="斗战者7000锐龙版"></a>斗战者7000锐龙版</h1><h2 id="图标背景问题"><a href="#图标背景问题" class="headerlink" title="图标背景问题"></a>图标背景问题</h2><p><img src="https://i0.hdslb.com/bfs/openplatform/8693cbc4fffbfbaaecc105afd462259c6605837e.jpg"></p>
-<p><img src="https://i0.hdslb.com/bfs/openplatform/f776c98dd184264bfbb62e2636e24aa6c90bfae3.jpg@1e_1c.webp"></p>
-]]></content>
-      <tags>
-        <tag>电脑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>电影中那些无法超越的唯美画面与经典台词</title>
     <url>/2023/04/30/%E7%94%B5%E5%BD%B1%E4%B8%AD%E9%82%A3%E4%BA%9B%E6%97%A0%E6%B3%95%E8%B6%85%E8%B6%8A%E7%9A%84%E5%94%AF%E7%BE%8E%E7%94%BB%E9%9D%A2%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%8F%B0%E8%AF%8D/</url>
     <content><![CDATA[<p>《返老还童》</p>
@@ -1254,6 +1242,118 @@
 ]]></content>
       <tags>
         <tag>美句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记战7000通病</title>
+    <url>/2025/08/19/%E8%AE%B0%E6%88%987000%E9%80%9A%E7%97%85/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="斗战者7000锐龙版"><a href="#斗战者7000锐龙版" class="headerlink" title="斗战者7000锐龙版"></a>斗战者7000锐龙版</h1><h2 id="图标背景问题"><a href="#图标背景问题" class="headerlink" title="图标背景问题"></a>图标背景问题</h2><p>首先表示不是显卡问题</p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/990c069175f117a50e471b62e61ca226b6f51e6c.jpg@1e_1c.webp"></p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/a02cf824e4d217914551d5ce22d85947abe6e02f.jpg@1e_1c.webp"></p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/8693cbc4fffbfbaaecc105afd462259c6605837e.jpg"></p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/c6150d6297352a936c53797913a54b09f9b34b8d.jpg@1e_1c.webp"></p>
+<h3 id="尝试各种联想工具"><a href="#尝试各种联想工具" class="headerlink" title="尝试各种联想工具"></a>尝试各种联想工具</h3><p><img src="https://i0.hdslb.com/bfs/openplatform/85ef2e6cf3618d92d306729bfbe3da4a6365c4d3.png"></p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/1acaaffae3cfd23d01d5e96488848aefaae52983.png"></p>
+<p>以排查账户问题失败转接客服二</p>
+<hr>
+<ul>
+<li><p><a href="https://iknow.lenovo.com.cn/detail/179533">Quick Fix</a></p>
+</li>
+<li><p><a href="https://tools.lenovo.com.cn/exeTools/detail/id/327/rid/1178600.html">新建账户工具</a></p>
+</li>
+</ul>
+<h3 id="新建用户失败"><a href="#新建用户失败" class="headerlink" title="新建用户失败"></a>新建用户失败</h3><p><img src="https://i0.hdslb.com/bfs/openplatform/7fb67a25198ad28f154d3e8560de45d9862d3c26.jpg@1e_1c.webp"></p>
+<h2 id="初见端倪-修复桌面图标"><a href="#初见端倪-修复桌面图标" class="headerlink" title="初见端倪(修复桌面图标)"></a>初见端倪(修复桌面图标)</h2><h3 id="尝试第三个工具"><a href="#尝试第三个工具" class="headerlink" title="尝试第三个工具"></a>尝试第三个工具</h3><p><a href="https://iknow.lenovo.com.cn/detail/141999">白图标步骤二链接</a></p>
+<h3 id="尝试DISM修复"><a href="#尝试DISM修复" class="headerlink" title="尝试DISM修复"></a>尝试DISM修复</h3><p><img src="https://i0.hdslb.com/bfs/openplatform/06bc2f5ea875faf14d00cf5a2cf22f9189f60f00.jpg@1e_1c.webp"></p>
+<p><img src="https://i0.hdslb.com/bfs/openplatform/f776c98dd184264bfbb62e2636e24aa6c90bfae3.jpg@1e_1c.webp"></p>
+<h2 id="无法修复，86元接远程"><a href="#无法修复，86元接远程" class="headerlink" title="无法修复，86元接远程"></a>无法修复，86元接远程</h2><p><img src="https://i0.hdslb.com/bfs/openplatform/8265b9da88521f06ea2b13295f9067bccda9fe5f.jpg"></p>
+<h2 id="自己开始尝试"><a href="#自己开始尝试" class="headerlink" title="自己开始尝试"></a>自己开始尝试</h2><h3 id="关注图标问题"><a href="#关注图标问题" class="headerlink" title="关注图标问题"></a>关注图标问题</h3><h4 id="DISM命令"><a href="#DISM命令" class="headerlink" title="DISM命令"></a>DISM命令</h4><ul>
+<li><input disabled="" type="checkbox"> 如何使用 DISM 命令修复 Windows 10&#x2F;11 系统映像 - 系统极客](<a href="https://www.sysgeek.cn/repair-windows-using-dism-tool/">https://www.sysgeek.cn/repair-windows-using-dism-tool/</a>)</li>
+</ul>
+<h4 id="观察错误报告"><a href="#观察错误报告" class="headerlink" title="观察错误报告"></a>观察错误报告</h4><p>win11 24h2 os内部版本26100.4946，通过DISM &#x2F;Online &#x2F;Cleanup-Image &#x2F;RestoreHealth，失败，桌面以及所有程序图标包全部丢失，只剩下名字，transaction<br>2025-08-18 16:35:06, Info                  CSI    0000023e Hashes for file member [l:10]’img105.jpg’ do not match.<br> Expected: {l:32 ml:33 b:67467b1e0d9a9c4b8cc81eadbdb5e978a11f898a8da2d661a5c00a62d3a8cc0d}.<br> Actual: {l:32 b:2bb1bd8e2ba09e94b1439a5b42975350ae16d8c870e5baa0e1c776a03636d7b2}.<br>2025-08-18 16:35:06, Info                  CSI    0000023f [SR] Cannot repair member file [l:10]’img105.jpg’ of Microsoft-Windows-ThemeUI-LockscreenBackgrounds-Client, version 10.0.26100.1, arch amd64, nonSxS, pkt {l:8 b:31bf3856ad364e35} in the store, hash mismatch<br>2025-08-18 16:35:06, Info                  CSI    00000240 Hashes for file member [l:10]’img105.jpg’ do not match.，想通过网络镜像进行恢复，dism网络中的镜像</p>
+<h4 id="给AI"><a href="#给AI" class="headerlink" title="给AI"></a>给AI</h4><p>遇到这种系统文件损坏的情况，使用DISM（部署映像服务和管理工具）进行修复是一个常见的解决办法，但有时确实会遇到修复不成功的情况，比如你提到的所有图标和桌面背景消失的问题。当DISM命令无法解决问题或者损坏情况比较严重时，可以尝试使用Windows更新、Windows恢复环境（WinRE）或重置系统。</p>
+<p>由于你现在想要通过网络镜像进行恢复，以下是针对你问题的具体步骤：</p>
+<h3 id="方法一：使用Windows-Update修复"><a href="#方法一：使用Windows-Update修复" class="headerlink" title="方法一：使用Windows Update修复"></a>方法一：使用Windows Update修复</h3><ol>
+<li><p><strong>打开设置</strong></p>
+<ul>
+<li>点击开始菜单并选择“设置”。</li>
+</ul>
+</li>
+<li><p><strong>更新和安全</strong></p>
+<ul>
+<li>在设置窗口中，点击“Windows 更新”。</li>
+</ul>
+</li>
+<li><p><strong>检查更新</strong></p>
+<ul>
+<li>点击“检查更新”来查找可用的更新，这可能有助于解决损坏的问题。有时安装了系统更新后，某些文件会被修正。</li>
+</ul>
+</li>
+</ol>
+<h3 id="方法二：使用Windows-恢复环境（WinRE）"><a href="#方法二：使用Windows-恢复环境（WinRE）" class="headerlink" title="方法二：使用Windows 恢复环境（WinRE）"></a>方法二：使用Windows 恢复环境（WinRE）</h3><ol>
+<li><strong>重启电脑</strong></li>
+</ol>
+<ul>
+<li>按电源键重启电脑。</li>
+</ul>
+<ol start="2">
+<li><p><strong>进入高级启动</strong></p>
+<ul>
+<li>根据提示持续按下“Shift+F8”，直至进入“选择一个选项”页面。</li>
+<li>或者尝试按F8或Esc键进入高级启动菜单。</li>
+</ul>
+</li>
+<li><p><strong>选择高级选项</strong></p>
+<ul>
+<li>选择“疑难解答”。</li>
+<li>选择“高级选项”。</li>
+<li>选择“命令提示符”。</li>
+</ul>
+</li>
+<li><p><strong>运行 DISM 命令</strong></p>
+<ul>
+<li>在命令提示符中输入以下命令来修复系统映像：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Dism /Online /Cleanup-Image /RestoreHealth</span><br></pre></td></tr></table></figure></li>
+<li>如果该命令依旧无效，尝试使用以下命令从Windows更新获取修复：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Dism /Online /Cleanup-Image /RestoreHealth /Source:wu</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="方法三：重置Windows"><a href="#方法三：重置Windows" class="headerlink" title="方法三：重置Windows"></a>方法三：重置Windows</h3><ol>
+<li><strong>设置 &gt; 更新和安全</strong></li>
+</ol>
+<ul>
+<li>点击“设置”后找到并选择“更新和安全”。</li>
+</ul>
+<ol start="2">
+<li><p><strong>恢复选项</strong></p>
+<ul>
+<li>在左侧选择“恢复”。</li>
+<li>在“重置此PC”下面，按照提示操作来重置Windows 11至出厂状态，这将会保留你的个人文件但会删除已安装的应用程序和其他设置。</li>
+</ul>
+</li>
+<li><p><strong>网络镜像（WIM&#x2F;ESD）</strong></p>
+<ul>
+<li>确保你有正确的Windows 11安装介质或ISO镜像，并且具有适当的许可密钥。</li>
+<li>使用介质创建安装U盘或DVD。</li>
+<li>引导至介质并按照屏幕上的指示进行重装。</li>
+<li>当到达“准备就绪，需要其他信息以继续”时，可以选择“修复计算机”下的高级选项。</li>
+<li>选择“命令提示符”，然后执行DISM命令以使用网络源进行修复：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Dism /Online /Cleanup-Image /RestoreHealth /Source:wim:&lt;path_to_install.wim&gt;\sources\install.wim:&lt;index&gt;</span><br></pre></td></tr></table></figure></li>
+<li><code>&lt;path_to_install.wim&gt;</code>应更改为你的安装文件路径。</li>
+<li><code>&lt;index&gt;</code>是WIM文件中的映像索引值，通常是1或2。</li>
+</ul>
+</li>
+</ol>
+<p>如果这些方法都不能解决问题，可能需要联系微软支持获取进一步的帮助。</p>
+<p>最后，请记得定期备份你的数据，以避免在系统出现问题时遭受数据丢失的风险。</p>
+<h4 id="下载官方"><a href="#下载官方" class="headerlink" title="下载官方"></a>下载官方</h4><p><img src="https://i0.hdslb.com/bfs/openplatform/03dbda261ddfa19ff64444b58a30c7395eb7024c.jpg@1e_1c.webp"></p>
+<h2 id="全部失败的终极收尾方案"><a href="#全部失败的终极收尾方案" class="headerlink" title="全部失败的终极收尾方案"></a>全部失败的终极收尾方案</h2><p>在bilibili上找到教程， <a href="https://www.bilibili.com/video/BV16s4y1E73y/?spm_id_from=..search-card.all.click&vd_source=9e62dc09918d1df2d6cfc98a3ea41ca5">解决桌面图标只显示文字不显示图标，开始菜单点不开，硬盘分区图标不显示，文件图标不显示，文件夹图标不显示，任务栏图标不显示问题-深圳提速电脑蔡建忠_哔哩哔哩_bilibili</a> </p>
+<p>成功解决</p>
+<h2 id="暗病出现-时不时死机"><a href="#暗病出现-时不时死机" class="headerlink" title="暗病出现(时不时死机)"></a>暗病出现(时不时死机)</h2><h3 id="尝试进Bios失败"><a href="#尝试进Bios失败" class="headerlink" title="尝试进Bios失败"></a>尝试进Bios失败</h3><h3 id="再次联系联想工程师"><a href="#再次联系联想工程师" class="headerlink" title="再次联系联想工程师"></a>再次联系联想工程师</h3><p> <a href="https://iknow.lenovo.com.cn/detail/417008">win10&amp;win11干净启动-联想知识库</a> </p>
+<p>干净启动，关闭不必要插件后成功</p>
+]]></content>
+      <tags>
+        <tag>电脑</tag>
       </tags>
   </entry>
 </search>
