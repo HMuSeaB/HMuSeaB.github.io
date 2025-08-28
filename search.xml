@@ -233,12 +233,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WordPress 文章完美转换 Markdown 方法</title>
-    <url>/2025/08/19/WordPress/</url>
-    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Vim简介</title>
     <url>/2024/04/26/Vim%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h2 id="vim是什么？"><a href="#vim是什么？" class="headerlink" title="vim是什么？"></a>vim是什么？</h2><p>vim是Linux环境下一款功能强大、高度可定制的文本编辑工具，类似于Windows下面的source insight、sublime、notepad。VI是visual interface的缩写，即可视化接口。vim 即 vi IMproved，在 vi 的基础上做了很多改进，如：增加了多级撤销、多窗口操作、崩溃后也可以恢复、增加了稳定性、关键字自动补全、上下文自动补全等功能。</p>
@@ -262,6 +256,12 @@
       <tags>
         <tag>代码</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WordPress 文章完美转换 Markdown 方法</title>
+    <url>/2025/08/19/WordPress/</url>
+    <content><![CDATA[<h1 id="WordPress-文章完美转换-Markdown-方法"><a href="#WordPress-文章完美转换-Markdown-方法" class="headerlink" title="WordPress 文章完美转换 Markdown 方法"></a>WordPress 文章完美转换 Markdown 方法</h1><p>WordPress 文章完美转换 Markdown 方法最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 <a href="https://link.zhihu.com/?target=https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a> 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.下载 Node.js访问 <a href="%5Bhttps://nodejs.org/zh-cn/%5D(https://link.zhihu.com/?target=https://nodejs.org/zh-cn/">Node.js</a>官网, 下载长期维护版即可.下载完成后安装, 无脑下一步即可.开始转换访问你的 WordPress 后台, 导出 <code>xml</code> 文件, 选择所有内容, 否则无法导出图片.<br><img src="https://pic4.zhimg.com/v2-8f5167f027068706d8ae43691e50f135_1440w.jpg" alt="img">1<br>新建一个文件夹, 名字随便, 把刚才下载的 <code>.xml</code> 文件改名为 <code>export.xml</code> 放到此文件夹.按住 Shift 右键文件夹空白处打开 <a href="https://zhida.zhihu.com/search?content_id=221885234&content_type=Article&match_order=1&q=powershell&zhida_source=entity">powershell</a><br><img src="https://picx.zhimg.com/v2-5f1316fb8f3671251b5842343d2f5b0d_1440w.jpg" alt="img">2<br>输入命令<code>npx wordpress-export-to-markdown</code>回车下一步, 提示 (y&#x2F;N) 全部选 y 即可.<br><img src="https://pica.zhimg.com/v2-26cc5dbde66427dab20934166c2ab0ca_1440w.jpg" alt="img">4<br>这样就算执行成功了(忽略我那两个错误), 返回文件夹 <code>output</code> 就是导出的所有内容.可以打开预览一下, 所有图片的链接的被替换到了本地.上传文章我们拿一篇文章举例子, 我是那我的环境来举例子, 具体我的环境请看我的前两篇文章.<a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/700">如何优雅的多平台发布文章？</a><br><a href="https://link.zhihu.com/?target=https://blog.biuioi.com/archives/705">如何多版本备份你的文章和图床?</a>上传之前我们要解决图片的问题, 由于图片都被下载到了本地, 所以我们要先上传我们的图床.注意图床设置要把文件的命名格式修改为原始, 不然会对后续替换造成麻烦.<br><img src="https://pic1.zhimg.com/v2-9b757f5883aff81b32d0f0528ff5d7c8_1440w.jpg" alt="img">5<br>文章和图片都在同一个文件夹, 我们直接全选上传即可.链接修改可以看到文章转换后链接都变成了 <code>image/***.jpg</code> 我们要修改的就是前面的 <code>image/</code> 内容, 因为我们是保留原文件名上传的, 所以文件名不用改.如图, 把 <code>image/</code> 全部替换为你的图床地址即可!<br><img src="https://pica.zhimg.com/v2-70adfb339f47535ecc290f3cd154f528_1440w.jpg" alt="img">6<br>现在预览看看, 所有图片已经完美替换, 直接上传你的博客即可, 其他文章也是同理.版权声明：本文为xiaomi250原创，依据CC BY-SA 4.0许可证进行授权，转载请附上出处链接及本声明。</p>
+]]></content>
   </entry>
   <entry>
     <title>Clash</title>
@@ -1232,22 +1232,11 @@
       </tags>
   </entry>
   <entry>
-    <title>图床</title>
-    <url>/2023/04/15/%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-
-<p><img src="https://article.biliimg.com/bfs/article/bcff52035697efb13c04b953787cd5a47ec2c4ee.jpg" alt="67184958_p0"></p>
-<p><img src="https://article.biliimg.com/bfs/article/467792f13def895b57d0747460b71779fb99cf49.jpg" alt="67243791_p0"></p>
-]]></content>
-      <tags>
-        <tag>破万法！！！</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记战7000通病</title>
     <url>/2025/08/19/%E8%AE%B0%E6%88%987000%E9%80%9A%E7%97%85/</url>
-    <content><![CDATA[<h1 id="斗战者7000锐龙版"><a href="#斗战者7000锐龙版" class="headerlink" title="斗战者7000锐龙版"></a>斗战者7000锐龙版</h1><h2 id="图标背景问题"><a href="#图标背景问题" class="headerlink" title="图标背景问题"></a>图标背景问题</h2><p>首先表示不是显卡问题</p>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="斗战者7000锐龙版"><a href="#斗战者7000锐龙版" class="headerlink" title="斗战者7000锐龙版"></a>斗战者7000锐龙版</h1><h2 id="图标背景问题"><a href="#图标背景问题" class="headerlink" title="图标背景问题"></a>图标背景问题</h2><p>首先表示不是显卡问题</p>
 <p><img src="https://i0.hdslb.com/bfs/openplatform/990c069175f117a50e471b62e61ca226b6f51e6c.jpg@1e_1c.webp"></p>
 <p><img src="https://i0.hdslb.com/bfs/openplatform/a02cf824e4d217914551d5ce22d85947abe6e02f.jpg@1e_1c.webp"></p>
 <p><img src="https://i0.hdslb.com/bfs/openplatform/8693cbc4fffbfbaaecc105afd462259c6605837e.jpg"></p>
@@ -1362,9 +1351,22 @@
 <h3 id="再次联系联想工程师"><a href="#再次联系联想工程师" class="headerlink" title="再次联系联想工程师"></a>再次联系联想工程师</h3><ul>
 <li><a href="https://iknow.lenovo.com.cn/detail/417008">win10&amp;win11干净启动-联想知识库</a></li>
 </ul>
-<meta name="referrer" content="no-referrer">]]></content>
+]]></content>
       <tags>
         <tag>破万法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图床</title>
+    <url>/2023/04/15/%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+
+<p><img src="https://article.biliimg.com/bfs/article/bcff52035697efb13c04b953787cd5a47ec2c4ee.jpg" alt="67184958_p0"></p>
+<p><img src="https://article.biliimg.com/bfs/article/467792f13def895b57d0747460b71779fb99cf49.jpg" alt="67243791_p0"></p>
+]]></content>
+      <tags>
+        <tag>破万法！！！</tag>
       </tags>
   </entry>
 </search>
